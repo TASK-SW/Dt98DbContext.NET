@@ -105,7 +105,6 @@
     <Compile Include="Dt98UserDbContext\Model\CardTRXCount_002.cs" />
     <Compile Include="Dt98UserDbContext\Model\CardTypeMapPING.cs" />
     <Compile Include="Dt98UserDbContext\Model\CardTypeS.cs" />
-    <Compile Include="Dt98UserDbContext\Model\Class1.cs" />
     <Compile Include="Dt98UserDbContext\Model\CodeVouchers.cs" />
     <Compile Include="Dt98UserDbContext\Model\DatacomOnlineCards.cs" />
     <Compile Include="Dt98UserDbContext\Model\DatacomOnlineHosts.cs" />
