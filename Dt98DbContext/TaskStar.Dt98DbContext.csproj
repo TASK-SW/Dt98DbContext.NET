@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{227EFE2D-E24A-4C8C-A146-EA79F3083A88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TaskStar.Dt98DbContext</RootNamespace>
+    <AssemblyName>TaskStar.Dt98DbContext</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>TaskStar.Dt98DbContext.dll.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dt98UserDbContext\Dt98UserContextFactory.cs" />
+    <Compile Include="Dt98UserDbContext\DT98UserEF6DbContext.cs" />
+    <Compile Include="Dt98UserDbContext\Model\AlternativePrices.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ArticleGroups.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ArticleKITSet.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ArticleS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ArticleStock.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ArticleSubGroups.cs" />
+    <Compile Include="Dt98UserDbContext\Model\BlackListLocal0001S.cs" />
+    <Compile Include="Dt98UserDbContext\Model\BlackLists.cs" />
+    <Compile Include="Dt98UserDbContext\Model\BlackListTypes.cs" />
+    <Compile Include="Dt98UserDbContext\Model\BlackList_001.cs" />
+    <Compile Include="Dt98UserDbContext\Model\BlackList_002.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardBaseType.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardData.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDataCom.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotals.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotalTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotal_001.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotal_002.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotal_003.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotal_004.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotal_023.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotal_025.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotal_026.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotal_029.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotal_045.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotal_046.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotal_050.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotal_051.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotal_158.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardDLYTotal_171.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardFieldS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardFieldValues.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardFiles.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardHandling.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardProductS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardProfileS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardTracks.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardTRXCountS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardTRXCountTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardTRXCount_001.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardTRXCount_002.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardTypeMapPING.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\Class1.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CodeVouchers.cs" />
+    <Compile Include="Dt98UserDbContext\Model\DatacomOnlineCards.cs" />
+    <Compile Include="Dt98UserDbContext\Model\DatacomOnlineHosts.cs" />
+    <Compile Include="Dt98UserDbContext\Model\DevClass.cs" />
+    <Compile Include="Dt98UserDbContext\Model\DevConfig.cs" />
+    <Compile Include="Dt98UserDbContext\Model\DevSetting.cs" />
+    <Compile Include="Dt98UserDbContext\Model\DevType.cs" />
+    <Compile Include="Dt98UserDbContext\Model\DevValType.cs" />
+    <Compile Include="Dt98UserDbContext\Model\EanCodes.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ENIError.cs" />
+    <Compile Include="Dt98UserDbContext\Model\FuelINGPointS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\FuelINGPointTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\FuelSales.cs" />
+    <Compile Include="Dt98UserDbContext\Model\GlobalValues.cs" />
+    <Compile Include="Dt98UserDbContext\Model\GreyListS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\GreyListTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\Hosts.cs" />
+    <Compile Include="Dt98UserDbContext\Model\HostTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ISSUERListS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ISSUERListTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\JournalBookingS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\JournalCurrency.cs" />
+    <Compile Include="Dt98UserDbContext\Model\JournalHeader.cs" />
+    <Compile Include="Dt98UserDbContext\Model\JournalJobs.cs" />
+    <Compile Include="Dt98UserDbContext\Model\MTS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\NormUnitS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\Nozzles.cs" />
+    <Compile Include="Dt98UserDbContext\Model\NozzleTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ObjectStateS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ObjectTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\OPTotalBaseMatrix.cs" />
+    <Compile Include="Dt98UserDbContext\Model\OPTotalData.cs" />
+    <Compile Include="Dt98UserDbContext\Model\OPTotalFiles.cs" />
+    <Compile Include="Dt98UserDbContext\Model\OPTotalGenerationS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\OPTotalPaymentMap.cs" />
+    <Compile Include="Dt98UserDbContext\Model\OPTotalProductMap.cs" />
+    <Compile Include="Dt98UserDbContext\Model\PaymentTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\persFuelINGPointS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\persNozzles.cs" />
+    <Compile Include="Dt98UserDbContext\Model\PosDataXmlPdfExportOrders.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ProductCodeGroups.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ProductCodeMaps.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ProductCodeTAXMap.cs" />
+    <Compile Include="Dt98UserDbContext\Model\Pumps.cs" />
+    <Compile Include="Dt98UserDbContext\Model\PumpTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ReceiptS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ReceiptsToPrint.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedListS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedListTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedList_001.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedList_002.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedList_003.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedList_004.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedList_023.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedList_025.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedList_026.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedList_029.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedList_045.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedList_046.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedList_050.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedList_051.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedList_158.cs" />
+    <Compile Include="Dt98UserDbContext\Model\RedList_171.cs" />
+    <Compile Include="Dt98UserDbContext\Model\SalesBookingS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\SalesHeader.cs" />
+    <Compile Include="Dt98UserDbContext\Model\SammelRecords.cs" />
+    <Compile Include="Dt98UserDbContext\Model\ScaledDiscount.cs" />
+    <Compile Include="Dt98UserDbContext\Model\Schedule.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctBlackListTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctCardBaseTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctCardDLYTotalTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctCardTRXCountTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctCardTypeMapPING.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctCardTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctFuelINGPointTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctGreyListTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctHostTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctISSUERListTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctNormUnitS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctNozzleTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctObjectTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctPaymentTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctPumpTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctRedListTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctTankTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctTerminalComponentTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctTerminalTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctTRXFileTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sctUnitS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptBlackListS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptCardDataCom.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptCardDLYTotalS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptCardFieldS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptCardFieldValues.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptCardFiles.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptCardHandling.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptCardProductS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptCardProfileS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptCardS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptCardTracks.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptCardTRXCountS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptFuelINGPointS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptGlobalValues.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptGreyListS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptHosts.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptISSUERListS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptNozzles.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptOPTotalBaseMatrix.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptOPTotalPaymentMap.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptOPTotalProductMap.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptProductCodeGroups.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptProductCodeMaps.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptProductCodeTAXMap.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptPumps.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptRedListS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptTankS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptTerminalComponents.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptTerminalS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptTerminalSettings.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptTerminationCodes.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptTotalHandler.cs" />
+    <Compile Include="Dt98UserDbContext\Model\sptTRXFiles.cs" />
+    <Compile Include="Dt98UserDbContext\Model\SqlPolicy.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TAInfo.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TankNetz.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TankS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TankTransactions.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TankTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\Taxes.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TerminalComponents.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TerminalComponentTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TerminalS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TerminalSettings.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TerminalTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TerminationCodes.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TotalHandler.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TRXData.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TRXFiles.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TRXFileTypeS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TRXGenerationS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\TRXHistory.cs" />
+    <Compile Include="Dt98UserDbContext\Model\UnitS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\Version.cs" />
+    <Compile Include="Dt98UserDbContext\Model\VMacurrent.cs" />
+    <Compile Include="Dt98UserDbContext\Model\VMAFuelSales.cs" />
+    <Compile Include="Dt98UserDbContext\Model\VMAHistory.cs" />
+    <Compile Include="Dt98UserDbContext\Model\VMAHistoryOLD.cs" />
+    <Compile Include="Dt98UserDbContext\Model\VMAHistoryTank.cs" />
+    <Compile Include="Dt98UserDbContext\Model\VMAHistoryTankOLD.cs" />
+    <Compile Include="Dt98UserDbContext\Model\VMAHostStates.cs" />
+    <Compile Include="Dt98UserDbContext\Model\VMARecords.cs" />
+    <Compile Include="Dt98UserDbContext\Model\VMARecordsTank.cs" />
+    <Compile Include="Dt98UserDbContext\Model\VMATankContents.cs" />
+    <Compile Include="Dt98UserDbContext\Model\VMATempFuelings.cs" />
+    <Compile Include="Dt98UserDbContext\Model\VMA_History.cs" />
+    <Compile Include="Dt98UserDbContext\Model\WEATWettbewerber.cs" />
+    <Compile Include="Dt98UserDbContext\Model\WEATWettbewerbsDaten.cs" />
+    <Compile Include="Dt98UserDbContext\Model\_sptISSUERLISTS.cs" />
+    <Compile Include="Dt98UserDbContext\Model\_sptTRXFILES.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="TaskStar.Dt98DbContext.dll.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+</Project>
