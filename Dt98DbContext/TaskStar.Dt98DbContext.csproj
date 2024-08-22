@@ -101,7 +101,7 @@
     <Compile Include="Dt98UserDbContext\Model\CardTracks.cs" />
     <Compile Include="Dt98UserDbContext\Model\CardTRXCountS.cs" />
     <Compile Include="Dt98UserDbContext\Model\CardTRXCountTypeS.cs" />
-    <Compile Include="Dt98UserDbContext\Model\CardTRXCount_001.cs" />
+    <Compile Include="Dt98UserDbContext\Model\CardTrxCount001.cs" />
     <Compile Include="Dt98UserDbContext\Model\CardTRXCount_002.cs" />
     <Compile Include="Dt98UserDbContext\Model\CardTypeMapPING.cs" />
     <Compile Include="Dt98UserDbContext\Model\CardTypeS.cs" />

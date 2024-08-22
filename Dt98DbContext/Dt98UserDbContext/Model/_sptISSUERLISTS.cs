@@ -1,7 +1,7 @@
 namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 {
     [System.ComponentModel.DataAnnotations.Schema.Table("_sptISSUERLISTS")]
-    public class _sptISSUERLISTS
+    public class sptIssuerLists
     {
         #region Public Constructors
 
