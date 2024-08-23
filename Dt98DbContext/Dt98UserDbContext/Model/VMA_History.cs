@@ -5,11 +5,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
    [Table("VMA_History")]
-   public class VMA_History
+   public class Vma_History
    {
       #region Public Constructors
 
-       public VMA_History()
+       public Vma_History()
       {
       }
 
