@@ -3,23 +3,23 @@ using TaskStar.Dt98DbContext.DT98UserDbContext.Model;
 
 namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 {
-    public class Dt98UserEF6DbContext : DbContext
+    public class Dt98UserEf6DbContext : DbContext
     {
         #region Public Constructors
 
-        public static string ConnectionString { get; set; }
-
-        public Dt98UserEF6DbContext() : base(ConnectionString) { }
-
-        public Dt98UserEF6DbContext(string connectionString) : base(connectionString)
+        public Dt98UserEf6DbContext() : base(ConnectionString)
         {
+        }
 
+        public Dt98UserEf6DbContext(string connectionString) : base(connectionString)
+        {
         }
 
         #endregion Public Constructors
 
         #region Public Properties
 
+        public static string ConnectionString { get; set; }
         public DbSet<ArticleGroups> ArticleGroups { get; set; }
 
         public DbSet<ArticleKitSet> ArticleKitSet { get; set; }
