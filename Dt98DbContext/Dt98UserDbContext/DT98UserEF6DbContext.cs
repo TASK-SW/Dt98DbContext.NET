@@ -1,4 +1,5 @@
 using System.Data.Entity;
+using TaskStar.Dt98DbContext.Dt98UserDbContext.Model;
 using TaskStar.Dt98DbContext.DT98UserDbContext.Model;
 
 namespace TaskStar.Dt98DbContext.Dt98UserDbContext
@@ -40,7 +41,7 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 
         public DbSet<CardDlyTotal003> CardDlyTotal003 { get; set; }
 
-        public DbSet<VmaCurrent> VMacurrent { get; set; }
+        public DbSet<VmaCurrent> VmaCurrent { get; set; }
 
         public DbSet<CardDlyTotal004> CardDlyTotal004 { get; set; }
 
@@ -196,13 +197,13 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 
         public DbSet<CardBaseTypes> CardBaseTypes { get; set; }
 
-        public DbSet<MTs> MTs { get; set; }
+        public DbSet<Mts> Mts { get; set; }
 
         public DbSet<CardDlyTotalTypes> CardDlyTotalTypes { get; set; }
 
         public DbSet<CardTrxCountTypes> CardTrxCountTypes { get; set; }
 
-        public DbSet<CardTypeMApping> CardTypeMApping { get; set; }
+        public DbSet<CardTypeMapping> CardTypeMapping { get; set; }
 
         public DbSet<CardTypes> CardTypes { get; set; }
 
@@ -306,7 +307,7 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 
         public DbSet<Terminals> Terminals { get; set; }
 
-        public DbSet<TerminalsETTingS> TerminalsETTingS { get; set; }
+        public DbSet<TerminalSettings> TerminalSettings { get; set; }
 
         public DbSet<TerminationCodes> TerminationCodes { get; set; }
 
