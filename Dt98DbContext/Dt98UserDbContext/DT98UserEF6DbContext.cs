@@ -1,5 +1,4 @@
 using System.Data.Entity;
-using TaskStar.Dt98DbContext.Dt98UserDbContext.Model;
 using TaskStar.Dt98DbContext.DT98UserDbContext.Model;
 
 namespace TaskStar.Dt98DbContext.Dt98UserDbContext
