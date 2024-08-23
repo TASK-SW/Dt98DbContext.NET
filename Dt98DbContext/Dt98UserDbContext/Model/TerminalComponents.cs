@@ -1,17 +1,10 @@
-//==================================================================================================
-//  FILE        :   _sptTERMINALCOMPONENTS.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("_sptTERMINALCOMPONENTS")]
+   [Table("_sptTERMINALCOMPONENTS")]
    public class TerminalComponents
    {
       #region Public Constructors
@@ -24,20 +17,21 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
        public string Oid { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_TERMINAL")]
+       [Column("OID_TERMINAL")]
        public string OidTerminal { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ID")]
+       [Column("ID")]
        public int Id { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("IID")]
+       [Column("IID")]
        public string IId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("CLSID")]
-       public string CLSId { get; set; }
+       [Column("CLSID")]
+       public string ClsId { get; set; }
 
 
        #endregion Public Properties

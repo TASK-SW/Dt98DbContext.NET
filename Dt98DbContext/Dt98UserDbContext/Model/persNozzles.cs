@@ -1,17 +1,10 @@
-//==================================================================================================
-//  FILE        :   _persNOZZLES.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("_persNOZZLES")]
+   [Table("_persNOZZLES")]
    public class persNozzles
    {
       #region Public Constructors
@@ -24,13 +17,14 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
        public string Oid { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("VOLUME")]
+       [Column("VOLUME")]
        public decimal Volume { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("AMOUNT")]
+       [Column("AMOUNT")]
        public decimal Amount { get; set; }
 
 

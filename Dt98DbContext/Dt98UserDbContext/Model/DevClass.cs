@@ -1,17 +1,10 @@
-//==================================================================================================
-//  FILE        :   DEV_CLASS.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("DEV_CLASS")]
+   [Table("DEV_CLASS")]
    public class DevClass
    {
       #region Public Constructors
@@ -24,11 +17,12 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ID_DEV_CLS")]
-       public string IdDevCLS { get; set; }
+       [Key, Column(Order = 0)]
+       //[Column("ID_DEV_CLS")]
+       public string IdDevCls { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("NM_DEV_CLS")]
-       public string NMDevCLS { get; set; }
+       [Column("NM_DEV_CLS")]
+       public string NmdevCls { get; set; }
 
 
        #endregion Public Properties

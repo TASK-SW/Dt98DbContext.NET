@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   VMARECORDS.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("VMARECORDS")]
-   public class VMARecords
+   [Table("VMARECORDS")]
+   public class VmaRecords
    {
       #region Public Constructors
 
-       public VMARecords()
+       public VmaRecords()
       {
       }
 
@@ -24,41 +17,45 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ProductId")]
+       [Key, Column(Order = 0)]
+       //[Column("ProductId")]
        public int ProductId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("FuelpointId")]
+       [Key, Column(Order = 1)]
+       //[Column("FuelpointId")]
        public int FuelpointId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("NozzleId")]
+       [Key, Column(Order = 2)]
+       //[Column("NozzleId")]
        public int NozzleId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TSBegin")]
-       public DateTime TSBegin { get; set; }
+       [Key, Column(Order = 3)]
+       //[Column("TSBegin")]
+       public DateTime TsBegin { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TSEnd")]
-       public DateTime TSEnd { get; set; }
+       [Column("TSEnd")]
+       public DateTime Tsend { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OldPrice")]
+       [Column("OldPrice")]
        public decimal OldPrice { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("NewPrice")]
+       [Column("NewPrice")]
        public decimal NewPrice { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("Volume")]
+       [Column("Volume")]
        public decimal Volume { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("Amount")]
+       [Column("Amount")]
        public decimal Amount { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("HostDeliveryState")]
+       [Column("HostDeliveryState")]
        public int HostDeliveryState { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OrderNumber")]
+       [Column("OrderNumber")]
        public int OrderNumber { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TSPlanned")]
-       public DateTime TSPlanned { get; set; }
+       [Column("TSPlanned")]
+       public DateTime TsPlanned { get; set; }
 
 
        #endregion Public Properties

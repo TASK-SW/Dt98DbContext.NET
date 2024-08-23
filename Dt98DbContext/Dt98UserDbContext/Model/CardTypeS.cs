@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   _sctCARDTYPES.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("_sctCARDTYPES")]
-   public class CardTypeS
+   [Table("_sctCARDTYPES")]
+   public class CardTypes
    {
       #region Public Constructors
 
-       public CardTypeS()
+       public CardTypes()
       {
       }
 
@@ -24,38 +17,39 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
        public string Oid { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ID")]
+       [Column("ID")]
        public int Id { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("NAME")]
+       [Column("NAME")]
        public string Name { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("SHORTNAME")]
+       [Column("SHORTNAME")]
        public string ShortName { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("IID")]
+       [Column("IID")]
        public string IId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("CLSID")]
-       public string CLSId { get; set; }
+       [Column("CLSID")]
+       public string ClsId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("IID_LAYOUT")]
+       [Column("IID_LAYOUT")]
        public string IIdLayout { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("CLSID_LAYOUT")]
-       public string CLSIdLayout { get; set; }
+       [Column("CLSID_LAYOUT")]
+       public string ClsIdLayout { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_CARDBASETYPE")]
+       [Column("OID_CARDBASETYPE")]
        public string OidCardBaseType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("IID_MANUALCARDDLG")]
-       public string IIdManualCardDLG { get; set; }
+       [Column("IID_MANUALCARDDLG")]
+       public string IIdManualCardDlg { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("CLSID_MANUALCARDDLG")]
-       public string CLSIdManualCardDLG { get; set; }
+       [Column("CLSID_MANUALCARDDLG")]
+       public string ClsIdManualCardDlg { get; set; }
 
 
        #endregion Public Properties

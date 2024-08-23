@@ -1,17 +1,10 @@
-//==================================================================================================
-//  FILE        :   JOURNALHEADER.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("JOURNALHEADER")]
+   [Table("JOURNALHEADER")]
    public class JournalHeader
    {
       #region Public Constructors
@@ -24,154 +17,155 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
        public string Oid { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("RECTYPE")]
-       public int RECType { get; set; }
+       [Column("RECTYPE")]
+       public int RecType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("JOURNALID")]
+       [Column("JOURNALID")]
        public int JournalId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DATETIME")]
+       [Column("DATETIME")]
        public DateTime DateTime { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TERMINALID")]
+       [Column("TERMINALID")]
        public string TerminalId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ACCOUNT")]
+       [Column("ACCOUNT")]
        public string Account { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("CARDNUMBER")]
+       [Column("CARDNUMBER")]
        public string CardNumber { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("CARDINFO")]
+       [Column("CARDINFO")]
        public string CardInfo { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("NETTOTAL")]
+       [Column("NETTOTAL")]
        public decimal NetTotal { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TAXTOTAL")]
-       public decimal TAXTotal { get; set; }
+       [Column("TAXTOTAL")]
+       public decimal TaxTotal { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TRACK_1")]
+       [Column("TRACK_1")]
        public string Track1 { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TRACK_2")]
+       [Column("TRACK_2")]
        public string Track2 { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TRACK_3")]
+       [Column("TRACK_3")]
        public string Track3 { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("CHIP")]
+       [Column("CHIP")]
        public string Chip { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("AMT_AUTHORIZED")]
-       public decimal AMTAuthorized { get; set; }
+       [Column("AMT_AUTHORIZED")]
+       public decimal AmtAuthorized { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("AMT_PAID")]
-       public decimal AMTPaid { get; set; }
+       [Column("AMT_PAID")]
+       public decimal AmtPaid { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("LAYOUTJOURNAL")]
+       [Column("LAYOUTJOURNAL")]
        public int LayoutJournal { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("LAYOUTRECEIPT")]
+       [Column("LAYOUTRECEIPT")]
        public int LayoutReceipt { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("LAYOUTCARDINFO")]
+       [Column("LAYOUTCARDINFO")]
        public int LayoutCardInfo { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TERMINATIONCODE")]
+       [Column("TERMINATIONCODE")]
        public int TerminationCode { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ERRORCODE")]
+       [Column("ERRORCODE")]
        public int ErrorCode { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("AMT_REST")]
-       public decimal Amtrest { get; set; }
+       [Column("AMT_REST")]
+       public decimal AmtRest { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TRXSEQNO")]
-       public int Trxseqno { get; set; }
+       [Column("TRXSEQNO")]
+       public int TrxSeqNo { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TRXCOUNT")]
-       public int TRXCount { get; set; }
+       [Column("TRXCOUNT")]
+       public int TrxCount { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ARTDETAILTYPE")]
+       [Column("ARTDETAILTYPE")]
        public int ArtDetailType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PAYMENTTYPE")]
+       [Column("PAYMENTTYPE")]
        public string PaymentType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("LANGUAGE")]
+       [Column("LANGUAGE")]
        public int Language { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_STORNO_ORIGIN")]
+       [Column("OID_STORNO_ORIGIN")]
        public string OidStornoOrigin { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("STORNOTYPE")]
+       [Column("STORNOTYPE")]
        public int StornoType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ID_STR_RT")]
-       public int IdSTRRT { get; set; }
+       [Column("ID_STR_RT")]
+       public int IdStrRt { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ID_WS")]
-       public int IdWS { get; set; }
+       [Column("ID_WS")]
+       public int IdWs { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ID_OPR")]
-       public int IdOPR { get; set; }
+       [Column("ID_OPR")]
+       public int IdopR { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TS_TM_SRT")]
-       public DateTime Tstmsrt { get; set; }
+       [Column("TS_TM_SRT")]
+       public DateTime TsTmSRt { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("AMT_RND")]
-       public decimal Amtrnd { get; set; }
+       [Column("AMT_RND")]
+       public decimal AmtRnd { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("AMT_RCV")]
-       public decimal Amtrcv { get; set; }
+       [Column("AMT_RCV")]
+       public decimal AmtRcv { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("AMT_RTN")]
-       public decimal Amtrtn { get; set; }
+       [Column("AMT_RTN")]
+       public decimal AmtRtn { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("RND_TYPE")]
-       public int RNDType { get; set; }
+       [Column("RND_TYPE")]
+       public int RndType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("CARD_NAME")]
+       [Column("CARD_NAME")]
        public string CardName { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ACCOUNT_NO")]
-       public string AccountNO { get; set; }
+       [Column("ACCOUNT_NO")]
+       public string AccountNo { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("FOREIGN_CNY")]
-       public int ForeignCNY { get; set; }
+       [Column("FOREIGN_CNY")]
+       public int ForeignCny { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DSC_TYPE")]
-       public int DSCType { get; set; }
+       [Column("DSC_TYPE")]
+       public int DscType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DSC_RATE")]
-       public decimal DSCRate { get; set; }
+       [Column("DSC_RATE")]
+       public decimal DscRate { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DSC_AMT")]
-       public decimal Dscamt { get; set; }
+       [Column("DSC_AMT")]
+       public decimal DscAmt { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DSC_AMTTOT")]
-       public decimal Dscamttot { get; set; }
+       [Column("DSC_AMTTOT")]
+       public decimal DscAmtTot { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("AUTH_INFO")]
+       [Column("AUTH_INFO")]
        public string AuthInfo { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("HOSTDELIVERYSTATE")]
+       [Column("HOSTDELIVERYSTATE")]
        public int HostDeliveryState { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DSC_TYPE_ID")]
-       public string DSCTypeId { get; set; }
+       [Column("DSC_TYPE_ID")]
+       public string DscTypeId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DSC_TYPE_NAME")]
-       public string DSCTypeName { get; set; }
+       [Column("DSC_TYPE_NAME")]
+       public string DscTypeName { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DSC_REF_NO")]
-       public string Dscrefno { get; set; }
+       [Column("DSC_REF_NO")]
+       public string DscRefNo { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("MATCH_CODE")]
+       [Column("MATCH_CODE")]
        public string MatchCode { get; set; }
 
 

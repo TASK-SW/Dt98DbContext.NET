@@ -1,17 +1,10 @@
-//==================================================================================================
-//  FILE        :   DatacomOnlineHosts.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("DatacomOnlineHosts")]
+   [Table("DatacomOnlineHosts")]
    public class DatacomOnlineHosts
    {
       #region Public Constructors
@@ -24,43 +17,46 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("HostId")]
+       [Key, Column(Order = 0)]
+       //[Column("HostId")]
        public int HostId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("RecordState")]
+       [Key, Column(Order = 1)]
+       //[Column("RecordState")]
        public int RecordState { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ApplicationId")]
+       [Key, Column(Order = 2)]
+       //[Column("ApplicationId")]
        public string ApplicationId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("HostAddressIsdnB")]
+       [Column("HostAddressIsdnB")]
        public string HostAddressIsdnB { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("HostAddressIP")]
+       [Column("HostAddressIP")]
        public string HostAddressIP { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("MessageTimeout")]
+       [Column("MessageTimeout")]
        public int MessageTimeout { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("RetryCountAuthorization")]
+       [Column("RetryCountAuthorization")]
        public int RetryCountAuthorization { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("RetryCountCancellation")]
+       [Column("RetryCountCancellation")]
        public int RetryCountCancellation { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("MACKeyId")]
+       [Column("MACKeyId")]
        public int MacKeyId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("MACKey")]
+       [Column("MACKey")]
        public string MacKey { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ENCKeyId")]
-       public int ENCKeyId { get; set; }
+       [Column("ENCKeyId")]
+       public int EncKeyId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ENCKey")]
-       public string ENCKey { get; set; }
+       [Column("ENCKey")]
+       public string EncKey { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OlisVersion")]
+       [Column("OlisVersion")]
        public int OlisVersion { get; set; }
 
 

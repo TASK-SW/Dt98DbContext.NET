@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   VMAHISTORYTANK_OLD.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("VMAHISTORYTANK_OLD")]
-   public class VMAHistoryTankOLD
+   [Table("VMAHISTORYTANK_OLD")]
+   public class VmaHistoryTankOld
    {
       #region Public Constructors
 
-       public VMAHistoryTankOLD()
+       public VmaHistoryTankOld()
       {
       }
 
@@ -24,34 +17,34 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ProductId")]
+       [Column("ProductId")]
        public int ProductId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TankId")]
+       [Column("TankId")]
        public int TankId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("VMAType")]
-       public int VMAType { get; set; }
+       [Column("VMAType")]
+       public int VmaType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DateTime")]
+       [Column("DateTime")]
        public DateTime DateTime { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OrderNumber")]
+       [Column("OrderNumber")]
        public int OrderNumber { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("UnitPrice")]
+       [Column("UnitPrice")]
        public decimal UnitPrice { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("UnitPriceNew")]
+       [Column("UnitPriceNew")]
        public decimal UnitPriceNew { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TankContent")]
+       [Column("TankContent")]
        public decimal TankContent { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TankMeter")]
+       [Column("TankMeter")]
        public decimal TankMeter { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("HostDeliveryState")]
+       [Column("HostDeliveryState")]
        public int HostDeliveryState { get; set; }
 
 

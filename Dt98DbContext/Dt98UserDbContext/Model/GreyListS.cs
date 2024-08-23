@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   _sptGREYLISTS.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("_sptGREYLISTS")]
-   public class GreyListS
+   [Table("_sptGREYLISTS")]
+   public class GreyLists
    {
       #region Public Constructors
 
-       public GreyListS()
+       public GreyLists()
       {
       }
 
@@ -24,28 +17,29 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
        public string Oid { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_TYPE")]
+       [Column("OID_TYPE")]
        public string OidType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ID")]
+       [Column("ID")]
        public int Id { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("GENNO")]
-       public string GenNO { get; set; }
+       [Column("GENNO")]
+       public string GenNo { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("UPGENNO")]
-       public string UPGenNO { get; set; }
+       [Column("UPGENNO")]
+       public string UpGenNo { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("VERSION")]
+       [Column("VERSION")]
        public string Version { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("VALIDITY")]
+       [Column("VALIDITY")]
        public int Validity { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DOWNLOADDATE")]
+       [Column("DOWNLOADDATE")]
        public DateTime DownloadDate { get; set; }
 
 

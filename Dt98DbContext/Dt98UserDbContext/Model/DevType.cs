@@ -1,17 +1,10 @@
-//==================================================================================================
-//  FILE        :   DEV_TYPE.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("DEV_TYPE")]
+   [Table("DEV_TYPE")]
    public class DevType
    {
       #region Public Constructors
@@ -24,17 +17,19 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ID_DEV_TYP")]
+       [Key, Column(Order = 0)]
+       //[Column("ID_DEV_TYP")]
        public string IdDevTyp { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ID_DEV_CLS")]
-       public string IdDevCLS { get; set; }
+       [Key, Column(Order = 1)]
+       //[Column("ID_DEV_CLS")]
+       public string IdDevCls { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("NM_DEV_TYP")]
-       public string NMDevTyp { get; set; }
+       [Column("NM_DEV_TYP")]
+       public string NmdevTyp { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("CLSID_DEV_TYP")]
-       public string CLSIdDevTyp { get; set; }
+       [Column("CLSID_DEV_TYP")]
+       public string ClsIdDevTyp { get; set; }
 
 
        #endregion Public Properties

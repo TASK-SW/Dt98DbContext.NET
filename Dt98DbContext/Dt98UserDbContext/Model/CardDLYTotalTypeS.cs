@@ -1,33 +1,39 @@
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-    [System.ComponentModel.DataAnnotations.Schema.Table("_sctCARDDLYTOTALTYPES")]
-    public class CardDLYTotalTypeS
-    {
-        #region Public Constructors
+   [Table("_sctCARDDLYTOTALTYPES")]
+   public class CardDlyTotalTypes
+   {
+      #region Public Constructors
 
-        public CardDLYTotalTypeS()
-        {
-        }
+       public CardDlyTotalTypes()
+      {
+      }
 
-        #endregion Public Constructors
+       #endregion Public Constructors
 
-        #region Public Properties
+       #region Public Properties
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
-        public string Oid { get; set; }
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
+       public string Oid { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("ID")]
-        public int Id { get; set; }
+       [Column("ID")]
+       public int Id { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("NAME")]
-        public string Name { get; set; }
+       [Column("NAME")]
+       public string Name { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("IID")]
-        public string IId { get; set; }
+       [Column("IID")]
+       public string IId { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("CLSID")]
-        public string CLSId { get; set; }
+       [Column("CLSID")]
+       public string ClsId { get; set; }
 
-        #endregion Public Properties
-    }
+
+       #endregion Public Properties
+   }
 }

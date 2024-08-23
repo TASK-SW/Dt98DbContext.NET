@@ -1,17 +1,10 @@
-//==================================================================================================
-//  FILE        :   VMA_History.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("VMA_History")]
+   [Table("VMA_History")]
    public class VMA_History
    {
       #region Public Constructors
@@ -24,55 +17,64 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ProductId")]
+       [Key, Column(Order = 0)]
+       //[Column("ProductId")]
        public int ProductId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("FuelPointId")]
+       [Key, Column(Order = 1)]
+       //[Column("FuelPointId")]
        public int FuelPointId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("NozzleId")]
+       [Key, Column(Order = 2)]
+       //[Column("NozzleId")]
        public int NozzleId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TankId")]
+       [Key, Column(Order = 3)]
+       //[Column("TankId")]
        public int TankId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ProcessingTime")]
+       [Key, Column(Order = 4)]
+       //[Column("ProcessingTime")]
        public DateTime ProcessingTime { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("VMASeqNumber")]
-       public int VMASeqNumber { get; set; }
+       [Key, Column(Order = 5)]
+       //[Column("VMASeqNumber")]
+       public int VmaSeqNumber { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("VMAType")]
-       public int VMAType { get; set; }
+       [Key, Column(Order = 6)]
+       //[Column("VMAType")]
+       public int VmaType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("VMATypeSeqNumber")]
-       public int VMATypeSeqNumber { get; set; }
+       [Key, Column(Order = 7)]
+       //[Column("VMATypeSeqNumber")]
+       public int VmaTypeSeqNumber { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OrderNumber")]
+       [Key, Column(Order = 8)]
+       //[Column("OrderNumber")]
        public int OrderNumber { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("Status")]
+       [Column("Status")]
        public int Status { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("HostDeliveryState")]
+       [Column("HostDeliveryState")]
        public int HostDeliveryState { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PlannedTime")]
+       [Column("PlannedTime")]
        public DateTime PlannedTime { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("UnitPrice")]
+       [Column("UnitPrice")]
        public decimal UnitPrice { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("NewUnitPrice")]
+       [Column("NewUnitPrice")]
        public decimal NewUnitPrice { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("Volume")]
+       [Column("Volume")]
        public decimal Volume { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("Amount")]
+       [Column("Amount")]
        public decimal Amount { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ResultCode")]
+       [Column("ResultCode")]
        public int ResultCode { get; set; }
 
 

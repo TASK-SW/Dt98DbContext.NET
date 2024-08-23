@@ -1,17 +1,10 @@
-//==================================================================================================
-//  FILE        :   ReceiptsToPrint.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("ReceiptsToPrint")]
+   [Table("ReceiptsToPrint")]
    public class ReceiptsToPrint
    {
       #region Public Constructors
@@ -24,16 +17,17 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_JourHead")]
+       [Key, Column(Order = 0)]
+       //[Column("OID_JourHead")]
        public string OidJourHead { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TerminalId")]
+       [Column("TerminalId")]
        public string TerminalId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ReceiptMsg")]
+       [Column("ReceiptMsg")]
        public string ReceiptMsg { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("RetryPrintCount")]
+       [Column("RetryPrintCount")]
        public int RetryPrintCount { get; set; }
 
 

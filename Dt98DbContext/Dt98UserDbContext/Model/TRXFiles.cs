@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   TRXFILES.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("TRXFILES")]
-   public class TRXFiles
+   [Table("TRXFILES")]
+   public class TrxFiles
    {
       #region Public Constructors
 
-       public TRXFiles()
+       public TrxFiles()
       {
       }
 
@@ -24,26 +17,27 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
        public string Oid { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_SEQUENCE")]
-       public int DTSequence { get; set; }
+       [Column("DT_SEQUENCE")]
+       public int DtSequence { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_RESETDATE")]
-       public DateTime DTRESetDate { get; set; }
+       [Column("DT_RESETDATE")]
+       public DateTime DtResetDate { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_ACTNUM")]
-       public int Dtactnum { get; set; }
+       [Column("DT_ACTNUM")]
+       public int DtActNum { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_PASNUM")]
-       public int Dtpasnum { get; set; }
+       [Column("DT_PASNUM")]
+       public int DtPASNum { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_VERSION")]
-       public int DTVersion { get; set; }
+       [Column("DT_VERSION")]
+       public int DtVersion { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_LASTTRXDATE")]
-       public DateTime DTLastTRXDate { get; set; }
+       [Column("DT_LASTTRXDATE")]
+       public DateTime DtLastTrxDate { get; set; }
 
 
        #endregion Public Properties

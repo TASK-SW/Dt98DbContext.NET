@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   VMARECORDSTANK.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("VMARECORDSTANK")]
-   public class VMARecordsTank
+   [Table("VMARECORDSTANK")]
+   public class VmaRecordsTank
    {
       #region Public Constructors
 
-       public VMARecordsTank()
+       public VmaRecordsTank()
       {
       }
 
@@ -24,22 +17,27 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ProductId")]
+       [Key, Column(Order = 0)]
+       //[Column("ProductId")]
        public int ProductId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("FuelpointId")]
+       [Key, Column(Order = 1)]
+       //[Column("FuelpointId")]
        public int FuelpointId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("NozzleId")]
+       [Key, Column(Order = 2)]
+       //[Column("NozzleId")]
        public int NozzleId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TSBegin")]
-       public DateTime TSBegin { get; set; }
+       [Key, Column(Order = 3)]
+       //[Column("TSBegin")]
+       public DateTime TsBegin { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TankId")]
+       [Key, Column(Order = 4)]
+       //[Column("TankId")]
        public int TankId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TankMeter")]
+       [Column("TankMeter")]
        public decimal TankMeter { get; set; }
 
 

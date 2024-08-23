@@ -1,33 +1,39 @@
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-    [System.ComponentModel.DataAnnotations.Schema.Table("_sptCARDPRODUCTS")]
-    public class CardProductS
-    {
-        #region Public Constructors
+   [Table("_sptCARDPRODUCTS")]
+   public class CardProducts
+   {
+      #region Public Constructors
 
-        public CardProductS()
-        {
-        }
+       public CardProducts()
+      {
+      }
 
-        #endregion Public Constructors
+       #endregion Public Constructors
 
-        #region Public Properties
+       #region Public Properties
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
-        public string Oid { get; set; }
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
+       public string Oid { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID_CARDTYPE")]
-        public string OidCardType { get; set; }
+       [Column("OID_CARDTYPE")]
+       public string OidCardType { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("SERVICECODE")]
-        public int ServiceCode { get; set; }
+       [Column("SERVICECODE")]
+       public int ServiceCode { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("SERVICEVALUE")]
-        public int ServiceValue { get; set; }
+       [Column("SERVICEVALUE")]
+       public int ServiceValue { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("PRODUCTS")]
-        public string ProductS { get; set; }
+       [Column("PRODUCTS")]
+       public string Products { get; set; }
 
-        #endregion Public Properties
-    }
+
+       #endregion Public Properties
+   }
 }

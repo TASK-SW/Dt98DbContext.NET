@@ -1,63 +1,69 @@
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-    [System.ComponentModel.DataAnnotations.Schema.Table("_sptCARDDATACOM")]
-    public class CardDataCom
-    {
-        #region Public Constructors
+   [Table("_sptCARDDATACOM")]
+   public class CardDataCom
+   {
+      #region Public Constructors
 
-        public CardDataCom()
-        {
-        }
+       public CardDataCom()
+      {
+      }
 
-        #endregion Public Constructors
+       #endregion Public Constructors
 
-        #region Public Properties
+       #region Public Properties
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
-        public string Oid { get; set; }
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
+       public string Oid { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("DT_CARD_TYPE_ID")]
-        public string DTCardTypeId { get; set; }
+       [Column("DT_CARD_TYPE_ID")]
+       public string DtCardTypeId { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("DT_ROUND_OPTOTAL")]
-        public int DTRoundOPTotal { get; set; }
+       [Column("DT_ROUND_OPTOTAL")]
+       public int DtRoundOpTotal { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("DT_ROUND_TRX")]
-        public int DTRoundTRX { get; set; }
+       [Column("DT_ROUND_TRX")]
+       public int DtRoundTrx { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("DT_XMIT_LIMIT_OUTDOOR")]
-        public int DTXMITLimitOutdoor { get; set; }
+       [Column("DT_XMIT_LIMIT_OUTDOOR")]
+       public int DtXmitLimitOutdoor { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("DT_LIMIT_OUTDOOR")]
-        public int DTLimitOutdoor { get; set; }
+       [Column("DT_LIMIT_OUTDOOR")]
+       public int DtLimitOutdoor { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("DT_LIMIT_TOTAL")]
-        public int DTLimitTotal { get; set; }
+       [Column("DT_LIMIT_TOTAL")]
+       public int DtLimitTotal { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("DT_ACCEPTANCE")]
-        public int DTAcceptance { get; set; }
+       [Column("DT_ACCEPTANCE")]
+       public int DtAcceptance { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("DT_XMIT_ONLINE_AUTH")]
-        public int DTXMITONLINEAuth { get; set; }
+       [Column("DT_XMIT_ONLINE_AUTH")]
+       public int DtXmitOnlineAuth { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("DT_ONLINE_AUTH")]
-        public int DTONLINEAuth { get; set; }
+       [Column("DT_ONLINE_AUTH")]
+       public int DtOnlineAuth { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("DT_XMIT_PIN_AUTH")]
-        public int DTXMITPINAuth { get; set; }
+       [Column("DT_XMIT_PIN_AUTH")]
+       public int DtXmitPinAuth { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("DT_PIN_AUTH")]
-        public int DTPINAuth { get; set; }
+       [Column("DT_PIN_AUTH")]
+       public int DtPinAuth { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("PAN_STRIP_BLACKLIST")]
-        public int PANStripBlackList { get; set; }
+       [Column("PAN_STRIP_BLACKLIST")]
+       public int PanStripBlackList { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("PAN_STRIP_TRANSACT")]
-        public int PANStripTransACT { get; set; }
+       [Column("PAN_STRIP_TRANSACT")]
+       public int PanStripTransAct { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("TRXDELIVMASK")]
-        public int TRXDelivMask { get; set; }
+       [Column("TRXDELIVMASK")]
+       public int TrxDelivMask { get; set; }
 
-        #endregion Public Properties
-    }
+
+       #endregion Public Properties
+   }
 }

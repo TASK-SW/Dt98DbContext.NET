@@ -1,27 +1,34 @@
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-    [System.ComponentModel.DataAnnotations.Schema.Table("AlternativePrices")]
-    public class AlternativePrices
-    {
-        #region Public Constructors
+   [Table("AlternativePrices")]
+   public class AlternativePrices
+   {
+      #region Public Constructors
 
-        public AlternativePrices()
-        {
-        }
+       public AlternativePrices()
+      {
+      }
 
-        #endregion Public Constructors
+       #endregion Public Constructors
 
-        #region Public Properties
+       #region Public Properties
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OIDArticle")]
-        public string OidArticle { get; set; }
+       [Key, Column(Order = 0)]
+       //[Column("OIDArticle")]
+       public string OidArticle { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("PriceId")]
-        public int PriceId { get; set; }
+       [Key, Column(Order = 1)]
+       //[Column("PriceId")]
+       public int PriceId { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("SalesPrice")]
-        public decimal SalesPrice { get; set; }
+       [Column("SalesPrice")]
+       public decimal SalesPrice { get; set; }
 
-        #endregion Public Properties
-    }
+
+       #endregion Public Properties
+   }
 }

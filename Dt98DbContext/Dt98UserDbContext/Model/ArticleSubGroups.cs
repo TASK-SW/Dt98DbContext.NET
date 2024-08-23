@@ -1,33 +1,39 @@
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-    [System.ComponentModel.DataAnnotations.Schema.Table("ARTICLESUBGROUPS")]
-    public class ArticlesUBGroups
-    {
-        #region Public Constructors
+   [Table("ARTICLESUBGROUPS")]
+   public class ArticlesUbGroups
+   {
+      #region Public Constructors
 
-        public ArticlesUBGroups()
-        {
-        }
+       public ArticlesUbGroups()
+      {
+      }
 
-        #endregion Public Constructors
+       #endregion Public Constructors
 
-        #region Public Properties
+       #region Public Properties
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
-        public string Oid { get; set; }
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
+       public string Oid { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID_ARTGRP")]
-        public string OidArtGrp { get; set; }
+       [Column("OID_ARTGRP")]
+       public string OidArtGrp { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("ID")]
-        public string Id { get; set; }
+       [Column("ID")]
+       public string Id { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("NAME")]
-        public string Name { get; set; }
+       [Column("NAME")]
+       public string Name { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("MIN_AGE")]
-        public int Minage { get; set; }
+       [Column("MIN_AGE")]
+       public int Minage { get; set; }
 
-        #endregion Public Properties
-    }
+
+       #endregion Public Properties
+   }
 }

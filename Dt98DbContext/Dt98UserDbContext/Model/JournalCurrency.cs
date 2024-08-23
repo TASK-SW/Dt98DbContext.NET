@@ -1,17 +1,10 @@
-//==================================================================================================
-//  FILE        :   JOURNALCURRENCY.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("JOURNALCURRENCY")]
+   [Table("JOURNALCURRENCY")]
    public class JournalCurrency
    {
       #region Public Constructors
@@ -24,44 +17,46 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_JOURNAL")]
+       [Key, Column(Order = 0)]
+       //[Column("OID_JOURNAL")]
        public string OidJournal { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ID_CNY")]
-       public int IdCNY { get; set; }
+       [Key, Column(Order = 1)]
+       //[Column("ID_CNY")]
+       public int IdCny { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("SY_CNY")]
-       public string Sycny { get; set; }
+       [Column("SY_CNY")]
+       public string SyCny { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("EXCHG_RATE_RCV")]
-       public decimal EXCHGRateRCV { get; set; }
+       [Column("EXCHG_RATE_RCV")]
+       public decimal ExchgRateRcv { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("EXCHG_RATE_RTN")]
-       public decimal EXCHGRateRTN { get; set; }
+       [Column("EXCHG_RATE_RTN")]
+       public decimal ExchgRateRtn { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("EXCHG_FEE")]
-       public decimal Exchgfee { get; set; }
+       [Column("EXCHG_FEE")]
+       public decimal ExchgFee { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("AMT_SALE")]
-       public decimal AMTSale { get; set; }
+       [Column("AMT_SALE")]
+       public decimal AmtSale { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("AMT_RCV")]
-       public decimal Amtrcv { get; set; }
+       [Column("AMT_RCV")]
+       public decimal AmtRcv { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("AMT_RTN")]
-       public decimal Amtrtn { get; set; }
+       [Column("AMT_RTN")]
+       public decimal AmtRtn { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TY_TND")]
-       public string Tytnd { get; set; }
+       [Column("TY_TND")]
+       public string TyTnd { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("FL_MAIN_TND")]
-       public int Flmaintnd { get; set; }
+       [Column("FL_MAIN_TND")]
+       public int FlmAIntNd { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("LOCAL_AMT_RND")]
-       public decimal LocalAMTRND { get; set; }
+       [Column("LOCAL_AMT_RND")]
+       public decimal LocalAmtRnd { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DE_TND")]
-       public string Detnd { get; set; }
+       [Column("DE_TND")]
+       public string DeTnd { get; set; }
 
 
        #endregion Public Properties

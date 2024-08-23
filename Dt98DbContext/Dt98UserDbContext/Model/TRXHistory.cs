@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   TRXHISTORY.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("TRXHISTORY")]
-   public class TRXHistory
+   [Table("TRXHISTORY")]
+   public class TrxHistory
    {
       #region Public Constructors
 
-       public TRXHistory()
+       public TrxHistory()
       {
       }
 
@@ -24,28 +17,28 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("APPLICATION")]
+       [Column("APPLICATION")]
        public string Application { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("GENERATION")]
+       [Column("GENERATION")]
        public int Generation { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DATESTART")]
+       [Column("DATESTART")]
        public DateTime DateStart { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DATEEND")]
+       [Column("DATEEND")]
        public DateTime DateEnd { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DATEDELIVERY")]
+       [Column("DATEDELIVERY")]
        public DateTime DateDelivery { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DATECLEARED")]
+       [Column("DATECLEARED")]
        public DateTime DateCLEARed { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TOTAL")]
+       [Column("TOTAL")]
        public decimal Total { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TRANSCOUNT")]
+       [Column("TRANSCOUNT")]
        public int TransCount { get; set; }
 
 

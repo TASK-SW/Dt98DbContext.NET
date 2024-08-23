@@ -1,17 +1,10 @@
-//==================================================================================================
-//  FILE        :   _sptHOSTS.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("_sptHOSTS")]
+   [Table("_sptHOSTS")]
    public class Hosts
    {
       #region Public Constructors
@@ -24,56 +17,57 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
        public string Oid { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_TYPE")]
+       [Column("OID_TYPE")]
        public string OidType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_NAME")]
-       public string DTName { get; set; }
+       [Column("DT_NAME")]
+       public string DtName { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_STATION_ID")]
-       public string DTStationId { get; set; }
+       [Column("DT_STATION_ID")]
+       public string DtStationId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_ISSUERLIST_OID")]
-       public string DTISSUERListOid { get; set; }
+       [Column("DT_ISSUERLIST_OID")]
+       public string DtIssuerListOid { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_FILEID_MSD")]
-       public string DTFileIdMSD { get; set; }
+       [Column("DT_FILEID_MSD")]
+       public string DtFileIdMsd { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_SHORTCUT")]
-       public string DTShortCut { get; set; }
+       [Column("DT_SHORTCUT")]
+       public string DtShortCut { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_APPLICATION_ID")]
-       public string DTApplicationId { get; set; }
+       [Column("DT_APPLICATION_ID")]
+       public string DtApplicationId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_INPATH")]
-       public string DTINPath { get; set; }
+       [Column("DT_INPATH")]
+       public string DtInPath { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_OUTPATH")]
-       public string DTOUTPath { get; set; }
+       [Column("DT_OUTPATH")]
+       public string DtOutPath { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_SLUMPATH")]
-       public string DTSLUMPath { get; set; }
+       [Column("DT_SLUMPATH")]
+       public string DtSlumPath { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_CARDHANDLING_OID")]
-       public string DTCardHandlingOid { get; set; }
+       [Column("DT_CARDHANDLING_OID")]
+       public string DtCardHandlingOid { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_CHECK_SYSTEM")]
-       public int DTCheckSystem { get; set; }
+       [Column("DT_CHECK_SYSTEM")]
+       public int DtCheckSystem { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_CHECK_ACCEPTANCE")]
-       public int DTCheckAcceptance { get; set; }
+       [Column("DT_CHECK_ACCEPTANCE")]
+       public int DtCheckAcceptance { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_DELIVER_OPTOTAL")]
-       public int DTDelivEROPTotal { get; set; }
+       [Column("DT_DELIVER_OPTOTAL")]
+       public int DtDelivErOpTotal { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_LOGIN_NAME")]
-       public string DTLOGINName { get; set; }
+       [Column("DT_LOGIN_NAME")]
+       public string DtLoginName { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_APPLICATION_TYPE")]
-       public string DTApplicationType { get; set; }
+       [Column("DT_APPLICATION_TYPE")]
+       public string DtApplicationType { get; set; }
 
 
        #endregion Public Properties

@@ -1,45 +1,51 @@
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-    [System.ComponentModel.DataAnnotations.Schema.Table("_sptCARDFIELDS")]
-    public class CardFieldS
-    {
-        #region Public Constructors
+   [Table("_sptCARDFIELDS")]
+   public class CardFields
+   {
+      #region Public Constructors
 
-        public CardFieldS()
-        {
-        }
+       public CardFields()
+      {
+      }
 
-        #endregion Public Constructors
+       #endregion Public Constructors
 
-        #region Public Properties
+       #region Public Properties
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
-        public string Oid { get; set; }
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
+       public string Oid { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID_TYPE")]
-        public string OidType { get; set; }
+       [Column("OID_TYPE")]
+       public string OidType { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("FIELDID")]
-        public int FieldId { get; set; }
+       [Column("FIELDID")]
+       public int FieldId { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("POSITION")]
-        public int Position { get; set; }
+       [Column("POSITION")]
+       public int Position { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("LENGTH")]
-        public int Length { get; set; }
+       [Column("LENGTH")]
+       public int Length { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("CHECKOPTION")]
-        public int CheckOption { get; set; }
+       [Column("CHECKOPTION")]
+       public int CheckOption { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("MINSIZE")]
-        public int MinSize { get; set; }
+       [Column("MINSIZE")]
+       public int MinSize { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("MAXSIZE")]
-        public int MaxSize { get; set; }
+       [Column("MAXSIZE")]
+       public int MaxSize { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("TEXTID")]
-        public int TextId { get; set; }
+       [Column("TEXTID")]
+       public int TextId { get; set; }
 
-        #endregion Public Properties
-    }
+
+       #endregion Public Properties
+   }
 }

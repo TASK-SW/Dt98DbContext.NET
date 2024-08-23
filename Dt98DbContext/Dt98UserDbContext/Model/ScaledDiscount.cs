@@ -1,17 +1,10 @@
-//==================================================================================================
-//  FILE        :   ScaledDiscount.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("ScaledDiscount")]
+   [Table("ScaledDiscount")]
    public class ScaledDiscount
    {
       #region Public Constructors
@@ -24,16 +17,18 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ItemId")]
+       [Key, Column(Order = 0)]
+       //[Column("ItemId")]
        public int ItemId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("Threshold")]
+       [Key, Column(Order = 1)]
+       //[Column("Threshold")]
        public decimal Threshold { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("Type")]
+       [Column("Type")]
        public int Type { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("Amount")]
+       [Column("Amount")]
        public decimal Amount { get; set; }
 
 

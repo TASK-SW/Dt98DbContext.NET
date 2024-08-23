@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   TRXDATA.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("TRXDATA")]
-   public class TRXData
+   [Table("TRXDATA")]
+   public class TrxData
    {
       #region Public Constructors
 
-       public TRXData()
+       public TrxData()
       {
       }
 
@@ -24,26 +17,29 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_TRX")]
-       public string OidTRX { get; set; }
+       [Key, Column(Order = 0)]
+       //[Column("OID_TRX")]
+       public string OidTrx { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("GENERATION")]
+       [Key, Column(Order = 1)]
+       //[Column("GENERATION")]
        public int Generation { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_SEQUENCE")]
-       public int DTSequence { get; set; }
+       [Key, Column(Order = 2)]
+       //[Column("DT_SEQUENCE")]
+       public int DtSequence { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_TOTALAMOUNT")]
-       public decimal DTTotalAmount { get; set; }
+       [Column("DT_TOTALAMOUNT")]
+       public decimal DtTotalAmount { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_DATE")]
-       public DateTime DTDate { get; set; }
+       [Column("DT_DATE")]
+       public DateTime DtDate { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_JOURHEAD")]
-       public string DTJourHead { get; set; }
+       [Column("DT_JOURHEAD")]
+       public string DtJourHead { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_TRANSACT")]
-       public string DTTransACT { get; set; }
+       [Column("DT_TRANSACT")]
+       public string DtTransAct { get; set; }
 
 
        #endregion Public Properties

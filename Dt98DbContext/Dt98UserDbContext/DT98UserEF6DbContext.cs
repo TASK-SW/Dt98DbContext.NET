@@ -1,14 +1,5 @@
-//==================================================================================================
-//  FILE        :
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System.Data.Entity;
-using System.Linq;
-using TaskStar.Dt98DbContext.Dt98UserDbContext.Model;
+using TaskStar.Dt98DbContext.DT98UserDbContext.Model;
 
 namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 {
@@ -16,78 +7,76 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
     {
         #region Public Constructors
 
-        public Dt98UserEF6DbContext() : base(ConnectionString)
-        {
-        }
+        public static string ConnectionString { get; set; } = "data source=.\\SQL2014;Initial Catalog=DT98User;user id=sa;password=E77lingen;Integrated Security=False;";
 
+        public Dt98UserEF6DbContext() : base(ConnectionString) { }
         public Dt98UserEF6DbContext(string connectionString) : base(connectionString) => ConnectionString = connectionString;
 
         #endregion Public Constructors
 
         #region Public Properties
 
-        public static string ConnectionString { get; set; } = "data source=.\\SQL2014;Initial Catalog=DT98User;user id=sa;password=E77lingen;Integrated Security=False;";
         public DbSet<ArticleGroups> ArticleGroups { get; set; }
 
-        public DbSet<ArticleKITSet> ArticleKITSet { get; set; }
+        public DbSet<ArticleKitSet> ArticleKitSet { get; set; }
 
         public DbSet<Articles> Articles { get; set; }
 
         public DbSet<BlackListLocal0001S> BlackListLocal0001S { get; set; }
 
-        public DbSet<ArticlesUBGroups> ArticlesUBGroups { get; set; }
+        public DbSet<ArticlesUbGroups> ArticlesUbGroups { get; set; }
 
         public DbSet<AlternativePrices> AlternativePrices { get; set; }
 
-        public DbSet<BlackList_001> BlackList_001 { get; set; }
+        public DbSet<BlackList001> BlackList001 { get; set; }
 
-        public DbSet<BlackList_002> BlackList_002 { get; set; }
+        public DbSet<BlackList002> BlackList002 { get; set; }
 
         public DbSet<JournalJobs> JournalJobs { get; set; }
 
-        public DbSet<CardDLYTotal_001> CardDLYTotal_001 { get; set; }
+        public DbSet<CardDlyTotal001> CardDlyTotal001 { get; set; }
 
-        public DbSet<CardDLYTotal_002> CardDLYTotal_002 { get; set; }
+        public DbSet<CardDlyTotal002> CardDlyTotal002 { get; set; }
 
-        public DbSet<CardDLYTotal_003> CardDLYTotal_003 { get; set; }
+        public DbSet<CardDlyTotal003> CardDlyTotal003 { get; set; }
 
         public DbSet<VMacurrent> VMacurrent { get; set; }
 
-        public DbSet<CardDLYTotal_004> CardDLYTotal_004 { get; set; }
+        public DbSet<CardDlyTotal004> CardDlyTotal004 { get; set; }
 
-        public DbSet<CardDLYTotal_023> CardDLYTotal_023 { get; set; }
+        public DbSet<CardDlyTotal023> CardDlyTotal023 { get; set; }
 
         public DbSet<VMA_History> VMA_History { get; set; }
 
-        public DbSet<CardDLYTotal_025> CardDLYTotal_025 { get; set; }
+        public DbSet<CardDlyTotal025> CardDlyTotal025 { get; set; }
 
-        public DbSet<CardDLYTotal_026> CardDLYTotal_026 { get; set; }
+        public DbSet<CardDlyTotal026> CardDlyTotal026 { get; set; }
 
-        public DbSet<VMATankContents> VMATankContents { get; set; }
+        public DbSet<VmaTankContents> VmaTankContents { get; set; }
 
         public DbSet<TankNetz> TankNetz { get; set; }
 
-        public DbSet<CardDLYTotal_029> CardDLYTotal_029 { get; set; }
+        public DbSet<CardDlyTotal029> CardDlyTotal029 { get; set; }
 
-        public DbSet<CardDLYTotal_045> CardDLYTotal_045 { get; set; }
+        public DbSet<CardDlyTotal045> CardDlyTotal045 { get; set; }
 
-        public DbSet<CardDLYTotal_046> CardDLYTotal_046 { get; set; }
+        public DbSet<CardDlyTotal046> CardDlyTotal046 { get; set; }
 
-        public DbSet<CardDLYTotal_050> CardDLYTotal_050 { get; set; }
+        public DbSet<CardDlyTotal050> CardDlyTotal050 { get; set; }
 
-        public DbSet<CardDLYTotal_051> CardDLYTotal_051 { get; set; }
+        public DbSet<CardDlyTotal051> CardDlyTotal051 { get; set; }
 
-        public DbSet<CardDLYTotal_158> CardDLYTotal_158 { get; set; }
+        public DbSet<CardDlyTotal158> CardDlyTotal158 { get; set; }
 
-        public DbSet<CardDLYTotal_171> CardDLYTotal_171 { get; set; }
+        public DbSet<CardDlyTotal171> CardDlyTotal171 { get; set; }
 
-        public DbSet<CardTRXCount_001> CardTRXCount_001 { get; set; }
+        public DbSet<CardTrxCount001> CardTrxCount001 { get; set; }
 
-        public DbSet<CardTRXCount_002> CardTRXCount_002 { get; set; }
+        public DbSet<CardTrxCount002> CardTrxCount002 { get; set; }
 
         public DbSet<DevClass> DevClass { get; set; }
 
-        public DbSet<VMARecordsTank> VMARecordsTank { get; set; }
+        public DbSet<VmaRecordsTank> VmaRecordsTank { get; set; }
 
         public DbSet<DevConfig> DevConfig { get; set; }
 
@@ -103,163 +92,163 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 
         public DbSet<FuelSales> FuelSales { get; set; }
 
-        public DbSet<ISSUERListS> ISSUERListS { get; set; }
+        public DbSet<IssuerLists> IssuerLists { get; set; }
 
-        public DbSet<WEATWettbewerber> WEATWettbewerber { get; set; }
+        public DbSet<WeatWettbewerber> WeatWettbewerber { get; set; }
 
-        public DbSet<JournalBookingS> JournalBookingS { get; set; }
+        public DbSet<JournalBookings> JournalBookings { get; set; }
 
         public DbSet<JournalCurrency> JournalCurrency { get; set; }
 
-        public DbSet<VMAFuelSales> VMAFuelSales { get; set; }
+        public DbSet<VmaFuelSales> VmaFuelSales { get; set; }
 
         public DbSet<JournalHeader> JournalHeader { get; set; }
 
-        public DbSet<ObjectStateS> ObjectStateS { get; set; }
+        public DbSet<ObjectStates> ObjectStates { get; set; }
 
-        public DbSet<VMAHostStates> VMAHostStates { get; set; }
+        public DbSet<VmaHostStates> VmaHostStates { get; set; }
 
-        public DbSet<OPTotalData> OPTotalData { get; set; }
+        public DbSet<OpTotalData> OpTotalData { get; set; }
 
-        public DbSet<OPTotalFiles> OPTotalFiles { get; set; }
+        public DbSet<OpTotalFiles> OpTotalFiles { get; set; }
 
-        public DbSet<TRXHistory> TRXHistory { get; set; }
+        public DbSet<TrxHistory> TrxHistory { get; set; }
 
-        public DbSet<OPTotalGenerationS> OPTotalGenerationS { get; set; }
+        public DbSet<OpTotalGenerations> OpTotalGenerations { get; set; }
 
-        public DbSet<ReceiptS> ReceiptS { get; set; }
+        public DbSet<Receipts> Receipts { get; set; }
 
-        public DbSet<RedList_001> RedList_001 { get; set; }
+        public DbSet<RedList001> RedList001 { get; set; }
 
         public DbSet<TankTransactions> TankTransactions { get; set; }
 
-        public DbSet<VMARecords> VMARecords { get; set; }
+        public DbSet<VmaRecords> VmaRecords { get; set; }
 
-        public DbSet<RedList_002> RedList_002 { get; set; }
+        public DbSet<RedList002> RedList002 { get; set; }
 
-        public DbSet<RedList_003> RedList_003 { get; set; }
+        public DbSet<RedList003> RedList003 { get; set; }
 
-        public DbSet<RedList_004> RedList_004 { get; set; }
+        public DbSet<RedList004> RedList004 { get; set; }
 
-        public DbSet<RedList_023> RedList_023 { get; set; }
+        public DbSet<RedList023> RedList023 { get; set; }
 
-        public DbSet<RedList_025> RedList_025 { get; set; }
+        public DbSet<RedList025> RedList025 { get; set; }
 
         public DbSet<ScaledDiscount> ScaledDiscount { get; set; }
 
-        public DbSet<RedList_026> RedList_026 { get; set; }
+        public DbSet<RedList026> RedList026 { get; set; }
 
-        public DbSet<RedList_029> RedList_029 { get; set; }
+        public DbSet<RedList029> RedList029 { get; set; }
 
         public DbSet<SammelRecords> SammelRecords { get; set; }
 
         public DbSet<DatacomOnlineCards> DatacomOnlineCards { get; set; }
 
-        public DbSet<RedList_045> RedList_045 { get; set; }
+        public DbSet<RedList045> RedList045 { get; set; }
 
         public DbSet<DatacomOnlineHosts> DatacomOnlineHosts { get; set; }
 
-        public DbSet<RedList_046> RedList_046 { get; set; }
+        public DbSet<RedList046> RedList046 { get; set; }
 
-        public DbSet<RedList_050> RedList_050 { get; set; }
+        public DbSet<RedList050> RedList050 { get; set; }
 
-        public DbSet<RedList_051> RedList_051 { get; set; }
+        public DbSet<RedList051> RedList051 { get; set; }
 
-        public DbSet<WEATWettbewerbsDaten> WEATWettbewerbsDaten { get; set; }
+        public DbSet<WeatWettbewerbsDaten> WeatWettbewerbsDaten { get; set; }
 
-        public DbSet<RedList_158> RedList_158 { get; set; }
+        public DbSet<RedList158> RedList158 { get; set; }
 
-        public DbSet<RedList_171> RedList_171 { get; set; }
+        public DbSet<RedList171> RedList171 { get; set; }
 
-        public DbSet<SalesBookingS> SalesBookingS { get; set; }
+        public DbSet<SalesBookings> SalesBookings { get; set; }
 
         public DbSet<SalesHeader> SalesHeader { get; set; }
 
         public DbSet<Schedule> Schedule { get; set; }
 
-        public DbSet<VMAHistoryOLD> VMAHistoryOLD { get; set; }
+        public DbSet<VmaHistoryOld> VmaHistoryOld { get; set; }
 
         public DbSet<SqlPolicy> SqlPolicy { get; set; }
 
-        public DbSet<VMAHistoryTankOLD> VMAHistoryTankOLD { get; set; }
+        public DbSet<VmaHistoryTankOld> VmaHistoryTankOld { get; set; }
 
         public DbSet<Taxes> Taxes { get; set; }
 
-        public DbSet<VMAHistory> VMAHistory { get; set; }
+        public DbSet<VmaHistory> VmaHistory { get; set; }
 
-        public DbSet<TAInfo> TAInfo { get; set; }
+        public DbSet<TaInfo> TaInfo { get; set; }
 
-        public DbSet<TRXData> TRXData { get; set; }
+        public DbSet<TrxData> TrxData { get; set; }
 
-        public DbSet<TRXFiles> TRXFiles { get; set; }
+        public DbSet<TrxFiles> TrxFiles { get; set; }
 
-        public DbSet<TRXGenerationS> TRXGenerationS { get; set; }
+        public DbSet<TrxGenerations> TrxGenerations { get; set; }
 
         public DbSet<Version> Version { get; set; }
 
-        public DbSet<persFuelINGPointS> persFuelINGPointS { get; set; }
+        public DbSet<persFuelIngPoints> persFuelIngPoints { get; set; }
 
-        public DbSet<VMAHistoryTank> VMAHistoryTank { get; set; }
+        public DbSet<VmaHistoryTank> VmaHistoryTank { get; set; }
 
         public DbSet<persNozzles> persNozzles { get; set; }
 
-        public DbSet<BlackListTypes> BlackListTypeS { get; set; }
+        public DbSet<BlackListTypes> BlackListTypes { get; set; }
 
-        public DbSet<CardBaseTypes> CardBaseTypeS { get; set; }
+        public DbSet<CardBaseTypes> CardBaseTypes { get; set; }
 
-        public DbSet<Mts> Mts { get; set; }
+        public DbSet<MTs> MTs { get; set; }
 
-        public DbSet<CardDLYTotalTypeS> CardDLYTotalTypeS { get; set; }
+        public DbSet<CardDlyTotalTypes> CardDlyTotalTypes { get; set; }
 
-        public DbSet<CardTRXCountTypeS> CardTRXCountTypeS { get; set; }
+        public DbSet<CardTrxCountTypes> CardTrxCountTypes { get; set; }
 
-        public DbSet<CardTypeMapPING> CardTypeMapPING { get; set; }
+        public DbSet<CardTypeMApping> CardTypeMApping { get; set; }
 
-        public DbSet<CardTypeS> CardTypeS { get; set; }
+        public DbSet<CardTypes> CardTypes { get; set; }
 
-        public DbSet<FuelINGPointTypeS> FuelINGPointTypeS { get; set; }
+        public DbSet<FuelIngPointTypes> FuelIngPointTypes { get; set; }
 
-        public DbSet<GreyListTypeS> GreyListTypeS { get; set; }
+        public DbSet<GreyListTypes> GreyListTypes { get; set; }
 
-        public DbSet<HostTypeS> HostTypeS { get; set; }
+        public DbSet<HostTypes> HostTypes { get; set; }
 
         public DbSet<ArticleStock> ArticleStock { get; set; }
 
-        public DbSet<ENIError> ENIError { get; set; }
+        public DbSet<EniError> EniError { get; set; }
 
-        public DbSet<ISSUERListTypeS> ISSUERListTypeS { get; set; }
+        public DbSet<IssuerListTypes> IssuerListTypes { get; set; }
 
-        public DbSet<NormUnitS> NormUnitS { get; set; }
+        public DbSet<NormUnits> NormUnits { get; set; }
 
-        public DbSet<NozzleTypeS> NozzleTypeS { get; set; }
+        public DbSet<NozzleTypes> NozzleTypes { get; set; }
 
-        public DbSet<ObjectTypeS> ObjectTypeS { get; set; }
+        public DbSet<ObjectTypes> ObjectTypes { get; set; }
 
-        public DbSet<PaymentTypeS> PaymentTypeS { get; set; }
+        public DbSet<PaymentTypes> PaymentTypes { get; set; }
 
         public DbSet<PosDataXmlPdfExportOrders> PosDataXmlPdfExportOrders { get; set; }
 
-        public DbSet<PumpTypeS> PumpTypeS { get; set; }
+        public DbSet<PumpTypes> PumpTypes { get; set; }
 
-        public DbSet<RedListTypeS> RedListTypeS { get; set; }
+        public DbSet<RedListTypes> RedListTypes { get; set; }
 
-        public DbSet<TankTypeS> TankTypeS { get; set; }
+        public DbSet<TankTypes> TankTypes { get; set; }
 
-        public DbSet<TerminalComponentTypeS> TerminalComponentTypeS { get; set; }
+        public DbSet<TerminalComponentTypes> TerminalComponentTypes { get; set; }
 
-        public DbSet<TerminalTypeS> TerminalTypeS { get; set; }
+        public DbSet<TerminalTypes> TerminalTypes { get; set; }
 
-        public DbSet<TRXFileTypeS> TRXFileTypeS { get; set; }
+        public DbSet<TrxFileTypes> TrxFileTypes { get; set; }
 
-        public DbSet<UnitS> UnitS { get; set; }
+        public DbSet<Units> Units { get; set; }
 
-        public DbSet<BlackListS> BlackListS { get; set; }
+        public DbSet<BlackLists> BlackLists { get; set; }
 
         public DbSet<CardDataCom> CardDataCom { get; set; }
 
-        public DbSet<CardDLYTotalS> CardDLYTotalS { get; set; }
+        public DbSet<CardDlyTotals> CardDlyTotals { get; set; }
 
-        public DbSet<CardFieldS> CardFieldS { get; set; }
+        public DbSet<CardFields> CardFields { get; set; }
 
         public DbSet<CardFieldValues> CardFieldValues { get; set; }
 
@@ -267,63 +256,63 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 
         public DbSet<CardHandling> CardHandling { get; set; }
 
-        public DbSet<CardProductS> CardProductS { get; set; }
+        public DbSet<CardProducts> CardProducts { get; set; }
 
         public DbSet<CodeVouchers> CodeVouchers { get; set; }
 
-        public DbSet<CardProfileS> CardProfileS { get; set; }
+        public DbSet<CardProfiles> CardProfiles { get; set; }
 
-        public DbSet<CardS> CardS { get; set; }
+        public DbSet<Cards> Cards { get; set; }
 
         public DbSet<ReceiptsToPrint> ReceiptsToPrint { get; set; }
 
         public DbSet<CardTracks> CardTracks { get; set; }
 
-        public DbSet<CardTRXCountS> CardTRXCountS { get; set; }
+        public DbSet<CardTrxCounts> CardTrxCounts { get; set; }
 
-        public DbSet<FuelINGPointS> FuelINGPointS { get; set; }
+        public DbSet<FuelIngPoints> FuelIngPoints { get; set; }
 
         public DbSet<GlobalValues> GlobalValues { get; set; }
 
-        public DbSet<GreyListS> GreyListS { get; set; }
+        public DbSet<GreyLists> GreyLists { get; set; }
 
         public DbSet<Hosts> Hosts { get; set; }
 
-        public DbSet<_sptISSUERLISTS> _sptISSUERLISTS { get; set; }
+        public DbSet<sptIssuerLists> sptIssuerLists { get; set; }
 
         public DbSet<Nozzles> Nozzles { get; set; }
 
-        public DbSet<OPTotalBaseMatrix> OPTotalBaseMatrix { get; set; }
+        public DbSet<OpTotalBaseMatrix> OpTotalBaseMatrix { get; set; }
 
-        public DbSet<OPTotalPaymentMap> OPTotalPaymentMap { get; set; }
+        public DbSet<OpTotalPaymentMap> OpTotalPaymentMap { get; set; }
 
-        public DbSet<OPTotalProductMap> OPTotalProductMap { get; set; }
+        public DbSet<OpTotalProductMap> OpTotalProductMap { get; set; }
 
-        public DbSet<VMATempFuelings> VMATempFuelings { get; set; }
+        public DbSet<VmaTempFuelings> VmaTempFuelings { get; set; }
 
         public DbSet<ProductCodeGroups> ProductCodeGroups { get; set; }
 
         public DbSet<ProductCodeMaps> ProductCodeMaps { get; set; }
 
-        public DbSet<ProductCodeTAXMap> ProductCodeTAXMap { get; set; }
+        public DbSet<ProductCodeTaxMap> ProductCodeTaxMap { get; set; }
 
         public DbSet<Pumps> Pumps { get; set; }
 
-        public DbSet<RedListS> RedListS { get; set; }
+        public DbSet<RedLists> RedLists { get; set; }
 
         public DbSet<TankS> TankS { get; set; }
 
         public DbSet<TerminalComponents> TerminalComponents { get; set; }
 
-        public DbSet<TerminalS> TerminalS { get; set; }
+        public DbSet<Terminals> Terminals { get; set; }
 
-        public DbSet<TerminalSettings> TerminalSettings { get; set; }
+        public DbSet<TerminalsETTingS> TerminalsETTingS { get; set; }
 
         public DbSet<TerminationCodes> TerminationCodes { get; set; }
 
         public DbSet<TotalHandler> TotalHandler { get; set; }
 
-        public DbSet<_sptTRXFILES> _sptTRXFILES { get; set; }
+        public DbSet<sptTrxFiles> sptTrxFiles { get; set; }
 
         #endregion Public Properties
     }

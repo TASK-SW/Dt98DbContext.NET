@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   OPTOTALDATA.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("OPTOTALDATA")]
-   public class OPTotalData
+   [Table("OPTOTALDATA")]
+   public class OpTotalData
    {
       #region Public Constructors
 
-       public OPTotalData()
+       public OpTotalData()
       {
       }
 
@@ -24,35 +17,36 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
        public int Oid { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_HOST")]
+       [Column("OID_HOST")]
        public string OidHost { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("GENERATION")]
+       [Column("GENERATION")]
        public int Generation { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_TYPE")]
-       public int DTType { get; set; }
+       [Column("DT_TYPE")]
+       public int DtType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_TRANSACTION_ID")]
-       public string DTTransactionId { get; set; }
+       [Column("DT_TRANSACTION_ID")]
+       public string DtTransactionId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_PRODUCT_ID")]
-       public string DTProductId { get; set; }
+       [Column("DT_PRODUCT_ID")]
+       public string DtProductId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_AMOUNT")]
-       public decimal DTAmount { get; set; }
+       [Column("DT_AMOUNT")]
+       public decimal DtAmount { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_QUANTITY")]
-       public decimal DTQuantity { get; set; }
+       [Column("DT_QUANTITY")]
+       public decimal DtQuantity { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("UNITCODE")]
+       [Column("UNITCODE")]
        public string UnitCode { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DT_COUNT")]
-       public int DTCount { get; set; }
+       [Column("DT_COUNT")]
+       public int DtCount { get; set; }
 
 
        #endregion Public Properties

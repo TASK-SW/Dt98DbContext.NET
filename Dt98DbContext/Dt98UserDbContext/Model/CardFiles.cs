@@ -1,48 +1,54 @@
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-    [System.ComponentModel.DataAnnotations.Schema.Table("_sptCARDFILES")]
-    public class CardFiles
-    {
-        #region Public Constructors
+   [Table("_sptCARDFILES")]
+   public class CardFiles
+   {
+      #region Public Constructors
 
-        public CardFiles()
-        {
-        }
+       public CardFiles()
+      {
+      }
 
-        #endregion Public Constructors
+       #endregion Public Constructors
 
-        #region Public Properties
+       #region Public Properties
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
-        public string Oid { get; set; }
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
+       public string Oid { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID_BLACKLIST")]
-        public string OidBlackList { get; set; }
+       [Column("OID_BLACKLIST")]
+       public string OidBlackList { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID_GREYLIST")]
-        public string OidGreyList { get; set; }
+       [Column("OID_GREYLIST")]
+       public string OidGreyList { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID_REDLIST")]
-        public string OidRedList { get; set; }
+       [Column("OID_REDLIST")]
+       public string OidRedList { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID_CARDDLYTOTAL")]
-        public string OidCardDLYTotal { get; set; }
+       [Column("OID_CARDDLYTOTAL")]
+       public string OidCardDlyTotal { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID_CARDTRXCOUNT")]
-        public string OidCardTRXCount { get; set; }
+       [Column("OID_CARDTRXCOUNT")]
+       public string OidCardTrxCount { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID_TRXFILE")]
-        public string OidTRXFile { get; set; }
+       [Column("OID_TRXFILE")]
+       public string OidTrxFile { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID_HOST")]
-        public string OidHost { get; set; }
+       [Column("OID_HOST")]
+       public string OidHost { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID_CARDDATACOM")]
-        public string OidCardDataCom { get; set; }
+       [Column("OID_CARDDATACOM")]
+       public string OidCardDataCom { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID_FOREIGNTRX")]
-        public string OidForeignTRX { get; set; }
+       [Column("OID_FOREIGNTRX")]
+       public string OidForeignTrx { get; set; }
 
-        #endregion Public Properties
-    }
+
+       #endregion Public Properties
+   }
 }

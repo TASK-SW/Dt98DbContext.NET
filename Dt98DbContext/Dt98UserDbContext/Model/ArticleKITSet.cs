@@ -1,27 +1,34 @@
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-    [System.ComponentModel.DataAnnotations.Schema.Table("ARTICLEKITSET")]
-    public class ArticleKITSet
-    {
-        #region Public Constructors
+   [Table("ARTICLEKITSET")]
+   public class ArticleKitSet
+   {
+      #region Public Constructors
 
-        public ArticleKITSet()
-        {
-        }
+       public ArticleKitSet()
+      {
+      }
 
-        #endregion Public Constructors
+       #endregion Public Constructors
 
-        #region Public Properties
+       #region Public Properties
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID_PARENT")]
-        public string OidParent { get; set; }
+       [Key, Column(Order = 0)]
+       //[Column("OID_PARENT")]
+       public string OidParent { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID_CHILD")]
-        public string OidChild { get; set; }
+       [Key, Column(Order = 1)]
+       //[Column("OID_CHILD")]
+       public string OidChild { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("COUNT")]
-        public int Count { get; set; }
+       [Column("COUNT")]
+       public int Count { get; set; }
 
-        #endregion Public Properties
-    }
+
+       #endregion Public Properties
+   }
 }

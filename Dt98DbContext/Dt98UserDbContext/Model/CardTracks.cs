@@ -1,39 +1,42 @@
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-    [System.ComponentModel.DataAnnotations.Schema.Table("_sptCARDTRACKS")]
-    public class CardTracks
-    {
-        #region Public Constructors
+   [Table("_sptCARDTRACKS")]
+   public class CardTracks
+   {
+      #region Public Constructors
 
-        public CardTracks()
-        {
-        }
+       public CardTracks()
+      {
+      }
 
-        #endregion Public Constructors
+       #endregion Public Constructors
 
-        #region Public Properties
+       #region Public Properties
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
-        public string Oid { get; set; }
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
+       public string Oid { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OID_CARDPROFILE")]
-        public string OidCardProfile { get; set; }
+       [Column("OID_CARDPROFILE")]
+       public string OidCardProfile { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("TRACKPOS")]
-        public int TrackPos { get; set; }
+       [Column("TRACKPOS")]
+       public int TrackPos { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("LOWVAL")]
-        public int LOWVal { get; set; }
+       [Column("LOWVAL")]
+       public int LowVal { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("UPVAL")]
-        public int UPVal { get; set; }
+       [Column("UPVAL")]
+       public int UpVal { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("CONDITION")]
-        public int Condition { get; set; }
+       [Column("CONDITION")]
+       public int Condition { get; set; }
 
-        #endregion Public Properties
-    }
+
+       #endregion Public Properties
+   }
 }

@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   _persFUELINGPOINTS.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("_persFUELINGPOINTS")]
-   public class persFuelINGPointS
+   [Table("_persFUELINGPOINTS")]
+   public class persFuelIngPoints
    {
       #region Public Constructors
 
-       public persFuelINGPointS()
+       public persFuelIngPoints()
       {
       }
 
@@ -24,56 +17,57 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
        public string Oid { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_FUELSALE")]
+       [Column("OID_FUELSALE")]
        public string OidFuelSale { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("CONTROLSTATE")]
+       [Column("CONTROLSTATE")]
        public int ControlState { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("LASTERROR")]
+       [Column("LASTERROR")]
        public int LastError { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ERRORCOUNT")]
+       [Column("ERRORCOUNT")]
        public int ErrorCount { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("CURRENTNOZZLE")]
+       [Column("CURRENTNOZZLE")]
        public int CurrentNozzle { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("LT_NUMMERATEUR")]
-       public int LTNUMMERateUR { get; set; }
+       [Column("LT_NUMMERATEUR")]
+       public int LtNummeRateUr { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("LT_VOLUME")]
-       public int LTVolume { get; set; }
+       [Column("LT_VOLUME")]
+       public int LtVolume { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("LT_AMOUNT")]
-       public int LTAmount { get; set; }
+       [Column("LT_AMOUNT")]
+       public int LtAmount { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("LT_NOZZLE")]
-       public int LTNozzle { get; set; }
+       [Column("LT_NOZZLE")]
+       public int LtNozzle { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PS_STATE")]
-       public int PSState { get; set; }
+       [Column("PS_STATE")]
+       public int PsState { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PS_ERROR")]
-       public int PSError { get; set; }
+       [Column("PS_ERROR")]
+       public int PsError { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PS_COUNTER1")]
-       public int PSCountER_1 { get; set; }
+       [Column("PS_COUNTER1")]
+       public int PsCountEr1 { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PS_COUNTER2")]
-       public int PSCountER_2 { get; set; }
+       [Column("PS_COUNTER2")]
+       public int PsCountEr2 { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PS_COUNTER3")]
-       public int PSCountER_3 { get; set; }
+       [Column("PS_COUNTER3")]
+       public int PsCountEr3 { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PS_COUNTER4")]
-       public int PSCountER_4 { get; set; }
+       [Column("PS_COUNTER4")]
+       public int PsCountEr4 { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PS_NUMMERATEUR")]
-       public int PSNUMMERateUR { get; set; }
+       [Column("PS_NUMMERATEUR")]
+       public int PsNummeRateUr { get; set; }
 
 
        #endregion Public Properties

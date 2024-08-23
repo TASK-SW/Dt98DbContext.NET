@@ -1,51 +1,57 @@
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-    [System.ComponentModel.DataAnnotations.Schema.Table("CARDDATA")]
-    public class CardData
-    {
-        #region Public Constructors
+   [Table("CARDDATA")]
+   public class CardData
+   {
+      #region Public Constructors
 
-        public CardData()
-        {
-        }
+       public CardData()
+      {
+      }
 
-        #endregion Public Constructors
+       #endregion Public Constructors
 
-        #region Public Properties
+       #region Public Properties
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("PAN")]
-        public string PAN { get; set; }
+       [Key, Column(Order = 0)]
+       //[Column("PAN")]
+       public string Pan { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("PINMode")]
-        public int PINMode { get; set; }
+       [Column("PINMode")]
+       public int PinMode { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("PIN")]
-        public int PIN { get; set; }
+       [Column("PIN")]
+       public int Pin { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("MileageMode")]
-        public int MileageMode { get; set; }
+       [Column("MileageMode")]
+       public int MileageMode { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("Mileage")]
-        public int Mileage { get; set; }
+       [Column("Mileage")]
+       public int Mileage { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("ServiceCode")]
-        public int ServiceCode { get; set; }
+       [Column("ServiceCode")]
+       public int ServiceCode { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("FuelLimit")]
-        public int FuelLimit { get; set; }
+       [Column("FuelLimit")]
+       public int FuelLimit { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("PosDateElapse")]
-        public int PosDateElapse { get; set; }
+       [Column("PosDateElapse")]
+       public int PosDateElapse { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("ErrorCountMax")]
-        public int ErrorCountMax { get; set; }
+       [Column("ErrorCountMax")]
+       public int ErrorCountMax { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("ErrorCountCur")]
-        public int ErrorCountCur { get; set; }
+       [Column("ErrorCountCur")]
+       public int ErrorCountCur { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("RecordState")]
-        public int RecordState { get; set; }
+       [Column("RecordState")]
+       public int RecordState { get; set; }
 
-        #endregion Public Properties
-    }
+
+       #endregion Public Properties
+   }
 }

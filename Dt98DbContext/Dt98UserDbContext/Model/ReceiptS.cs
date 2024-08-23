@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   RECEIPTS.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("RECEIPTS")]
-   public class ReceiptS
+   [Table("RECEIPTS")]
+   public class Receipts
    {
       #region Public Constructors
 
-       public ReceiptS()
+       public Receipts()
       {
       }
 
@@ -24,53 +17,54 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
        public string Oid { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_CARDTYPE")]
+       [Column("OID_CARDTYPE")]
        public string OidCardType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_TERMINAL")]
+       [Column("OID_TERMINAL")]
        public string OidTerminal { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TERMINALTYPE")]
+       [Column("TERMINALTYPE")]
        public int TerminalType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PAN")]
-       public string PAN { get; set; }
+       [Column("PAN")]
+       public string Pan { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PRINTCOUNT")]
+       [Column("PRINTCOUNT")]
        public int PrintCount { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DATESTORE")]
+       [Column("DATESTORE")]
        public DateTime DateStore { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DATEPRINT")]
+       [Column("DATEPRINT")]
        public DateTime DatePrint { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("RECEIPTTEXT")]
+       [Column("RECEIPTTEXT")]
        public string ReceiptText { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("EXTRADATA")]
+       [Column("EXTRADATA")]
        public string ExtraData { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PRINTER_WIDTH")]
+       [Column("PRINTER_WIDTH")]
        public int PrinterWidth { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("WM_FORMAT")]
-       public string WMFormat { get; set; }
+       [Column("WM_FORMAT")]
+       public string WmFormat { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PAN2")]
-       public string PAN2 { get; set; }
+       [Column("PAN2")]
+       public string Pan2 { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PAN3")]
-       public string PAN3 { get; set; }
+       [Column("PAN3")]
+       public string Pan3 { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PAN4")]
-       public string PAN4 { get; set; }
+       [Column("PAN4")]
+       public string Pan4 { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PAN5")]
-       public string PAN5 { get; set; }
+       [Column("PAN5")]
+       public string Pan5 { get; set; }
 
 
        #endregion Public Properties

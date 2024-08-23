@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   _sptISSUERLISTS.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     19.07.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("_sptISSUERLISTS")]
-   public class sptISSUERListS
+   [Table("_sptISSUERLISTS")]
+   public class sptIssuerLists
    {
       #region Public Constructors
 
-       public sptISSUERListS()
+       public sptIssuerLists()
       {
       }
 
@@ -24,14 +17,14 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Key]
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
        public string Oid { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_TYPE")]
+       [Column("OID_TYPE")]
        public string OidType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("NAME")]
+       [Column("NAME")]
        public string Name { get; set; }
 
 

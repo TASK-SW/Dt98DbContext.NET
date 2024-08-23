@@ -1,30 +1,37 @@
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-    [System.ComponentModel.DataAnnotations.Schema.Table("ArticleStock")]
-    public class ArticleStock
-    {
-        #region Public Constructors
+   [Table("ArticleStock")]
+   public class ArticleStock
+   {
+      #region Public Constructors
 
-        public ArticleStock()
-        {
-        }
+       public ArticleStock()
+      {
+      }
 
-        #endregion Public Constructors
+       #endregion Public Constructors
 
-        #region Public Properties
+       #region Public Properties
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OIDArticle")]
-        public string OidArticle { get; set; }
+       [Key, Column(Order = 0)]
+       //[Column("OIDArticle")]
+       public string OidArticle { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("WorkstationId")]
-        public int WorkstationId { get; set; }
+       [Key, Column(Order = 1)]
+       //[Column("WorkstationId")]
+       public int WorkstationId { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("CurrentQuantity")]
-        public decimal CurrentQuantity { get; set; }
+       [Column("CurrentQuantity")]
+       public decimal CurrentQuantity { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Schema.Column("OpenQuantity")]
-        public decimal OpenQuantity { get; set; }
+       [Column("OpenQuantity")]
+       public decimal OpenQuantity { get; set; }
 
-        #endregion Public Properties
-    }
+
+       #endregion Public Properties
+   }
 }

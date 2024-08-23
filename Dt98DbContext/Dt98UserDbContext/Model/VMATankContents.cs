@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   VMA_TankContents.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("VMA_TankContents")]
-   public class VMATankContents
+   [Table("VMA_TankContents")]
+   public class VmaTankContents
    {
       #region Public Constructors
 
-       public VMATankContents()
+       public VmaTankContents()
       {
       }
 
@@ -24,49 +17,57 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TankId")]
+       [Key, Column(Order = 0)]
+       //[Column("TankId")]
        public int TankId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ProductId")]
+       [Key, Column(Order = 1)]
+       //[Column("ProductId")]
        public int ProductId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ProcessingTime")]
+       [Key, Column(Order = 2)]
+       //[Column("ProcessingTime")]
        public DateTime ProcessingTime { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("VMASeqNumber")]
-       public int VMASeqNumber { get; set; }
+       [Key, Column(Order = 3)]
+       //[Column("VMASeqNumber")]
+       public int VmaSeqNumber { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("VMAType")]
-       public int VMAType { get; set; }
+       [Key, Column(Order = 4)]
+       //[Column("VMAType")]
+       public int VmaType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("VMATypeSeqNumber")]
-       public int VMATypeSeqNumber { get; set; }
+       [Key, Column(Order = 5)]
+       //[Column("VMATypeSeqNumber")]
+       public int VmaTypeSeqNumber { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OrderNumber")]
+       [Key, Column(Order = 6)]
+       //[Column("OrderNumber")]
        public int OrderNumber { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TankContentsType")]
+       [Key, Column(Order = 7)]
+       //[Column("TankContentsType")]
        public int TankContentsType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("HostDeliveryState")]
+       [Column("HostDeliveryState")]
        public int HostDeliveryState { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("TankContents")]
+       [Column("TankContents")]
        public decimal TankContents { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ProductLevel")]
+       [Column("ProductLevel")]
        public decimal ProductLevel { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("WaterLevel")]
+       [Column("WaterLevel")]
        public decimal WaterLevel { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("WaterVolume")]
+       [Column("WaterVolume")]
        public decimal WaterVolume { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("Temperature")]
+       [Column("Temperature")]
        public decimal Temperature { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("Density")]
+       [Column("Density")]
        public decimal Density { get; set; }
 
 

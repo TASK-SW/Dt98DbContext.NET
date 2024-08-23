@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   OBJECTSTATES.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("OBJECTSTATES")]
-   public class ObjectStateS
+   [Table("OBJECTSTATES")]
+   public class ObjectStates
    {
       #region Public Constructors
 
-       public ObjectStateS()
+       public ObjectStates()
       {
       }
 
@@ -24,22 +17,27 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OBJTYPE")]
+       [Key, Column(Order = 0)]
+       //[Column("OBJTYPE")]
        public int Objtype { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OBJID")]
+       [Key, Column(Order = 1)]
+       //[Column("OBJID")]
        public string ObjId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PARTYPE")]
+       [Key, Column(Order = 2)]
+       //[Column("PARTYPE")]
        public int PArtype { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("PARID")]
-       public string PARId { get; set; }
+       [Key, Column(Order = 3)]
+       //[Column("PARID")]
+       public string ParId { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("STATE")]
+       [Column("STATE")]
        public int State { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OBJSTATEIX")]
+       [Key, Column(Order = 4)]
+       //[Column("OBJSTATEIX")]
        public int ObjStateIX { get; set; }
 
 

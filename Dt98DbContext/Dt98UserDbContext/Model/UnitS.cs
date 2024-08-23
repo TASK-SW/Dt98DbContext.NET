@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   _sctUNITS.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("_sctUNITS")]
-   public class UnitS
+   [Table("_sctUNITS")]
+   public class Units
    {
       #region Public Constructors
 
-       public UnitS()
+       public Units()
       {
       }
 
@@ -24,16 +17,17 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ID")]
+       [Key, Column(Order = 0)]
+       //[Column("ID")]
        public int Id { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("NAME")]
+       [Column("NAME")]
        public string Name { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("SHORTCUT")]
+       [Column("SHORTCUT")]
        public string ShortCut { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("DECIMALS")]
+       [Column("DECIMALS")]
        public int Decimals { get; set; }
 
 

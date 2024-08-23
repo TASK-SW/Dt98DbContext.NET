@@ -1,22 +1,15 @@
-//==================================================================================================
-//  FILE        :   _sptCARDS.cs
-//  PROJECT     :   TaskStar.DT98UserEF6DbContext.DT98UserDbContext.Model
-//  COPYRIGHT   :   (C) 2011, TASK Technology Gmbh, Germany
-//  AUTHOR(s)   :   af              Andrej Froschgeiser
-//  HISTORY     :   01.00.00.01     22.08.2024af01   creation
-//==================================================================================================
-
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
+namespace TaskStar.Dt98DbContext.DT98UserDbContext.Model
 {
-   [System.ComponentModel.DataAnnotations.Schema.Table("_sptCARDS")]
-   public class CardS
+   [Table("_sptCARDS")]
+   public class Cards
    {
       #region Public Constructors
 
-       public CardS()
+       public Cards()
       {
       }
 
@@ -24,28 +17,29 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext.Model
 
        #region Public Properties
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID")]
+       [Key, Column(Order = 0)]
+       //[Column("OID")]
        public string Oid { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_TYPE")]
+       [Column("OID_TYPE")]
        public string OidType { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_TERMINAL")]
+       [Column("OID_TERMINAL")]
        public string OidTerminal { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("ID")]
+       [Column("ID")]
        public int Id { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("STATE")]
+       [Column("STATE")]
        public int State { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("RECSTATE")]
-       public int RECState { get; set; }
+       [Column("RECSTATE")]
+       public int RecState { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_CARDHANDLING")]
+       [Column("OID_CARDHANDLING")]
        public string OidCardHandling { get; set; }
 
-       [System.ComponentModel.DataAnnotations.Schema.Column("OID_PAYMENTTYPE")]
+       [Column("OID_PAYMENTTYPE")]
        public string OidPaymentType { get; set; }
 
 
