@@ -87,7 +87,6 @@
     <Compile Include="Dt98UserDbContext\Model\ArticlesUbGroups.cs" />
     <Compile Include="Dt98UserDbContext\Model\BlackList001.cs" />
     <Compile Include="Dt98UserDbContext\Model\BlackList002.cs" />
-    <Compile Include="Dt98UserDbContext\Model\BlackListLocal0001S.cs" />
     <Compile Include="Dt98UserDbContext\Model\BlackLists.cs" />
     <Compile Include="Dt98UserDbContext\Model\BlackListTypes.cs" />
     <Compile Include="Dt98UserDbContext\Model\CardBaseTypes.cs" />
@@ -99,7 +98,6 @@
     <Compile Include="Dt98UserDbContext\Model\CardDlyTotal004.cs" />
     <Compile Include="Dt98UserDbContext\Model\CardDlyTotal023.cs" />
     <Compile Include="Dt98UserDbContext\Model\CardDlyTotal025.cs" />
-    <Compile Include="Dt98UserDbContext\Model\CardDlyTotal026.cs" />
     <Compile Include="Dt98UserDbContext\Model\CardDlyTotal029.cs" />
     <Compile Include="Dt98UserDbContext\Model\CardDlyTotal045.cs" />
     <Compile Include="Dt98UserDbContext\Model\CardDlyTotal046.cs" />
@@ -176,7 +174,6 @@
     <Compile Include="Dt98UserDbContext\Model\RedList004.cs" />
     <Compile Include="Dt98UserDbContext\Model\RedList023.cs" />
     <Compile Include="Dt98UserDbContext\Model\RedList025.cs" />
-    <Compile Include="Dt98UserDbContext\Model\RedList026.cs" />
     <Compile Include="Dt98UserDbContext\Model\RedList029.cs" />
     <Compile Include="Dt98UserDbContext\Model\RedList045.cs" />
     <Compile Include="Dt98UserDbContext\Model\RedList046.cs" />
@@ -188,7 +185,6 @@
     <Compile Include="Dt98UserDbContext\Model\RedListTypes.cs" />
     <Compile Include="Dt98UserDbContext\Model\SalesBookings.cs" />
     <Compile Include="Dt98UserDbContext\Model\SalesHeader.cs" />
-    <Compile Include="Dt98UserDbContext\Model\SammelRecords.cs" />
     <Compile Include="Dt98UserDbContext\Model\ScaledDiscount.cs" />
     <Compile Include="Dt98UserDbContext\Model\Schedule.cs" />
     <Compile Include="Dt98UserDbContext\Model\SqlPolicy.cs" />
@@ -209,15 +205,11 @@
     <Compile Include="Dt98UserDbContext\Model\TrxFiles.cs" />
     <Compile Include="Dt98UserDbContext\Model\TrxFileTypes.cs" />
     <Compile Include="Dt98UserDbContext\Model\TrxGenerations.cs" />
-    <Compile Include="Dt98UserDbContext\Model\TrxHistory.cs" />
     <Compile Include="Dt98UserDbContext\Model\Units.cs" />
-    <Compile Include="Dt98UserDbContext\Model\Version.cs" />
     <Compile Include="Dt98UserDbContext\Model\VmaCurrent.cs" />
     <Compile Include="Dt98UserDbContext\Model\VmaFuelSales.cs" />
     <Compile Include="Dt98UserDbContext\Model\VmaHistory.cs" />
-    <Compile Include="Dt98UserDbContext\Model\VmaHistoryOld.cs" />
     <Compile Include="Dt98UserDbContext\Model\VmaHistoryTank.cs" />
-    <Compile Include="Dt98UserDbContext\Model\VmaHistoryTankOld.cs" />
     <Compile Include="Dt98UserDbContext\Model\VmaHostStates.cs" />
     <Compile Include="Dt98UserDbContext\Model\VmaRecords.cs" />
     <Compile Include="Dt98UserDbContext\Model\VmaRecordsTank.cs" />

@@ -26,8 +26,6 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 
         public DbSet<Articles> Articles { get; set; }
 
-        public DbSet<BlackListLocal0001S> BlackListLocal0001S { get; set; }
-
         public DbSet<ArticlesUbGroups> ArticlesUbGroups { get; set; }
 
         public DbSet<AlternativePrices> AlternativePrices { get; set; }
@@ -53,8 +51,6 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
         public DbSet<Vma_History> Vma_History { get; set; }
 
         public DbSet<CardDlyTotal025> CardDlyTotal025 { get; set; }
-
-        public DbSet<CardDlyTotal026> CardDlyTotal026 { get; set; }
 
         public DbSet<VmaTankContents> VmaTankContents { get; set; }
 
@@ -116,8 +112,6 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 
         public DbSet<OpTotalFiles> OpTotalFiles { get; set; }
 
-        public DbSet<TrxHistory> TrxHistory { get; set; }
-
         public DbSet<OpTotalGenerations> OpTotalGenerations { get; set; }
 
         public DbSet<Receipts> Receipts { get; set; }
@@ -140,11 +134,7 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 
         public DbSet<ScaledDiscount> ScaledDiscount { get; set; }
 
-        public DbSet<RedList026> RedList026 { get; set; }
-
         public DbSet<RedList029> RedList029 { get; set; }
-
-        public DbSet<SammelRecords> SammelRecords { get; set; }
 
         public DbSet<DatacomOnlineCards> DatacomOnlineCards { get; set; }
 
@@ -170,11 +160,7 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 
         public DbSet<Schedule> Schedule { get; set; }
 
-        public DbSet<VmaHistoryOld> VmaHistoryOld { get; set; }
-
         public DbSet<SqlPolicy> SqlPolicy { get; set; }
-
-        public DbSet<VmaHistoryTankOld> VmaHistoryTankOld { get; set; }
 
         public DbSet<Taxes> Taxes { get; set; }
 
@@ -187,8 +173,6 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
         public DbSet<TrxFiles> TrxFiles { get; set; }
 
         public DbSet<TrxGenerations> TrxGenerations { get; set; }
-
-        public DbSet<Version> Version { get; set; }
 
         public DbSet<persFuelIngPoints> persFuelIngPoints { get; set; }
 
