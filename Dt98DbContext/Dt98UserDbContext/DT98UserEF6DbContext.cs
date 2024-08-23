@@ -7,10 +7,14 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
     {
         #region Public Constructors
 
-        public static string ConnectionString { get; set; } = "data source=.\\SQL2014;Initial Catalog=DT98User;user id=sa;password=E77lingen;Integrated Security=False;";
+        public static string ConnectionString { get; set; }
 
         public Dt98UserEF6DbContext() : base(ConnectionString) { }
-        public Dt98UserEF6DbContext(string connectionString) : base(connectionString) => ConnectionString = connectionString;
+
+        public Dt98UserEF6DbContext(string connectionString) : base(connectionString)
+        {
+
+        }
 
         #endregion Public Constructors
 
