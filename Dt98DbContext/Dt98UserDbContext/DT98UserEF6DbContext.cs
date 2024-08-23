@@ -7,10 +7,6 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
     {
         #region Public Constructors
 
-        public Dt98UserEf6DbContext() : base(ConnectionString)
-        {
-        }
-
         public Dt98UserEf6DbContext(string connectionString) : base(connectionString)
         {
         }
@@ -19,7 +15,6 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 
         #region Public Properties
 
-        public static string ConnectionString { get; set; }
         public DbSet<ArticleGroups> ArticleGroups { get; set; }
 
         public DbSet<ArticleKitSet> ArticleKitSet { get; set; }
