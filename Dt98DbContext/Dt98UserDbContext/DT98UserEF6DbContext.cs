@@ -40,13 +40,13 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 
         public DbSet<CardDlyTotal003> CardDlyTotal003 { get; set; }
 
-        public DbSet<VMacurrent> VMacurrent { get; set; }
+        public DbSet<VmaCurrent> VMacurrent { get; set; }
 
         public DbSet<CardDlyTotal004> CardDlyTotal004 { get; set; }
 
         public DbSet<CardDlyTotal023> CardDlyTotal023 { get; set; }
 
-        public DbSet<VMA_History> VMA_History { get; set; }
+        public DbSet<Vma_History> Vma_History { get; set; }
 
         public DbSet<CardDlyTotal025> CardDlyTotal025 { get; set; }
 

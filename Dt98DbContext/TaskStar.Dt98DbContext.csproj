@@ -194,7 +194,7 @@
     <Compile Include="Dt98UserDbContext\Model\TrxHistory.cs" />
     <Compile Include="Dt98UserDbContext\Model\Units.cs" />
     <Compile Include="Dt98UserDbContext\Model\Version.cs" />
-    <Compile Include="Dt98UserDbContext\Model\VMacurrent.cs" />
+    <Compile Include="Dt98UserDbContext\Model\VmaCurrent.cs" />
     <Compile Include="Dt98UserDbContext\Model\VmaFuelSales.cs" />
     <Compile Include="Dt98UserDbContext\Model\VmaHistory.cs" />
     <Compile Include="Dt98UserDbContext\Model\VmaHistoryOld.cs" />
@@ -205,7 +205,7 @@
     <Compile Include="Dt98UserDbContext\Model\VmaRecordsTank.cs" />
     <Compile Include="Dt98UserDbContext\Model\VmaTankContents.cs" />
     <Compile Include="Dt98UserDbContext\Model\VmaTempFuelings.cs" />
-    <Compile Include="Dt98UserDbContext\Model\VMA_History.cs" />
+    <Compile Include="Dt98UserDbContext\Model\Vma_History.cs" />
     <Compile Include="Dt98UserDbContext\Model\WeatWettbewerber.cs" />
     <Compile Include="Dt98UserDbContext\Model\WeatWettbewerbsDaten.cs" />
     <Compile Include="Dt98UserDbContext\Model\sptIssuerLists.cs" />
