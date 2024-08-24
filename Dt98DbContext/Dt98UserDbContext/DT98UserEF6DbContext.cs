@@ -1,10 +1,35 @@
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using TaskStar.Dt98DbContext.DT98UserDbContext.Model;
 
 namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 {
     public class Dt98UserEf6DbContext : DbContext
     {
+        #region Private Methods
+
+        private void FixEfProviderServicesProblem()
+        {
+            //https://stackoverflow.com/questions/18455747/no-entity-framework-provider-found-for-the-ado-net-provider-with-invariant-name
+            // The Entity Framework provider type 'System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer'
+            // for the 'System.Data.SqlClient' ADO.NET provider could not be loaded.
+            // Make sure the provider assembly is available to the running application.
+            // See http://go.microsoft.com/fwlink/?LinkId=260882 for more information.
+            var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
+        }
+
+        #endregion Private Methods
+
+        #region Protected Methods
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer<Dt98UserEf6DbContext>(null);
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
+
+        #endregion Protected Methods
+
         #region Public Constructors
 
         public Dt98UserEf6DbContext(string connectionString) : base(connectionString)

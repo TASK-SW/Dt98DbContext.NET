@@ -21,7 +21,7 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 
         public Dt98UserContextFactory(string connectionString)
         {
-            if (connectionString.Contains("provider"))
+            if (connectionString.ToLower().Contains("provider"))
             {
                 OleDbConnectionStringBuilder builder = new OleDbConnectionStringBuilder(connectionString);
                 builder.Remove("provider");
