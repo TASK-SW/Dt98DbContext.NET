@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 {
+    /// <summary>
+    /// <b>Dt98UserContextFactory</b>
+    /// </summary>
     public class Dt98UserContextFactory
     {
         #region Private Fields
