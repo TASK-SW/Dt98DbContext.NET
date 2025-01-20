@@ -17,21 +17,12 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
 
         private readonly string _connectionString;
 
-        private Dt98UserContextFactory _dbContextFactory;
-
         #endregion Private Fields
 
         #region Public Constructors
 
         public Dt98UserContextFactory(string connectionString)
         {
-            //if (connectionString.ToLower().Contains("provider"))
-            //{
-            //    OleDbConnectionStringBuilder builder = new OleDbConnectionStringBuilder(connectionString);
-            //    builder.Remove("provider");
-            //    connectionString = builder.ConnectionString;
-            //}
-
             _connectionString = connectionString;
         }
 

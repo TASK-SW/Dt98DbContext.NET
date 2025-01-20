@@ -1,13 +1,14 @@
 1. Create nuspec file
-TaskStar.Dt98DbContext.nuspec
+TaskStar.Dt98DbContext.NET.nuspec
 
-2. Create nuget with use .nuspec in PowerShell
-d:\work\tools\nuget.exe pack TaskStar.Dt98DbContext.csproj -IncludeReferencedProjects -Properties Configuration=Release
+2. Rebild project Release
 
-3. Publish in local repo in PowerShell
-d:\work\tools\nuget.exe add TaskStar.Dt98DbContext.1.0.0.nupkg -Source \\10.0.0.60\task-installer\nugetrepo
+3. Create nuget with use .nuspec in PowerShell where is it located .csproj
+dotnet pack --configuration Release
 
-for Delete repo use (Example)
-d:\work\tools\nuget.exe delete TaskStar.Dt98DbContext 1.0.0 -Source \\10.0.0.60\task-installer\nugetrepo
-or
-delete Folder: \\10.0.0.60\task-installer\nugetrepo\TaskStar.Dt98DbContext\1.0.0
+4. Publish in local repo in PowerShell
+dotnet nuget push bin\Release\TaskStar.Dt98DbContext.NET.1.0.0.nupkg --source \\10.0.0.60\task-installer\nugetrepo
+
+5. for Delete repo use (Example)
+5.1. delete Folder: \\10.0.0.60\task-installer\nugetrepo\TaskStar.Dt98DbContext.NET\1.0.0
+5.2. dotnet nuget locals all --clear
