@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <RootNamespace>TaskStar.Dt98DbContext.NET</RootNamespace>
+    <AssemblyName>TaskStar.Dt98DbContext.NET</AssemblyName>
+    <IsPackable>true</IsPackable>
+    <PackageId>TaskStar.Dt98DbContext.NET</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>TASK Technology Gmbh</Authors>
+    <Description>TaskStar.Dt98DbContext.NET is a library for database operations using EF Core 9.0.</Description>
+    <PackageTags>Dt98DbContext.NET; DT98; taskstar</PackageTags>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>TaskStar.Dt98DbContext.NET.dll.snk</AssemblyOriginatorKeyFile>
+	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="TaskStar.Dt98DbContext.NET.dll.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+  </ItemGroup>
+
+</Project>
