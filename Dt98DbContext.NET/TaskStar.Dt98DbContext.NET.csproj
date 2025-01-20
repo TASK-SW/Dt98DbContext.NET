@@ -14,6 +14,7 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>TaskStar.Dt98DbContext.NET.dll.snk</AssemblyOriginatorKeyFile>
 	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	  <PackageProjectUrl>https://github.com/TASK-SW/Dt98DbContext.NET.git</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
