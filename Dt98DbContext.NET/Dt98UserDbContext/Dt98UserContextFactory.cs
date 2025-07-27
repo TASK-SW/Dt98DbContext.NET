@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext
+namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext
 {
     /// <summary>
     /// <b>Dt98UserContextFactory</b>
@@ -36,7 +36,6 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
             optionsBuilder.UseSqlServer(_connectionString);
 
             return new DT98UserEFCoreDbContext(optionsBuilder.Options);
-
         }
 
         #endregion Public Methods

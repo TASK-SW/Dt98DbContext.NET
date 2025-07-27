@@ -1,19 +1,18 @@
 using Microsoft.EntityFrameworkCore;
-using TaskStar.Dt98DbContext.DT98UserDbContext.Model;
+using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations;
+using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
 
-namespace TaskStar.Dt98DbContext.Dt98UserDbContext
+namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext
 {
     public class DT98UserEFCoreDbContext : DbContext
     {
-        #region Private Methods
-        #endregion Private Methods
-
         #region Protected Methods
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Database.SetInitializer<DT98UserEFCoreDbContext>(null);
-            //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.ApplyConfiguration(new JournalHeaderConfiguration());
+            modelBuilder.ApplyConfiguration(new JournalBookingsConfiguration());
+            modelBuilder.ApplyConfiguration(new JournalCurrencyConfiguration());
         }
 
         #endregion Protected Methods
@@ -23,6 +22,7 @@ namespace TaskStar.Dt98DbContext.Dt98UserDbContext
         public DT98UserEFCoreDbContext(DbContextOptions<DT98UserEFCoreDbContext> options) : base(options)
         {
         }
+
         #endregion Public Constructors
 
         #region Public Properties
