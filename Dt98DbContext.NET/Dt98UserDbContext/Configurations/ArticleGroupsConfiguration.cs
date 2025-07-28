@@ -20,6 +20,10 @@ public class ArticleGroupsConfiguration : IEntityTypeConfiguration<ArticleGroups
 
         builder.Property(a => a.Name)
             .HasColumnName("NAME");
+
+        builder.HasMany(g => g.SubGroups)
+            .WithOne(sg => sg.Group)
+            .HasForeignKey(sg => sg.OidArtGrp);
     }
 
     #endregion Public Methods

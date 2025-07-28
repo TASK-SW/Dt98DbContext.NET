@@ -14,7 +14,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         #region Public Properties
 
-        public string Oid { get; set; }
+        public string OidTrxFiles { get; set; }
         public int DtSequence { get; set; }
         public DateTime DtResetDate { get; set; }
         public int DtActNum { get; set; }

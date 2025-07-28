@@ -33,6 +33,18 @@ public class ArticlesConfiguration : IEntityTypeConfiguration<Articles>
         builder.Property(a => a.VoucherThreshOld).HasColumnName("VOUCHER_THRESHOLD");
         builder.Property(a => a.VoucherMinAmount).HasColumnName("VOUCHER_MIN_AMOUNT");
         builder.Property(a => a.VoucherDscPerLiter).HasColumnName("VOUCHER_DSC_PER_LITER");
+
+        builder.HasOne(a => a.SubGroup)
+            .WithMany(sg => sg.Articles)
+            .HasForeignKey(a => a.OidArtSubGrp);
+
+        builder.HasOne(a => a.Tax)
+            .WithMany(t => t.Articles)
+            .HasForeignKey(a => a.OidTax);
+
+        builder.HasMany(a => a.EanCodes)
+            .WithOne(e => e.Article)
+            .HasForeignKey(e => e.OidArticle);
     }
 
     #endregion Public Methods

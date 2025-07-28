@@ -11,8 +11,8 @@ namespace Configurations
         {
             builder.ToTable("_sctTRXFILETYPES");
 
-            builder.HasKey(e => e.Oid);
-            builder.Property(e => e.Oid).HasColumnName("OID");
+            builder.HasKey(e => e.OidTrxFileTypes);
+            builder.Property(e => e.OidTrxFileTypes).HasColumnName("OID");
             builder.Property(e => e.Id).HasColumnName("ID");
             builder.Property(e => e.Name).HasColumnName("NAME");
             builder.Property(e => e.IId).HasColumnName("IID");

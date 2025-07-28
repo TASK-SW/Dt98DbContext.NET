@@ -17,6 +17,14 @@ public class ArticleSubGroupsConfiguration : IEntityTypeConfiguration<ArticleSub
         builder.Property(a => a.Id).HasColumnName("ID");
         builder.Property(a => a.Name).HasColumnName("NAME");
         builder.Property(a => a.Minage).HasColumnName("MIN_AGE");
+
+        builder.HasOne(sg => sg.Group)
+            .WithMany(g => g.SubGroups)
+            .HasForeignKey(sg => sg.OidArtGrp);
+
+        builder.HasMany(sg => sg.Articles)
+            .WithOne(a => a.SubGroup)
+            .HasForeignKey(a => a.OidArtSubGrp);
     }
 
     #endregion Public Methods

@@ -11,8 +11,8 @@ namespace Configurations
         {
             builder.ToTable("TRXFILES");
 
-            builder.HasKey(e => e.Oid);
-            builder.Property(e => e.Oid).HasColumnName("OID");
+            builder.HasKey(e => e.OidTrxFiles);
+            builder.Property(e => e.OidTrxFiles).HasColumnName("OID");
             builder.Property(e => e.DtSequence).HasColumnName("DT_SEQUENCE");
             builder.Property(e => e.DtResetDate).HasColumnName("DT_RESETDATE");
             builder.Property(e => e.DtActNum).HasColumnName("DT_ACTNUM");
