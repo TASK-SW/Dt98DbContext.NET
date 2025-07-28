@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(ProductId), nameof(FuelpointId), nameof(NozzleId), nameof(TsBegin))]
+    //===[===PrimaryKey(nameof(ProductId), nameof(FuelpointId), nameof(NozzleId), nameof(TsBegin))]
    [Table("VMARECORDS")]
    public class VmaRecords
    {
@@ -15,20 +15,24 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("ProductId")]
+        [Key]
+        [Column("ProductId")]
        public int ProductId { get; set; }
 
-       [Column("FuelpointId")]
+        [Key]
+        [Column("FuelpointId")]
        public int FuelpointId { get; set; }
 
-       [Column("NozzleId")]
+        [Key]
+        [Column("NozzleId")]
        public int NozzleId { get; set; }
 
-       [Column("TSBegin")]
+        [Key]
+        [Column("TSBegin")]
        public DateTime TsBegin { get; set; }
 
        [Column("TSEnd")]

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Oid))]
+    //===[===PrimaryKey(nameof(Oid))]
    [Table("TA_INFO")]
    public class TaInfo
    {
@@ -15,11 +15,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("OID")]
+        [Key]
+        [Column("OID")]
        public int Oid { get; set; }
 
        [Column("APP_ID")]

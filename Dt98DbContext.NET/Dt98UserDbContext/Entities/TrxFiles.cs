@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Oid))]
+    //===[===PrimaryKey(nameof(Oid))]
    [Table("TRXFILES")]
    public class TrxFiles
    {
@@ -20,8 +20,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         #region Public Properties
 
         //FK : sptTrxFiles.Oid
-        [Key()]
-       [Column("OID")]
+        [Key]
+        [Column("OID")]
        public string Oid { get; set; }
 
        [Column("DT_SEQUENCE")]

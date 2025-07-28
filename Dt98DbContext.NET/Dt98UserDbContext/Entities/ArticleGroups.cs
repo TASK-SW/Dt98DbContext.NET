@@ -1,9 +1,10 @@
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Oid))]
+    //===[===PrimaryKey(nameof(Oid))]
     [Table("ARTICLEGROUPS")]
     public class ArticleGroups
     {
@@ -17,6 +18,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         #region Public Properties
 
+        [Key]
         [Column("OID")]
         public string Oid { get; set; }
 

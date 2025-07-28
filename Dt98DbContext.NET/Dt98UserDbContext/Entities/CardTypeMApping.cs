@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Oid))]
+    //===[===PrimaryKey(nameof(Oid))]
    [Table("_sctCARDTYPEMAPPING")]
    public class CardTypeMapping
    {
@@ -15,11 +15,13 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("OID")]
+        //FK : CardTypes.Oid
+        [Key]
+        [Column("OID")]
        public string Oid { get; set; }
 
        [Column("TYPE_BOF")]

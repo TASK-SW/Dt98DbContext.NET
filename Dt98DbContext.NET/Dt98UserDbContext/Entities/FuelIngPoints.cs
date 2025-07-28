@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Oid))]
+    //===[===PrimaryKey(nameof(Oid))]
    [Table("_sptFUELINGPOINTS")]
    public class FuelIngPoints
    {
@@ -15,17 +15,20 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("OID")]
+        [Key]
+        [Column("OID")]
        public string Oid { get; set; }
 
-       [Column("OID_TYPE")]
+        //FK : FuelIngPointTypes.Oid
+        [Column("OID_TYPE")]
        public string OidType { get; set; }
 
-       [Column("OID_PUMP")]
+        //FK : Pumps.Oid
+        [Column("OID_PUMP")]
        public string OidPump { get; set; }
 
        [Column("ID")]

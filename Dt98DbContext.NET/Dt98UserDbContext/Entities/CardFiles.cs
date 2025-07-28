@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Oid))]
+    //===[===PrimaryKey(nameof(Oid))]
    [Table("_sptCARDFILES")]
    public class CardFiles
    {
@@ -15,35 +15,45 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("OID")]
+        //FK : CardTypes.Oid
+        [Key]
+        [Column("OID")]
        public string Oid { get; set; }
 
-       [Column("OID_BLACKLIST")]
+        //FK : BlackLists.Oid
+        [Column("OID_BLACKLIST")]
        public string OidBlackList { get; set; }
 
-       [Column("OID_GREYLIST")]
+        //FK : GreyLists.Oid
+        [Column("OID_GREYLIST")]
        public string OidGreyList { get; set; }
 
-       [Column("OID_REDLIST")]
+        //FK : RedLists.Oid
+        [Column("OID_REDLIST")]
        public string OidRedList { get; set; }
 
-       [Column("OID_CARDDLYTOTAL")]
+        //FK : CardDlyTotals.Oid
+        [Column("OID_CARDDLYTOTAL")]
        public string OidCardDlyTotal { get; set; }
 
-       [Column("OID_CARDTRXCOUNT")]
+        //FK : CardTrxCounts.Oid
+        [Column("OID_CARDTRXCOUNT")]
        public string OidCardTrxCount { get; set; }
 
-       [Column("OID_TRXFILE")]
+        //FK : TrxFiles.Oid
+        [Column("OID_TRXFILE")]
        public string OidTrxFile { get; set; }
 
-       [Column("OID_HOST")]
+        //FK : Hosts.Oid
+        [Column("OID_HOST")]
        public string OidHost { get; set; }
 
-       [Column("OID_CARDDATACOM")]
+        //FK : CardDataCom.Oid
+        [Column("OID_CARDDATACOM")]
        public string OidCardDataCom { get; set; }
 
        [Column("OID_FOREIGNTRX")]

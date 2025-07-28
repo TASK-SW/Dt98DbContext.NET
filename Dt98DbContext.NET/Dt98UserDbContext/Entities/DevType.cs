@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(IdDevTyp), nameof(IdDevCls))]
+    //===[===PrimaryKey(nameof(IdDevTyp), nameof(IdDevCls))]
    [Table("DEV_TYPE")]
    public class DevType
    {
@@ -15,14 +15,16 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("ID_DEV_TYP")]
+        [Key]
+        [Column("ID_DEV_TYP")]
        public string IdDevTyp { get; set; }
 
         //FK : DevClass.IdDevCls
+        [Key]
         [Column("ID_DEV_CLS")]
        public string IdDevCls { get; set; }
 

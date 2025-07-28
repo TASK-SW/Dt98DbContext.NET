@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Pan))]
+    //===[===PrimaryKey(nameof(Pan))]
     [Table("CARDDLYTOTAL025")]
     public class CardDlyTotal025
     {
@@ -19,6 +19,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         #region Public Properties
 
+        [Key]
         [Column("PAN")]
         public string Pan { get; set; }
 

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(ProductId), nameof(FuelPointId), nameof(NozzleId), nameof(TankId), nameof(ProcessingTime), nameof(VmaSeqNumber), nameof(VmaType), nameof(VmaTypeSeqNumber), nameof(OrderNumber))]
+    //===[===PrimaryKey(nameof(ProductId), nameof(FuelPointId), nameof(NozzleId), nameof(TankId), nameof(ProcessingTime), nameof(VmaSeqNumber), nameof(VmaType), nameof(VmaTypeSeqNumber), nameof(OrderNumber))]
    [Table("VMA_History")]
    public class Vma_History
    {
@@ -15,35 +15,44 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("ProductId")]
+        [Key]
+        [Column("ProductId")]
        public int ProductId { get; set; }
 
-       [Column("FuelPointId")]
+        [Key]
+        [Column("FuelPointId")]
        public int FuelPointId { get; set; }
 
-       [Column("NozzleId")]
+        [Key]
+        [Column("NozzleId")]
        public int NozzleId { get; set; }
 
-       [Column("TankId")]
+        [Key]
+        [Column("TankId")]
        public int TankId { get; set; }
 
-       [Column("ProcessingTime")]
+        [Key]
+        [Column("ProcessingTime")]
        public DateTime ProcessingTime { get; set; }
 
-       [Column("VMASeqNumber")]
+        [Key]
+        [Column("VMASeqNumber")]
        public int VmaSeqNumber { get; set; }
 
-       [Column("VMAType")]
+        [Key]
+        [Column("VMAType")]
        public int VmaType { get; set; }
 
-       [Column("VMATypeSeqNumber")]
+        [Key]
+        [Column("VMATypeSeqNumber")]
        public int VmaTypeSeqNumber { get; set; }
 
-       [Column("OrderNumber")]
+        [Key]
+        [Column("OrderNumber")]
        public int OrderNumber { get; set; }
 
        [Column("Status")]

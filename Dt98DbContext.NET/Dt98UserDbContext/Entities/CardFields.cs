@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Oid))]
+    //===[===PrimaryKey(nameof(Oid))]
     [Table("_sptCARDFIELDS")]
     public class CardFields
     {
@@ -19,9 +19,11 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         #region Public Properties
 
+        [Key]
         [Column("OID")]
         public string Oid { get; set; }
 
+        //FK : CardBaseTypes.Oid
         [Column("OID_TYPE")]
         public string OidType { get; set; }
 

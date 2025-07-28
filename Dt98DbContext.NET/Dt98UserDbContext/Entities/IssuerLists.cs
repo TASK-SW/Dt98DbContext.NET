@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Oid))]
+    //===[===PrimaryKey(nameof(Oid))]
    [Table("ISSUERLISTS")]
    public class IssuerLists
    {
@@ -20,6 +20,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         #region Public Properties
 
         //FK : sptIssuerLists.Oid
+        [Key]
         [Column("OID")]
        public string Oid { get; set; }
 

@@ -1,10 +1,11 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Pan))]
+    //===[===PrimaryKey(nameof(Pan))]
     [Table("CARDDLYTOTAL002")]
     public class CardDlyTotal002
     {
@@ -18,6 +19,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         #region Public Properties
 
+        [Key]
         [Column("PAN")]
         public string Pan { get; set; }
 

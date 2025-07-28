@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Oid))]
+    //===[===PrimaryKey(nameof(Oid))]
    [Table("_sptHOSTS")]
    public class Hosts
    {
@@ -15,14 +15,16 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("OID")]
+        [Key]
+        [Column("OID")]
        public string Oid { get; set; }
 
-       [Column("OID_TYPE")]
+        //FK : HostTypes.Oid
+        [Column("OID_TYPE")]
        public string OidType { get; set; }
 
        [Column("DT_NAME")]
@@ -31,7 +33,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
        [Column("DT_STATION_ID")]
        public string DtStationId { get; set; }
 
-       [Column("DT_ISSUERLIST_OID")]
+        //FK : sptIssuerLists.Oid
+        [Column("DT_ISSUERLIST_OID")]
        public string DtIssuerListOid { get; set; }
 
        [Column("DT_FILEID_MSD")]

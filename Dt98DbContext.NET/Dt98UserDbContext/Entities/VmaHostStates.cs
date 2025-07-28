@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(HostId), nameof(StateKey))]
+    //===[===PrimaryKey(nameof(HostId), nameof(StateKey))]
    [Table("VMA_HostStates")]
    public class VmaHostStates
    {
@@ -15,14 +15,16 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("HostId")]
+        [Key]
+        [Column("HostId")]
        public int HostId { get; set; }
 
-       [Column("StateKey")]
+        [Key]
+        [Column("StateKey")]
        public string StateKey { get; set; }
 
        [Column("StateValue")]

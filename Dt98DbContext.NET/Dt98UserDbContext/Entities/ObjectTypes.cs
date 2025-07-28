@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Objtype))]
+    //===[===PrimaryKey(nameof(Objtype))]
    [Table("_sctOBJECTTYPES")]
    public class ObjectTypes
    {
@@ -15,11 +15,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("OBJTYPE")]
+        [Key]
+        [Column("OBJTYPE")]
        public int Objtype { get; set; }
 
        [Column("OBJTYPENAME")]

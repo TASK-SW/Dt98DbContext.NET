@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Oid))]
+    //===[===PrimaryKey(nameof(Oid))]
    [Table("_sctCARDTYPES")]
    public class CardTypes
    {
@@ -15,11 +15,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("OID")]
+        [Key]
+        [Column("OID")]
        public string Oid { get; set; }
 
        [Column("ID")]
@@ -43,7 +44,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
        [Column("CLSID_LAYOUT")]
        public string ClsIdLayout { get; set; }
 
-       [Column("OID_CARDBASETYPE")]
+        //FK : CardBaseTypes.Oid
+        [Column("OID_CARDBASETYPE")]
        public string OidCardBaseType { get; set; }
 
        [Column("IID_MANUALCARDDLG")]

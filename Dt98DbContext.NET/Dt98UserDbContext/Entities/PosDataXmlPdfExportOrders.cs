@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Id))]
+    //===[===PrimaryKey(nameof(Id))]
    [Table("POSDataXmlPdfExportOrders")]
    public class PosDataXmlPdfExportOrders
    {
@@ -15,11 +15,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("ID")]
+        [Key]
+        [Column("ID")]
        public string Id { get; set; }
 
        [Column("OID")]

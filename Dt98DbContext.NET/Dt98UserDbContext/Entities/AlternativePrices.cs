@@ -1,9 +1,10 @@
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(OidArticle), nameof(PriceId))]
+    //===[===PrimaryKey(nameof(OidArticle), nameof(PriceId))]
     [Table("AlternativePrices")]
     public class AlternativePrices
     {
@@ -17,9 +18,11 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         #region Public Properties
 
+        [Key]
         [Column("OIDArticle")]
         public string OidArticle { get; set; }
 
+        [Key]
         [Column("PriceId")]
         public int PriceId { get; set; }
 

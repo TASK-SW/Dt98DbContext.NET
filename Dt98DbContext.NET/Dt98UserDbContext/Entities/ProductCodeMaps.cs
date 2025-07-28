@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Id), nameof(IntCode))]
+    //===[===PrimaryKey(nameof(Id), nameof(IntCode))]
    [Table("_sptPRODUCTCODEMAPS")]
    public class ProductCodeMaps
    {
@@ -15,14 +15,18 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("ID")]
+        //FK : ProductCodeTaxMap.Id
+        //FK : ProductCodeTaxMap.ExtCode
+        [Key]
+        [Column("ID")]
        public int Id { get; set; }
 
-       [Column("INTCODE")]
+        [Key]
+        [Column("INTCODE")]
        public int IntCode { get; set; }
 
        [Column("EXTCODE")]

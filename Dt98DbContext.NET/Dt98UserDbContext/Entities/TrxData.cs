@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(OidTrx), nameof(Generation), nameof(DtSequence))]
+    //===[===PrimaryKey(nameof(OidTrx), nameof(Generation), nameof(DtSequence))]
    [Table("TRXDATA")]
    public class TrxData
    {
@@ -15,17 +15,20 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("OID_TRX")]
+        [Key]
+        [Column("OID_TRX")]
        public string OidTrx { get; set; }
 
-       [Column("GENERATION")]
+        [Key]
+        [Column("GENERATION")]
        public int Generation { get; set; }
 
-       [Column("DT_SEQUENCE")]
+        [Key]
+        [Column("DT_SEQUENCE")]
        public int DtSequence { get; set; }
 
        [Column("DT_TOTALAMOUNT")]

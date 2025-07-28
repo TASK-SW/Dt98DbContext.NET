@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(PkId))]
+    //===[===PrimaryKey(nameof(PkId))]
    [Table("TankTransactions")]
    public class TankTransactions
    {
@@ -15,11 +15,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("PkId")]
+        [Key]
+        [Column("PkId")]
        public string PkId { get; set; }
 
        [Column("TrxDate")]

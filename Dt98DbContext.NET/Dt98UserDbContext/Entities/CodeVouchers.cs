@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(VoucherCode), nameof(VoucherType), nameof(EanCode))]
+    //===[===PrimaryKey(nameof(VoucherCode), nameof(VoucherType), nameof(EanCode))]
    [Table("CodeVouchers")]
    public class CodeVouchers
    {
@@ -15,14 +15,16 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("VoucherCode")]
+        [Key]
+        [Column("VoucherCode")]
        public int VoucherCode { get; set; }
 
-       [Column("VoucherType")]
+        [Key]
+        [Column("VoucherType")]
        public int VoucherType { get; set; }
 
        [Column("ItemId")]
@@ -37,7 +39,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
        [Column("RedemptionDate")]
        public DateTime RedemptionDate { get; set; }
 
-       [Column("EANCode")]
+        [Key]
+        [Column("EANCode")]
        public string EanCode { get; set; }
 
        [Column("ValidFromDate")]

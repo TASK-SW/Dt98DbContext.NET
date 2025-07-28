@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(HostId), nameof(RecordState), nameof(ApplicationId))]
+    //===[===PrimaryKey(nameof(HostId), nameof(RecordState), nameof(ApplicationId))]
    [Table("DatacomOnlineHosts")]
    public class DatacomOnlineHosts
    {
@@ -15,17 +15,20 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("HostId")]
+        [Key]
+        [Column("HostId")]
        public int HostId { get; set; }
 
-       [Column("RecordState")]
+        [Key]
+        [Column("RecordState")]
        public int RecordState { get; set; }
 
-       [Column("ApplicationId")]
+        [Key]
+        [Column("ApplicationId")]
        public string ApplicationId { get; set; }
 
        [Column("HostAddressIsdnB")]

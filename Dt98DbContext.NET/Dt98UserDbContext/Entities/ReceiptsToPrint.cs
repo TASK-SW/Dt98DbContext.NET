@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(OidJourHead))]
+    //===[===PrimaryKey(nameof(OidJourHead))]
    [Table("ReceiptsToPrint")]
    public class ReceiptsToPrint
    {
@@ -15,11 +15,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("OID_JourHead")]
+        [Key]
+        [Column("OID_JourHead")]
        public string OidJourHead { get; set; }
 
        [Column("TerminalId")]

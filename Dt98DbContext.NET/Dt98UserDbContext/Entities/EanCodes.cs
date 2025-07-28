@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(EanCode))]
+    //===[===PrimaryKey(nameof(EanCode))]
    [Table("EANCODES")]
    public class EanCodes
    {
@@ -15,11 +15,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("EANCODE")]
+        [Key]
+        [Column("EANCODE")]
        public string EanCode { get; set; }
 
         //FK : Articles.Oid

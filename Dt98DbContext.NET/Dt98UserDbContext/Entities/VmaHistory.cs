@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(ProductId), nameof(VmaType), nameof(DateTime), nameof(OrderNumber))]
+    //===[===PrimaryKey(nameof(ProductId), nameof(VmaType), nameof(DateTime), nameof(OrderNumber))]
    [Table("VMAHISTORY")]
    public class VmaHistory
    {
@@ -15,20 +15,24 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("ProductId")]
+        [Key]
+        [Column("ProductId")]
        public int ProductId { get; set; }
 
-       [Column("VMAType")]
+        [Key]
+        [Column("VMAType")]
        public int VmaType { get; set; }
 
-       [Column("DateTime")]
+        [Key]
+        [Column("DateTime")]
        public DateTime DateTime { get; set; }
 
-       [Column("OrderNumber")]
+        [Key]
+        [Column("OrderNumber")]
        public int OrderNumber { get; set; }
 
        [Column("UnitPrice")]

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(ProductId), nameof(FuelPointId), nameof(NozzleId), nameof(TankId))]
+    //===[===PrimaryKey(nameof(ProductId), nameof(FuelPointId), nameof(NozzleId), nameof(TankId))]
    [Table("VMA_Current")]
    public class VmaCurrent
    {
@@ -15,20 +15,24 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("ProductId")]
+        [Key]
+        [Column("ProductId")]
        public int ProductId { get; set; }
 
-       [Column("FuelPointId")]
+        [Key]
+        [Column("FuelPointId")]
        public int FuelPointId { get; set; }
 
-       [Column("NozzleId")]
+        [Key]
+        [Column("NozzleId")]
        public int NozzleId { get; set; }
 
-       [Column("TankId")]
+        [Key]
+        [Column("TankId")]
        public int TankId { get; set; }
 
        [Column("Volume")]

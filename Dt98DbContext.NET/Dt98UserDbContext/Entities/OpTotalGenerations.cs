@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(OidHost), nameof(Generation))]
+    //===[===PrimaryKey(nameof(OidHost), nameof(Generation))]
    [Table("OPTOTALGENERATIONS")]
    public class OpTotalGenerations
    {
@@ -15,14 +15,16 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("OID_HOST")]
+        [Key]
+        [Column("OID_HOST")]
        public string OidHost { get; set; }
 
-       [Column("GENERATION")]
+        [Key]
+        [Column("GENERATION")]
        public int Generation { get; set; }
 
        [Column("CYCLESTART")]

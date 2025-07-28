@@ -295,7 +295,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext
 
         public DbSet<RedLists> RedLists { get; set; }
 
-        public DbSet<TankS> TankS { get; set; }
+        public DbSet<Tanks> Tanks { get; set; }
 
         public DbSet<TerminalComponents> TerminalComponents { get; set; }
 

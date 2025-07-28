@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Pan))]
+    //===[===PrimaryKey(nameof(Pan))]
    [Table("REDLIST158")]
    public class RedList158
    {
@@ -15,11 +15,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("PAN")]
+        [Key]
+        [Column("PAN")]
        public string Pan { get; set; }
 
        [Column("COUNT")]

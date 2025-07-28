@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(IdValType))]
+    //===[===PrimaryKey(nameof(IdValType))]
    [Table("DEV_VALTYPE")]
    public class DevValType
    {
@@ -15,11 +15,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("ID_VAL_TYPE")]
+        [Key]
+        [Column("ID_VAL_TYPE")]
        public int IdValType { get; set; }
 
        [Column("NM_VAL_TYPE")]

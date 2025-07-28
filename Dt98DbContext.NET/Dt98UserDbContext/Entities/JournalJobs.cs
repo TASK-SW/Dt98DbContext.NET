@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(OidJournal), nameof(ProviderId), nameof(JobId))]
+    //===[===PrimaryKey(nameof(OidJournal), nameof(ProviderId), nameof(JobId))]
    [Table("JOURNALJOBS")]
    public class JournalJobs
    {
@@ -20,13 +20,16 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         #region Public Properties
 
         //FK : JournalHeader.Oid
+        [Key]
         [Column("OID_JOURNAL")]
        public string OidJournal { get; set; }
 
-       [Column("ProviderId")]
+        [Key]
+        [Column("ProviderId")]
        public int ProviderId { get; set; }
 
-       [Column("JobId")]
+        [Key]
+        [Column("JobId")]
        public int JobId { get; set; }
 
        [Column("LastUpdate")]

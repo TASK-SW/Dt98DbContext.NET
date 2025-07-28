@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(TankId), nameof(ProductId), nameof(ProcessingTime), nameof(VmaSeqNumber), nameof(VmaType), nameof(VmaTypeSeqNumber), nameof(OrderNumber), nameof(TankContentsType))]
+    //===[===PrimaryKey(nameof(TankId), nameof(ProductId), nameof(ProcessingTime), nameof(VmaSeqNumber), nameof(VmaType), nameof(VmaTypeSeqNumber), nameof(OrderNumber), nameof(TankContentsType))]
    [Table("VMA_TankContents")]
    public class VmaTankContents
    {
@@ -15,32 +15,40 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("TankId")]
+        [Key]
+        [Column("TankId")]
        public int TankId { get; set; }
 
-       [Column("ProductId")]
+        [Key]
+        [Column("ProductId")]
        public int ProductId { get; set; }
 
-       [Column("ProcessingTime")]
+        [Key]
+        [Column("ProcessingTime")]
        public DateTime ProcessingTime { get; set; }
 
-       [Column("VMASeqNumber")]
+        [Key]
+        [Column("VMASeqNumber")]
        public int VmaSeqNumber { get; set; }
 
-       [Column("VMAType")]
+        [Key]
+        [Column("VMAType")]
        public int VmaType { get; set; }
 
-       [Column("VMATypeSeqNumber")]
+        [Key]
+        [Column("VMATypeSeqNumber")]
        public int VmaTypeSeqNumber { get; set; }
 
-       [Column("OrderNumber")]
+        [Key]
+        [Column("OrderNumber")]
        public int OrderNumber { get; set; }
 
-       [Column("TankContentsType")]
+        [Key]
+        [Column("TankContentsType")]
        public int TankContentsType { get; set; }
 
        [Column("HostDeliveryState")]

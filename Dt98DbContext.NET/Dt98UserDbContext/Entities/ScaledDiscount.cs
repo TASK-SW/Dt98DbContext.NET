@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(ItemId), nameof(Threshold))]
+    //===[===PrimaryKey(nameof(ItemId), nameof(Threshold))]
    [Table("ScaledDiscount")]
    public class ScaledDiscount
    {
@@ -15,14 +15,16 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("ItemId")]
+        [Key]
+        [Column("ItemId")]
        public int ItemId { get; set; }
 
-       [Column("Threshold")]
+        [Key]
+        [Column("Threshold")]
        public decimal Threshold { get; set; }
 
        [Column("Type")]

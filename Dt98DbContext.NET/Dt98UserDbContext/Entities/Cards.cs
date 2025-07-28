@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(Oid))]
+    //===[===PrimaryKey(nameof(Oid))]
    [Table("_sptCARDS")]
    public class Cards
    {
@@ -15,17 +15,20 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("OID")]
+        [Key]
+        [Column("OID")]
        public string Oid { get; set; }
 
-       [Column("OID_TYPE")]
+        //FK : CardTypes.Oid
+        [Column("OID_TYPE")]
        public string OidType { get; set; }
 
-       [Column("OID_TERMINAL")]
+        //FK : Terminals.Oid
+        [Column("OID_TERMINAL")]
        public string OidTerminal { get; set; }
 
        [Column("ID")]
@@ -37,10 +40,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
        [Column("RECSTATE")]
        public int RecState { get; set; }
 
-       [Column("OID_CARDHANDLING")]
+        //FK : CardHandling.Oid
+        [Column("OID_CARDHANDLING")]
        public string OidCardHandling { get; set; }
 
-       [Column("OID_PAYMENTTYPE")]
+        //FK : PaymentTypes.Oid
+        [Column("OID_PAYMENTTYPE")]
        public string OidPaymentType { get; set; }
 
 

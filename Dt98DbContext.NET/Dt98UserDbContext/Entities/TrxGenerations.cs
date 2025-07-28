@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(OidTrx), nameof(Generation))]
+    //===[===PrimaryKey(nameof(OidTrx), nameof(Generation))]
    [Table("TRXGENERATIONS")]
    public class TrxGenerations
    {
@@ -15,14 +15,16 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("OID_TRX")]
+        [Key]
+        [Column("OID_TRX")]
        public string OidTrx { get; set; }
 
-       [Column("GENERATION")]
+        [Key]
+        [Column("GENERATION")]
        public int Generation { get; set; }
 
        [Column("STARTDATE")]

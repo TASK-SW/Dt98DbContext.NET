@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [PrimaryKey(nameof(TrackNo), nameof(CardId), nameof(RecordState), nameof(ApplicationId))]
+    //===[===PrimaryKey(nameof(TrackNo), nameof(CardId), nameof(RecordState), nameof(ApplicationId))]
    [Table("DatacomOnlineCards")]
    public class DatacomOnlineCards
    {
@@ -15,20 +15,24 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("TrackNo")]
+        [Key]
+        [Column("TrackNo")]
        public int TrackNo { get; set; }
 
-       [Column("CardId")]
+        [Key]
+        [Column("CardId")]
        public string CardId { get; set; }
 
-       [Column("RecordState")]
+        [Key]
+        [Column("RecordState")]
        public int RecordState { get; set; }
 
-       [Column("ApplicationId")]
+        [Key]
+        [Column("ApplicationId")]
        public string ApplicationId { get; set; }
 
        [Column("OnlineCheckIndoor")]
