@@ -1,56 +1,20 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
-
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(Oid))]
-   [Table("OPTOTALDATA")]
-   public class OpTotalData
-   {
-      #region Public Constructors
+    public class OpTotalData
+    {
+        public OpTotalData()
+        {
+        }
 
-       public OpTotalData()
-      {
-      }
-
-        #endregion Public Constructors
-
-        #region Public Properties
-
-        [Key]
-        [Column("OID")]
-       public int Oid { get; set; }
-
-       [Column("OID_HOST")]
-       public string OidHost { get; set; }
-
-       [Column("GENERATION")]
-       public int Generation { get; set; }
-
-       [Column("DT_TYPE")]
-       public int DtType { get; set; }
-
-       [Column("DT_TRANSACTION_ID")]
-       public string DtTransactionId { get; set; }
-
-       [Column("DT_PRODUCT_ID")]
-       public string DtProductId { get; set; }
-
-       [Column("DT_AMOUNT")]
-       public decimal DtAmount { get; set; }
-
-       [Column("DT_QUANTITY")]
-       public decimal DtQuantity { get; set; }
-
-       [Column("UNITCODE")]
-       public string UnitCode { get; set; }
-
-       [Column("DT_COUNT")]
-       public int DtCount { get; set; }
-
-
-       #endregion Public Properties
-   }
+        public int Oid { get; set; }
+        public string OidHost { get; set; }
+        public int Generation { get; set; }
+        public int DtType { get; set; }
+        public string DtTransactionId { get; set; }
+        public string DtProductId { get; set; }
+        public decimal DtAmount { get; set; }
+        public decimal DtQuantity { get; set; }
+        public string UnitCode { get; set; }
+        public int DtCount { get; set; }
+    }
 }

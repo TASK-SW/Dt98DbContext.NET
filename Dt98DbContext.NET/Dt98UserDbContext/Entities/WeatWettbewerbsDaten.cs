@@ -1,41 +1,25 @@
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(Oid))]
-   [Table("WEAT_WettbewerbsDaten")]
-   public class WeatWettbewerbsDaten
-   {
-      #region Public Constructors
+    public class WeatWettbewerbsDaten
+    {
+        #region Public Constructors
 
-       public WeatWettbewerbsDaten()
-      {
-      }
+        public WeatWettbewerbsDaten()
+        {
+        }
 
         #endregion Public Constructors
 
         #region Public Properties
 
-        [Key]
-        [Column("OID")]
-       public string Oid { get; set; }
+        public string Oid { get; set; }
+        public string OidWettBewerber { get; set; }
+        public int ProductId { get; set; }
+        public decimal UnitPrice { get; set; }
+        public DateTime DateTime { get; set; }
 
-       [Column("OID_WETTBEWERBER")]
-       public string OidWettBewerber { get; set; }
-
-       [Column("ProductId")]
-       public int ProductId { get; set; }
-
-       [Column("UnitPrice")]
-       public decimal UnitPrice { get; set; }
-
-       [Column("DateTime")]
-       public DateTime DateTime { get; set; }
-
-
-       #endregion Public Properties
-   }
+        #endregion Public Properties
+    }
 }

@@ -1,42 +1,25 @@
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(OidTrx), nameof(Generation))]
-   [Table("TRXGENERATIONS")]
-   public class TrxGenerations
-   {
-      #region Public Constructors
+    public class TrxGenerations
+    {
+        #region Public Constructors
 
-       public TrxGenerations()
-      {
-      }
+        public TrxGenerations()
+        {
+        }
 
         #endregion Public Constructors
 
         #region Public Properties
 
-        [Key]
-        [Column("OID_TRX")]
-       public string OidTrx { get; set; }
+        public string OidTrx { get; set; }
+        public int Generation { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public DateTime DeliveryDate { get; set; }
 
-        [Key]
-        [Column("GENERATION")]
-       public int Generation { get; set; }
-
-       [Column("STARTDATE")]
-       public DateTime StartDate { get; set; }
-
-       [Column("ENDDATE")]
-       public DateTime EndDate { get; set; }
-
-       [Column("DELIVERYDATE")]
-       public DateTime DeliveryDate { get; set; }
-
-
-       #endregion Public Properties
-   }
+        #endregion Public Properties
+    }
 }

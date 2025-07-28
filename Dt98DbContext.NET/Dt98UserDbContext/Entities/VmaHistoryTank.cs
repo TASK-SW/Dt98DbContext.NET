@@ -1,60 +1,30 @@
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(ProductId), nameof(TankId), nameof(VmaType), nameof(DateTime), nameof(OrderNumber))]
-   [Table("VMAHISTORYTANK")]
-   public class VmaHistoryTank
-   {
-      #region Public Constructors
+    public class VmaHistoryTank
+    {
+        #region Public Constructors
 
-       public VmaHistoryTank()
-      {
-      }
+        public VmaHistoryTank()
+        {
+        }
 
         #endregion Public Constructors
 
         #region Public Properties
 
-        [Key]
-        [Column("ProductId")]
-       public int ProductId { get; set; }
+        public int ProductId { get; set; }
+        public int TankId { get; set; }
+        public int VmaType { get; set; }
+        public DateTime DateTime { get; set; }
+        public int OrderNumber { get; set; }
+        public decimal UnitPrice { get; set; }
+        public decimal UnitPriceNew { get; set; }
+        public decimal TankContent { get; set; }
+        public decimal TankMeter { get; set; }
+        public int HostDeliveryState { get; set; }
 
-        [Key]
-        [Column("TankId")]
-       public int TankId { get; set; }
-
-        [Key]
-        [Column("VMAType")]
-       public int VmaType { get; set; }
-
-        [Key]
-        [Column("DateTime")]
-       public DateTime DateTime { get; set; }
-
-        [Key]
-        [Column("OrderNumber")]
-       public int OrderNumber { get; set; }
-
-       [Column("UnitPrice")]
-       public decimal UnitPrice { get; set; }
-
-       [Column("UnitPriceNew")]
-       public decimal UnitPriceNew { get; set; }
-
-       [Column("TankContent")]
-       public decimal TankContent { get; set; }
-
-       [Column("TankMeter")]
-       public decimal TankMeter { get; set; }
-
-       [Column("HostDeliveryState")]
-       public int HostDeliveryState { get; set; }
-
-
-       #endregion Public Properties
-   }
+        #endregion Public Properties
+    }
 }

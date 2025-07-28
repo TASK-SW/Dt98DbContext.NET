@@ -1,56 +1,30 @@
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(Oid))]
-   [Table("SCHEDULE")]
-   public class Schedule
-   {
-      #region Public Constructors
+    public class Schedule
+    {
+        #region Public Constructors
 
-       public Schedule()
-      {
-      }
+        public Schedule()
+        {
+        }
 
         #endregion Public Constructors
 
         #region Public Properties
 
-        [Key]
-        [Column("OID")]
-       public string Oid { get; set; }
+        public string Oid { get; set; }
+        public int Mode { get; set; }
+        public int Interval { get; set; }
+        public int DayOffSet { get; set; }
+        public int TimeOffSet { get; set; }
+        public DateTime LastDate { get; set; }
+        public DateTime NextDate { get; set; }
+        public string FileName { get; set; }
+        public string Command { get; set; }
+        public int ComSvr { get; set; }
 
-       [Column("MODE")]
-       public int Mode { get; set; }
-
-       [Column("INTERVAL")]
-       public int Interval { get; set; }
-
-       [Column("DAYOFFSET")]
-       public int DayOffSet { get; set; }
-
-       [Column("TIMEOFFSET")]
-       public int TimeOffSet { get; set; }
-
-       [Column("LASTDATE")]
-       public DateTime LastDate { get; set; }
-
-       [Column("NEXTDATE")]
-       public DateTime NextDate { get; set; }
-
-       [Column("FILENAME")]
-       public string FileName { get; set; }
-
-       [Column("COMMAND")]
-       public string Command { get; set; }
-
-       [Column("COMSVR")]
-       public int ComSvr { get; set; }
-
-
-       #endregion Public Properties
-   }
+        #endregion Public Properties
+    }
 }

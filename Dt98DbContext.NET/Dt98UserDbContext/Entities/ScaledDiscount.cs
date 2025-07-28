@@ -1,39 +1,14 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
-
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(ItemId), nameof(Threshold))]
-   [Table("ScaledDiscount")]
-   public class ScaledDiscount
-   {
-      #region Public Constructors
+    public class ScaledDiscount
+    {
+        public ScaledDiscount()
+        {
+        }
 
-       public ScaledDiscount()
-      {
-      }
-
-        #endregion Public Constructors
-
-        #region Public Properties
-
-        [Key]
-        [Column("ItemId")]
-       public int ItemId { get; set; }
-
-        [Key]
-        [Column("Threshold")]
-       public decimal Threshold { get; set; }
-
-       [Column("Type")]
-       public int Type { get; set; }
-
-       [Column("Amount")]
-       public decimal Amount { get; set; }
-
-
-       #endregion Public Properties
-   }
+        public int ItemId { get; set; }
+        public decimal Threshold { get; set; }
+        public int Type { get; set; }
+        public decimal Amount { get; set; }
+    }
 }

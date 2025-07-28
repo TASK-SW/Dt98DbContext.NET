@@ -1,48 +1,27 @@
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(OidHost), nameof(Generation))]
-   [Table("OPTOTALGENERATIONS")]
-   public class OpTotalGenerations
-   {
-      #region Public Constructors
+    public class OpTotalGenerations
+    {
+        #region Public Constructors
 
-       public OpTotalGenerations()
-      {
-      }
+        public OpTotalGenerations()
+        {
+        }
 
         #endregion Public Constructors
 
         #region Public Properties
 
-        [Key]
-        [Column("OID_HOST")]
-       public string OidHost { get; set; }
+        public string OidHost { get; set; }
+        public int Generation { get; set; }
+        public DateTime CycleStart { get; set; }
+        public DateTime CycleEnd { get; set; }
+        public DateTime CreationStart { get; set; }
+        public DateTime CreationEnd { get; set; }
+        public DateTime DeliveryDate { get; set; }
 
-        [Key]
-        [Column("GENERATION")]
-       public int Generation { get; set; }
-
-       [Column("CYCLESTART")]
-       public DateTime CycleStart { get; set; }
-
-       [Column("CYCLEEND")]
-       public DateTime CycleEnd { get; set; }
-
-       [Column("CREATIONSTART")]
-       public DateTime CreationStart { get; set; }
-
-       [Column("CREATIONEND")]
-       public DateTime CreationEnd { get; set; }
-
-       [Column("DELIVERYDATE")]
-       public DateTime DeliveryDate { get; set; }
-
-
-       #endregion Public Properties
-   }
+        #endregion Public Properties
+    }
 }

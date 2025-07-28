@@ -1,12 +1,7 @@
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(Oid))]
-    [Table("_sptCARDDLYTOTALS")]
     public class CardDlyTotals
     {
         #region Public Constructors
@@ -19,18 +14,9 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         #region Public Properties
 
-        [Key]
-        [Column("OID")]
         public string Oid { get; set; }
-
-        //FK : CardDlyTotalTypes.Oid
-        [Column("OID_TYPE")]
         public string OidType { get; set; }
-
-        [Column("ID")]
         public int Id { get; set; }
-
-        [Column("RESETDATE")]
         public DateTime ResetDate { get; set; }
 
         #endregion Public Properties

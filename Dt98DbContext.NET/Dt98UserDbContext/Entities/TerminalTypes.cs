@@ -1,41 +1,15 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
-
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(Oid))]
-   [Table("_sctTERMINALTYPES")]
-   public class TerminalTypes
-   {
-      #region Public Constructors
+    public class TerminalTypes
+    {
+        public TerminalTypes()
+        {
+        }
 
-       public TerminalTypes()
-      {
-      }
-
-        #endregion Public Constructors
-
-        #region Public Properties
-
-        [Key]
-        [Column("OID")]
-       public string Oid { get; set; }
-
-       [Column("ID")]
-       public int Id { get; set; }
-
-       [Column("NAME")]
-       public string Name { get; set; }
-
-       [Column("IID")]
-       public string IId { get; set; }
-
-       [Column("CLSID")]
-       public string ClsId { get; set; }
-
-
-       #endregion Public Properties
-   }
+        public string Oid { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string IId { get; set; }
+        public string ClsId { get; set; }
+    }
 }

@@ -1,83 +1,39 @@
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(Oid))]
-   [Table("TankNetz")]
-   public class TankNetz
-   {
-      #region Public Constructors
+    public class TankNetz
+    {
+        #region Public Constructors
 
-       public TankNetz()
-      {
-      }
+        public TankNetz()
+        {
+        }
 
         #endregion Public Constructors
 
         #region Public Properties
 
-        [Key]
-        [Column("OID")]
-       public string Oid { get; set; }
+        public string Oid { get; set; }
+        public DateTime DateTime { get; set; }
+        public int JournalId { get; set; }
+        public int StationId { get; set; }
+        public int TerminalId { get; set; }
+        public string FirstCard { get; set; }
+        public int SecondCard { get; set; }
+        public int Mileage { get; set; }
+        public int AddInfo { get; set; }
+        public int ArticleId { get; set; }
+        public int FpId { get; set; }
+        public int ProductType { get; set; }
+        public decimal Quantity { get; set; }
+        public decimal UnitPrice { get; set; }
+        public decimal Amount { get; set; }
+        public int Nummerator { get; set; }
+        public int Pin { get; set; }
+        public string ArticleName { get; set; }
+        public string TraceNo { get; set; }
 
-       [Column("DateTime")]
-       public DateTime DateTime { get; set; }
-
-       [Column("JournalId")]
-       public int JournalId { get; set; }
-
-       [Column("StationId")]
-       public int StationId { get; set; }
-
-       [Column("TerminalId")]
-       public int TerminalId { get; set; }
-
-       [Column("FirstCard")]
-       public string FirstCard { get; set; }
-
-       [Column("SecondCard")]
-       public int SecondCard { get; set; }
-
-       [Column("Mileage")]
-       public int Mileage { get; set; }
-
-       [Column("AddInfo")]
-       public int AddInfo { get; set; }
-
-       [Column("ArticleId")]
-       public int ArticleId { get; set; }
-
-       [Column("FPId")]
-       public int FpId { get; set; }
-
-       [Column("ProductType")]
-       public int ProductType { get; set; }
-
-       [Column("Quantity")]
-       public decimal Quantity { get; set; }
-
-       [Column("UnitPrice")]
-       public decimal UnitPrice { get; set; }
-
-       [Column("Amount")]
-       public decimal Amount { get; set; }
-
-       [Column("Nummerator")]
-       public int Nummerator { get; set; }
-
-       [Column("PIN")]
-       public int Pin { get; set; }
-
-       [Column("ArticleName")]
-       public string ArticleName { get; set; }
-
-       [Column("TraceNo")]
-       public string TraceNo { get; set; }
-
-
-       #endregion Public Properties
-   }
+        #endregion Public Properties
+    }
 }

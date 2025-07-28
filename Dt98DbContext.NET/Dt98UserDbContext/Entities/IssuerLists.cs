@@ -1,36 +1,23 @@
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(Oid))]
-   [Table("ISSUERLISTS")]
-   public class IssuerLists
-   {
-      #region Public Constructors
+    public class IssuerLists
+    {
+        #region Public Constructors
 
-       public IssuerLists()
-      {
-      }
+        public IssuerLists()
+        {
+        }
 
         #endregion Public Constructors
 
         #region Public Properties
 
-        //FK : sptIssuerLists.Oid
-        [Key]
-        [Column("OID")]
-       public string Oid { get; set; }
+        public string Oid { get; set; }
+        public int DtVersion { get; set; }
+        public DateTime DtLastUpdate { get; set; }
 
-       [Column("DT_VERSION")]
-       public int DtVersion { get; set; }
-
-       [Column("DT_LASTUPDATE")]
-       public DateTime DtLastUpdate { get; set; }
-
-
-       #endregion Public Properties
-   }
+        #endregion Public Properties
+    }
 }

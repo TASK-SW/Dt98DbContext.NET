@@ -1,40 +1,14 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
-
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(Oid))]
-   [Table("_sptOPTOTAL_PAYMENTMAP")]
-   public class OpTotalPaymentMap
-   {
-      #region Public Constructors
+    public class OpTotalPaymentMap
+    {
+        public OpTotalPaymentMap()
+        {
+        }
 
-       public OpTotalPaymentMap()
-      {
-      }
-
-        #endregion Public Constructors
-
-        #region Public Properties
-
-        [Key]
-        [Column("OID")]
-       public int Oid { get; set; }
-
-        //FK : PaymentTypes.Oid
-        [Column("OID_PAYMENTTYPE")]
-       public string OidPaymentType { get; set; }
-
-        //FK : TerminalTypes.Oid
-        [Column("OID_TERMINALTYPE")]
-       public string OidTerminalType { get; set; }
-
-       [Column("TRANSACTION_ID")]
-       public string TransactionId { get; set; }
-
-
-       #endregion Public Properties
-   }
+        public int Oid { get; set; }
+        public string OidPaymentType { get; set; }
+        public string OidTerminalType { get; set; }
+        public string TransactionId { get; set; }
+    }
 }

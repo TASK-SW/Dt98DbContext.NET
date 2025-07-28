@@ -1,68 +1,34 @@
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(Oid))]
-   [Table("VMA_FuelSales")]
-   public class VmaFuelSales
-   {
-      #region Public Constructors
+    public class VmaFuelSales
+    {
+        #region Public Constructors
 
-       public VmaFuelSales()
-      {
-      }
+        public VmaFuelSales()
+        {
+        }
 
         #endregion Public Constructors
 
         #region Public Properties
 
-        [Key]
-        [Column("OID")]
-       public string Oid { get; set; }
+        public string Oid { get; set; }
+        public DateTime EntryTime { get; set; }
+        public DateTime AuthorizationTime { get; set; }
+        public DateTime FuelStartTime { get; set; }
+        public DateTime FuelEndTime { get; set; }
+        public string TerminalId { get; set; }
+        public string PaymentType { get; set; }
+        public int ProductId { get; set; }
+        public int FuelPointId { get; set; }
+        public int NozzleId { get; set; }
+        public decimal Amount { get; set; }
+        public decimal Volume { get; set; }
+        public decimal UnitPrice { get; set; }
+        public int HostDeliveryState { get; set; }
 
-       [Column("EntryTime")]
-       public DateTime EntryTime { get; set; }
-
-       [Column("AuthorizationTime")]
-       public DateTime AuthorizationTime { get; set; }
-
-       [Column("FuelStartTime")]
-       public DateTime FuelStartTime { get; set; }
-
-       [Column("FuelEndTime")]
-       public DateTime FuelEndTime { get; set; }
-
-       [Column("TerminalId")]
-       public string TerminalId { get; set; }
-
-       [Column("PaymentType")]
-       public string PaymentType { get; set; }
-
-       [Column("ProductId")]
-       public int ProductId { get; set; }
-
-       [Column("FuelPointId")]
-       public int FuelPointId { get; set; }
-
-       [Column("NozzleId")]
-       public int NozzleId { get; set; }
-
-       [Column("Amount")]
-       public decimal Amount { get; set; }
-
-       [Column("Volume")]
-       public decimal Volume { get; set; }
-
-       [Column("UnitPrice")]
-       public decimal UnitPrice { get; set; }
-
-       [Column("HostDeliveryState")]
-       public int HostDeliveryState { get; set; }
-
-
-       #endregion Public Properties
-   }
+        #endregion Public Properties
+    }
 }

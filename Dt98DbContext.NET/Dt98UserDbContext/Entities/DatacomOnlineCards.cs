@@ -1,107 +1,36 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
-
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(TrackNo), nameof(CardId), nameof(RecordState), nameof(ApplicationId))]
-   [Table("DatacomOnlineCards")]
-   public class DatacomOnlineCards
-   {
-      #region Public Constructors
+    public class DatacomOnlineCards
+    {
+        public DatacomOnlineCards()
+        {
+        }
 
-       public DatacomOnlineCards()
-      {
-      }
-
-        #endregion Public Constructors
-
-        #region Public Properties
-
-        [Key]
-        [Column("TrackNo")]
-       public int TrackNo { get; set; }
-
-        [Key]
-        [Column("CardId")]
-       public string CardId { get; set; }
-
-        [Key]
-        [Column("RecordState")]
-       public int RecordState { get; set; }
-
-        [Key]
-        [Column("ApplicationId")]
-       public string ApplicationId { get; set; }
-
-       [Column("OnlineCheckIndoor")]
-       public int OnlineCheckIndoor { get; set; }
-
-       [Column("OnlineCheckOutdoor")]
-       public int OnlineCheckOutdoor { get; set; }
-
-       [Column("OnlinePresetOutdoor")]
-       public decimal OnlinePresetOutdoor { get; set; }
-
-       [Column("DownOptionLimitIndoor")]
-       public decimal DownOptionLimitIndoor { get; set; }
-
-       [Column("DownOptionLimitOutdoor")]
-       public decimal DownOptionLimitOutdoor { get; set; }
-
-       [Column("DownOptionTransactionCount")]
-       public int DownOptionTransactionCount { get; set; }
-
-       [Column("DownOptionCheckBlacklist")]
-       public int DownOptionCheckBlacklist { get; set; }
-
-       [Column("OnlineFloorLimit")]
-       public decimal OnlineFloorLimit { get; set; }
-
-       [Column("AuthorizationHost1Id")]
-       public int AuthorizationHost1Id { get; set; }
-
-       [Column("AuthorizationHost2Id")]
-       public int AuthorizationHost2Id { get; set; }
-
-       [Column("TdFileOnlineInformation")]
-       public int TdFileOnlineInformation { get; set; }
-
-       [Column("OnlineSiteId")]
-       public string OnlineSiteId { get; set; }
-
-       [Column("OlisVersion")]
-       public int OlisVersion { get; set; }
-
-       [Column("SiteIdOlis1P")]
-       public int SiteIdOlis1P { get; set; }
-
-       [Column("CheckLuhn")]
-       public int CheckLuhn { get; set; }
-
-       [Column("MinumumPanLength")]
-       public int MinumumPanLength { get; set; }
-
-       [Column("MaximumPanLength")]
-       public int MaximumPanLength { get; set; }
-
-       [Column("ExpirationDatePosition")]
-       public int ExpirationDatePosition { get; set; }
-
-       [Column("IssuerId")]
-       public int IssuerId { get; set; }
-
-       [Column("SignatureAllowed")]
-       public int SignatureAllowed { get; set; }
-
-       [Column("BlacklistId")]
-       public int BlacklistId { get; set; }
-
-       [Column("DCCQuery")]
-       public int DccQuery { get; set; }
-
-
-       #endregion Public Properties
-   }
+        public int TrackNo { get; set; }
+        public string CardId { get; set; }
+        public int RecordState { get; set; }
+        public string ApplicationId { get; set; }
+        public int OnlineCheckIndoor { get; set; }
+        public int OnlineCheckOutdoor { get; set; }
+        public decimal OnlinePresetOutdoor { get; set; }
+        public decimal DownOptionLimitIndoor { get; set; }
+        public decimal DownOptionLimitOutdoor { get; set; }
+        public int DownOptionTransactionCount { get; set; }
+        public int DownOptionCheckBlacklist { get; set; }
+        public decimal OnlineFloorLimit { get; set; }
+        public int AuthorizationHost1Id { get; set; }
+        public int AuthorizationHost2Id { get; set; }
+        public int TdFileOnlineInformation { get; set; }
+        public string OnlineSiteId { get; set; }
+        public int OlisVersion { get; set; }
+        public int SiteIdOlis1P { get; set; }
+        public int CheckLuhn { get; set; }
+        public int MinumumPanLength { get; set; }
+        public int MaximumPanLength { get; set; }
+        public int ExpirationDatePosition { get; set; }
+        public int IssuerId { get; set; }
+        public int SignatureAllowed { get; set; }
+        public int BlacklistId { get; set; }
+        public int DccQuery { get; set; }
+    }
 }

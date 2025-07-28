@@ -1,53 +1,29 @@
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(Oid))]
-   [Table("MTS")]
-   public class Mts
-   {
-      #region Public Constructors
+    public class Mts
+    {
+        #region Public Constructors
 
-       public Mts()
-      {
-      }
+        public Mts()
+        {
+        }
 
         #endregion Public Constructors
 
         #region Public Properties
 
-        [Key]
-        [Column("OID")]
-       public string Oid { get; set; }
+        public string Oid { get; set; }
+        public string ProductSign { get; set; }
+        public int ProductCode { get; set; }
+        public decimal NewPrice { get; set; }
+        public decimal OldPrice { get; set; }
+        public int ServiceMode { get; set; }
+        public DateTime DateTime { get; set; }
+        public int OrderNumber { get; set; }
+        public int HostDeliveryState { get; set; }
 
-       [Column("ProductSign")]
-       public string ProductSign { get; set; }
-
-       [Column("ProductCode")]
-       public int ProductCode { get; set; }
-
-       [Column("NewPrice")]
-       public decimal NewPrice { get; set; }
-
-       [Column("OldPrice")]
-       public decimal OldPrice { get; set; }
-
-       [Column("ServiceMode")]
-       public int ServiceMode { get; set; }
-
-       [Column("DateTime")]
-       public DateTime DateTime { get; set; }
-
-       [Column("OrderNumber")]
-       public int OrderNumber { get; set; }
-
-       [Column("HostDeliveryState")]
-       public int HostDeliveryState { get; set; }
-
-
-       #endregion Public Properties
-   }
+        #endregion Public Properties
+    }
 }

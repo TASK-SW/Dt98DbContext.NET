@@ -1,60 +1,21 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
-
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(Oid))]
-   [Table("_sctCARDTYPES")]
-   public class CardTypes
-   {
-      #region Public Constructors
+    public class CardTypes
+    {
+        public CardTypes()
+        {
+        }
 
-       public CardTypes()
-      {
-      }
-
-        #endregion Public Constructors
-
-        #region Public Properties
-
-        [Key]
-        [Column("OID")]
-       public string Oid { get; set; }
-
-       [Column("ID")]
-       public int Id { get; set; }
-
-       [Column("NAME")]
-       public string Name { get; set; }
-
-       [Column("SHORTNAME")]
-       public string ShortName { get; set; }
-
-       [Column("IID")]
-       public string IId { get; set; }
-
-       [Column("CLSID")]
-       public string ClsId { get; set; }
-
-       [Column("IID_LAYOUT")]
-       public string IIdLayout { get; set; }
-
-       [Column("CLSID_LAYOUT")]
-       public string ClsIdLayout { get; set; }
-
-        //FK : CardBaseTypes.Oid
-        [Column("OID_CARDBASETYPE")]
-       public string OidCardBaseType { get; set; }
-
-       [Column("IID_MANUALCARDDLG")]
-       public string IIdManualCardDlg { get; set; }
-
-       [Column("CLSID_MANUALCARDDLG")]
-       public string ClsIdManualCardDlg { get; set; }
-
-
-       #endregion Public Properties
-   }
+        public string Oid { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string ShortName { get; set; }
+        public string IId { get; set; }
+        public string ClsId { get; set; }
+        public string IIdLayout { get; set; }
+        public string ClsIdLayout { get; set; }
+        public string OidCardBaseType { get; set; }
+        public string IIdManualCardDlg { get; set; }
+        public string ClsIdManualCardDlg { get; set; }
+    }
 }
