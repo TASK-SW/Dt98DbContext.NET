@@ -33,7 +33,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext
 
         public DbSet<Articles> Articles { get; set; }
 
-        public DbSet<ArticlesUbGroups> ArticlesUbGroups { get; set; }
+        public DbSet<ArticleSubGroups> ArticlesUbGroups { get; set; }
 
         public DbSet<AlternativePrices> AlternativePrices { get; set; }
 
