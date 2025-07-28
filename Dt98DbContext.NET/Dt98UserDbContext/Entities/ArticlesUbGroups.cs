@@ -1,39 +1,26 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(Oid))]
-    [Table("ARTICLESUBGROUPS")]
     public class ArticleSubGroups
     {
         #region Public Constructors
 
         public ArticleSubGroups()
-        {
-        }
+        { }
 
         #endregion Public Constructors
 
         #region Public Properties
 
-        [Key]
-        [Column("OID")]
-        public string Oid { get; set; }
+        public string OidSubGroups { get; set; }
 
-        //FK : ArticleGroups.Oid
-        [Column("OID_ARTGRP")]
         public string OidArtGrp { get; set; }
 
-        [Column("ID")]
         public string Id { get; set; }
 
-        [Column("NAME")]
         public string Name { get; set; }
 
-        [Column("MIN_AGE")]
         public int Minage { get; set; }
 
         #endregion Public Properties
