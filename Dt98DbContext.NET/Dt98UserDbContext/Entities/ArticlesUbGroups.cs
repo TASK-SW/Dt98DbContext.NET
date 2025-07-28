@@ -7,11 +7,11 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
     [PrimaryKey(nameof(Oid))]
     [Table("ARTICLESUBGROUPS")]
-    public class ArticlesUbGroups
+    public class ArticleSubGroups
     {
         #region Public Constructors
 
-        public ArticlesUbGroups()
+        public ArticleSubGroups()
         {
         }
 
@@ -22,6 +22,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         [Column("OID")]
         public string Oid { get; set; }
 
+        //FK : ArticleGroups.Oid
         [Column("OID_ARTGRP")]
         public string OidArtGrp { get; set; }
 

@@ -15,11 +15,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("OID_JOURNAL")]
+        //FK : JournalHeader.Oid
+        [Column("OID_JOURNAL")]
        public string OidJournal { get; set; }
 
        [Column("ProviderId")]

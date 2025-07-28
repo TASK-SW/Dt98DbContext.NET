@@ -22,10 +22,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
        [Column("OID")]
        public int Oid { get; set; }
 
-       [Column("OID_PAYMENTTYPE")]
+        //FK : PaymentTypes.Oid
+        [Column("OID_PAYMENTTYPE")]
        public string OidPaymentType { get; set; }
 
-       [Column("OID_TERMINALTYPE")]
+        //FK : TerminalTypes.Oid
+        [Column("OID_TERMINALTYPE")]
        public string OidTerminalType { get; set; }
 
        [Column("TRANSACTION_ID")]

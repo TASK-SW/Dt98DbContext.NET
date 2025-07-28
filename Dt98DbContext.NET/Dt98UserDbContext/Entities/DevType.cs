@@ -22,7 +22,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
        [Column("ID_DEV_TYP")]
        public string IdDevTyp { get; set; }
 
-       [Column("ID_DEV_CLS")]
+        //FK : DevClass.IdDevCls
+        [Column("ID_DEV_CLS")]
        public string IdDevCls { get; set; }
 
        [Column("NM_DEV_TYP")]

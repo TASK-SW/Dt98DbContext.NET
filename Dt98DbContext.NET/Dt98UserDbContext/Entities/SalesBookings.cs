@@ -22,7 +22,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
        [Column("OID")]
        public string Oid { get; set; }
 
-       [Column("OID_SALES")]
+        //FK : SalesHeader.Oid
+        [Column("OID_SALES")]
        public string OidSales { get; set; }
 
        [Column("ARTICLEID")]

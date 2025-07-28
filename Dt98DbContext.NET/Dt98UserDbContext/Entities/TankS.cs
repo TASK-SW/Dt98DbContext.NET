@@ -7,11 +7,11 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
     [PrimaryKey(nameof(Oid))]
    [Table("_sptTANKS")]
-   public class TankS
+   public class Tanks
    {
       #region Public Constructors
 
-       public TankS()
+       public Tanks()
       {
       }
 
@@ -22,10 +22,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
        [Column("OID")]
        public string Oid { get; set; }
 
-       [Column("OID_TYPE")]
+        //FK : TankTypes.Oid
+        [Column("OID_TYPE")]
        public string OidType { get; set; }
 
-       [Column("OID_ARTICLE")]
+        //FK : Articles.Oid
+        [Column("OID_ARTICLE")]
        public string OidArticle { get; set; }
 
        [Column("OID_TANKLEVELTAB")]

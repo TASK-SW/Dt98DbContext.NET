@@ -28,7 +28,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
        [Column("ID_DEV_CLS")]
        public string IdDevCls { get; set; }
 
-       [Column("ID_DEV_PAR")]
+        //FK : DevConfig.IdDevCfg
+        [Column("ID_DEV_PAR")]
        public string IdDevPar { get; set; }
 
 

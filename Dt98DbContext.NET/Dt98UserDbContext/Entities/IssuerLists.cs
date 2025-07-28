@@ -15,11 +15,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("OID")]
+        //FK : sptIssuerLists.Oid
+        [Column("OID")]
        public string Oid { get; set; }
 
        [Column("DT_VERSION")]

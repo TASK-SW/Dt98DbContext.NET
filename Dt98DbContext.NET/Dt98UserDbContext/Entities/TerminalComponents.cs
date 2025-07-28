@@ -22,7 +22,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
        [Column("OID")]
        public string Oid { get; set; }
 
-       [Column("OID_TERMINAL")]
+        //FK : Terminals.Oid
+        [Column("OID_TERMINAL")]
        public string OidTerminal { get; set; }
 
        [Column("ID")]

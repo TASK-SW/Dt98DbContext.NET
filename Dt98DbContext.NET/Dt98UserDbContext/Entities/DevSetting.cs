@@ -15,11 +15,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
       {
       }
 
-       #endregion Public Constructors
+        #endregion Public Constructors
 
-       #region Public Properties
+        #region Public Properties
 
-       [Column("ID_DEV_CFG")]
+        //FK : DevConfig.IdDevCfg
+        [Column("ID_DEV_CFG")]
        public string IdDevCfg { get; set; }
 
        [Column("VAL_DEV_SET")]

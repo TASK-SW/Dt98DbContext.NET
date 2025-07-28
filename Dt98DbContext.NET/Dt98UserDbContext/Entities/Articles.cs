@@ -22,9 +22,11 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         [Column("OID")]
         public string Oid { get; set; }
 
+        //FK : ArticleSubGroups.Oid
         [Column("OID_ARTSUBGRP")]
         public string OidArtSubGrp { get; set; }
 
+        //FK : Taxes.Oid
         [Column("OID_TAX")]
         public string OidTax { get; set; }
 

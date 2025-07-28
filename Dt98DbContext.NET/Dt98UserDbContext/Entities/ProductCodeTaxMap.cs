@@ -25,6 +25,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
        [Column("EXTCODE")]
        public int ExtCode { get; set; }
 
+        //FK : Taxes.Oid
        [Column("VAT_OID")]
        public string VatOid { get; set; }
 

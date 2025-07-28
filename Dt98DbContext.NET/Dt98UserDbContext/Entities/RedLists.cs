@@ -22,7 +22,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
        [Column("OID")]
        public string Oid { get; set; }
 
-       [Column("OID_TYPE")]
+        //FK : RedListTypes.Oid
+        [Column("OID_TYPE")]
        public string OidType { get; set; }
 
        [Column("ID")]

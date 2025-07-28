@@ -22,7 +22,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
        [Column("EANCODE")]
        public string EanCode { get; set; }
 
-       [Column("OID_ARTICLE")]
+        //FK : Articles.Oid
+        [Column("OID_ARTICLE")]
        public string OidArticle { get; set; }
 
        [Column("SALES_PRICE")]
