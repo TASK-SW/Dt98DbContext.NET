@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
 
@@ -10,9 +11,10 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new JournalHeaderConfiguration());
-            modelBuilder.ApplyConfiguration(new JournalBookingsConfiguration());
-            modelBuilder.ApplyConfiguration(new JournalCurrencyConfiguration());
+            base.OnModelCreating(modelBuilder);
+            //modelBuilder.HasDefaultSchema("Wms");
+            modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
         #endregion Protected Methods

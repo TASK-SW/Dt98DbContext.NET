@@ -74,6 +74,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
                    .WithOne(jb => jb.Header)
                    .HasForeignKey(jb => jb.OidJournal)
                    .HasPrincipalKey(jh => jh.Oid);
+
+            builder.HasOne(r => r.Receipt)
+                .WithOne()
+                .HasForeignKey<Receipts>(r => r.OidReceipt)
+                .HasPrincipalKey<JournalHeader>(h => h.Oid)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
         #endregion Public Methods

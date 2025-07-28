@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    //===[===PrimaryKey(nameof(OidArticle), nameof(PriceId))]
     [Table("AlternativePrices")]
     public class AlternativePrices
     {

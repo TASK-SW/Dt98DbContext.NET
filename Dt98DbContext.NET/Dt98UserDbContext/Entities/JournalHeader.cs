@@ -12,6 +12,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         private ICollection<JournalBookings> _journalBookings;
 
+        private Receipts _receipt;
+
         #endregion Private Fields
 
         #region Private Properties
@@ -46,6 +48,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         {
             get => LazyLoader.Load(this, ref _journalBookings);
             set => _journalBookings = value;
+        }
+
+        public Receipts Receipt
+        {
+            get => LazyLoader.Load(this, ref _receipt);
+            set => _receipt = value;
         }
 
         public int RecType { get; set; }
