@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
 
+namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations;
+
 public class ArticleSubGroupsConfiguration : IEntityTypeConfiguration<ArticleSubGroups>
 {
     #region Public Methods

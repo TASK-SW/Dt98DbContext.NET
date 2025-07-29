@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
-    [Table("RECEIPTS")]
     public class Receipts
     {
         #region Private Fields

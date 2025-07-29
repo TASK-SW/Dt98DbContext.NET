@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
 
-namespace Configurations
+namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class FuelSalesConfiguration : IEntityTypeConfiguration<FuelSales>
     {

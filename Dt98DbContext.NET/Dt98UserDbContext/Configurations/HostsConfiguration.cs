@@ -1,12 +1,13 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
 
-namespace Configurations
+namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class HostsConfiguration : IEntityTypeConfiguration<Hosts>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<Hosts> builder)
         {
             builder.ToTable("_sptHOSTS");
@@ -30,5 +31,7 @@ namespace Configurations
             builder.Property(e => e.DtLoginName).HasColumnName("DT_LOGIN_NAME");
             builder.Property(e => e.DtApplicationType).HasColumnName("DT_APPLICATION_TYPE");
         }
+
+        #endregion Public Methods
     }
 }
