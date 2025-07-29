@@ -18,8 +18,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         public decimal AmtRcv { get; set; }
         public decimal AmtRtn { get; set; }
         public string TyTnd { get; set; }
-        public int FlmAIntNd { get; set; }
-        public decimal LocalAmtRnd { get; set; }
+        public int? FlmAIntNd { get; set; }
+        public decimal? LocalAmtRnd { get; set; }
         public string DeTnd { get; set; }
 
         #endregion Public Properties

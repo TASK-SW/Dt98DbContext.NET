@@ -21,23 +21,23 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         public string Version { get; set; }
 
-        public int Validity { get; set; }
+        public int? Validity { get; set; }
 
-        public DateTime DownloadDate { get; set; }
+        public DateTime? DownloadDate { get; set; }
 
         public string GenNo { get; set; }
 
         public string UpGenNo { get; set; }
 
-        public DateTime GroupDownloadDate { get; set; }
+        public DateTime? GroupDownloadDate { get; set; }
 
-        public int DataComId { get; set; }
+        public int? DataComId { get; set; }
 
-        public int PanLength { get; set; }
+        public int? PanLength { get; set; }
 
-        public int StripLength { get; set; }
+        public int? StripLength { get; set; }
 
-        public int ExpirationDays { get; set; }
+        public int? ExpirationDays { get; set; }
 
         #endregion Public Properties
     }

@@ -11,9 +11,9 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         public string OidArticle { get; set; }
         public string OidTankLevelTab { get; set; }
         public int Id { get; set; }
-        public decimal Volume { get; set; }
-        public decimal Length { get; set; }
-        public decimal Height { get; set; }
-        public decimal Width { get; set; }
+        public decimal? Volume { get; set; }
+        public decimal? Length { get; set; }
+        public decimal? Height { get; set; }
+        public decimal? Width { get; set; }
     }
 }

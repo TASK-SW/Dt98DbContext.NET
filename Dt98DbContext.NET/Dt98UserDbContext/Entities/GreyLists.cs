@@ -20,8 +20,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         public string GenNo { get; set; }
         public string UpGenNo { get; set; }
         public string Version { get; set; }
-        public int Validity { get; set; }
-        public DateTime DownloadDate { get; set; }
+        public int? Validity { get; set; }
+        public DateTime? DownloadDate { get; set; }
 
         #endregion Public Properties
     }

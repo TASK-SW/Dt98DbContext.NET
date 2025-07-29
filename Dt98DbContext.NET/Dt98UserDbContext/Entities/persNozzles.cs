@@ -7,7 +7,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         }
 
         public string Oid { get; set; }
-        public decimal Volume { get; set; }
-        public decimal Amount { get; set; }
+        public decimal? Volume { get; set; }
+        public decimal? Amount { get; set; }
     }
 }

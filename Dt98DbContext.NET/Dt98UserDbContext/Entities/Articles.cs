@@ -67,31 +67,31 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         public string ReceiptText { get; set; }
 
-        public decimal SalesPrice { get; set; }
+        public decimal? SalesPrice { get; set; }
 
-        public int SalesUnit { get; set; }
+        public int? SalesUnit { get; set; }
 
-        public decimal SalesQuantity { get; set; }
+        public decimal? SalesQuantity { get; set; }
 
-        public int NormUnit { get; set; }
+        public int? NormUnit { get; set; }
 
-        public decimal NormQuantity { get; set; }
+        public decimal? NormQuantity { get; set; }
 
-        public decimal NormPrice { get; set; }
+        public decimal? NormPrice { get; set; }
 
-        public int VoucherEnabled { get; set; }
+        public int? VoucherEnabled { get; set; }
 
-        public DateTime VoucherValIdFrom { get; set; }
+        public DateTime? VoucherValIdFrom { get; set; }
 
-        public DateTime VoucherValIdtO { get; set; }
+        public DateTime? VoucherValIdtO { get; set; }
 
-        public int VoucherValIdDays { get; set; }
+        public int? VoucherValIdDays { get; set; }
 
-        public int VoucherThreshOld { get; set; }
+        public int? VoucherThreshOld { get; set; }
 
-        public decimal VoucherMinAmount { get; set; }
+        public decimal? VoucherMinAmount { get; set; }
 
-        public decimal VoucherDscPerLiter { get; set; }
+        public decimal? VoucherDscPerLiter { get; set; }
 
         #endregion Public Properties
     }

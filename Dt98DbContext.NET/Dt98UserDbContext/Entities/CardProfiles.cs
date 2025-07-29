@@ -10,6 +10,6 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         public string OidCard { get; set; }
         public int Id { get; set; }
         public int DataSource { get; set; }
-        public int CountErNo { get; set; }
+        public int? CountErNo { get; set; }
     }
 }

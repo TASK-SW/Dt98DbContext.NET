@@ -10,7 +10,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         public string ObjId { get; set; }
         public int PArtype { get; set; }
         public string ParId { get; set; }
-        public int State { get; set; }
+        public int? State { get; set; }
         public int ObjStateIX { get; set; }
     }
 }

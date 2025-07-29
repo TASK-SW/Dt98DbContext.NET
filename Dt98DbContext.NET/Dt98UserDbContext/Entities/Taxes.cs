@@ -37,7 +37,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         public string OidTaxes { get; set; }
         public int Id { get; set; }
         public string Name { get; set; }
-        public decimal Tax { get; set; }
+        public decimal? Tax { get; set; }
 
         #endregion Public Properties
     }

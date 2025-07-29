@@ -18,9 +18,9 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         public string DtOutPath { get; set; }
         public string DtSlumPath { get; set; }
         public string DtCardHandlingOid { get; set; }
-        public int DtCheckSystem { get; set; }
-        public int DtCheckAcceptance { get; set; }
-        public int DtDelivErOpTotal { get; set; }
+        public int? DtCheckSystem { get; set; }
+        public int? DtCheckAcceptance { get; set; }
+        public int? DtDelivErOpTotal { get; set; }
         public string DtLoginName { get; set; }
         public string DtApplicationType { get; set; }
     }

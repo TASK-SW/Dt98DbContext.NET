@@ -12,9 +12,9 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         public int DtType { get; set; }
         public string DtTransactionId { get; set; }
         public string DtProductId { get; set; }
-        public decimal DtAmount { get; set; }
-        public decimal DtQuantity { get; set; }
+        public decimal? DtAmount { get; set; }
+        public decimal? DtQuantity { get; set; }
         public string UnitCode { get; set; }
-        public int DtCount { get; set; }
+        public int? DtCount { get; set; }
     }
 }

@@ -10,6 +10,6 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         public string OidTerminalComponent { get; set; }
         public string Id { get; set; }
         public string Value { get; set; }
-        public int Type { get; set; }
+        public int? Type { get; set; }
     }
 }

@@ -18,6 +18,6 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         public string MacKey { get; set; }
         public int EncKeyId { get; set; }
         public string EncKey { get; set; }
-        public int OlisVersion { get; set; }
+        public int? OlisVersion { get; set; }
     }
 }

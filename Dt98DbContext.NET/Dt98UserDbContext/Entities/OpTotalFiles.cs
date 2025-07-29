@@ -15,10 +15,10 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         #region Public Properties
 
         public string Oid { get; set; }
-        public DateTime StartDate { get; set; }
+        public DateTime? StartDate { get; set; }
         public int ActualGen { get; set; }
         public int DelivGen { get; set; }
-        public int DtVersion { get; set; }
+        public int? DtVersion { get; set; }
 
         #endregion Public Properties
     }

@@ -16,7 +16,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         public string Oid { get; set; }
         public int DtVersion { get; set; }
-        public DateTime DtLastUpdate { get; set; }
+        public DateTime? DtLastUpdate { get; set; }
 
         #endregion Public Properties
     }

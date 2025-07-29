@@ -35,7 +35,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         public string EanCode { get; set; }
         public string OidArticle { get; set; }
-        public decimal SalesPrice { get; set; }
+        public decimal? SalesPrice { get; set; }
 
         #endregion Public Properties
     }

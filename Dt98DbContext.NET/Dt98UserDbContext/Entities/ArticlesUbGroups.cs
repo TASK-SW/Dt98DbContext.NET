@@ -45,7 +45,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         public string Name { get; set; }
 
-        public int Minage { get; set; }
+        public int? Minage { get; set; }
 
         #endregion Public Properties
     }

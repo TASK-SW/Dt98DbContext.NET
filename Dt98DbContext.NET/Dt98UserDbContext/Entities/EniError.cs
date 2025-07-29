@@ -21,7 +21,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         public int MessageNumber { get; set; }
         public string MessageText { get; set; }
         public int HostDeliveryState { get; set; }
-        public DateTime DateTime { get; set; }
+        public DateTime? DateTime { get; set; }
 
         #endregion Public Properties
     }

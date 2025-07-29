@@ -22,15 +22,15 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         public int AuthorizationHost2Id { get; set; }
         public int TdFileOnlineInformation { get; set; }
         public string OnlineSiteId { get; set; }
-        public int OlisVersion { get; set; }
-        public int SiteIdOlis1P { get; set; }
-        public int CheckLuhn { get; set; }
-        public int MinumumPanLength { get; set; }
-        public int MaximumPanLength { get; set; }
-        public int ExpirationDatePosition { get; set; }
-        public int IssuerId { get; set; }
-        public int SignatureAllowed { get; set; }
-        public int BlacklistId { get; set; }
-        public int DccQuery { get; set; }
+        public int? OlisVersion { get; set; }
+        public int? SiteIdOlis1P { get; set; }
+        public int? CheckLuhn { get; set; }
+        public int? MinumumPanLength { get; set; }
+        public int? MaximumPanLength { get; set; }
+        public int? ExpirationDatePosition { get; set; }
+        public int? IssuerId { get; set; }
+        public int? SignatureAllowed { get; set; }
+        public int? BlacklistId { get; set; }
+        public int? DccQuery { get; set; }
     }
 }

@@ -47,11 +47,11 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         public string OidTerminal { get; set; }
 
-        public int TerminalType { get; set; }
+        public int? TerminalType { get; set; }
 
         public string Pan { get; set; }
 
-        public int PrintCount { get; set; }
+        public int? PrintCount { get; set; }
 
         public DateTime? DateStore { get; set; }
 
@@ -59,7 +59,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         public string ReceiptText { get; set; }
 
         public string ExtraData { get; set; }
-        public int PrinterWidth { get; set; }
+        public int? PrinterWidth { get; set; }
 
         public string WmFormat { get; set; }
 

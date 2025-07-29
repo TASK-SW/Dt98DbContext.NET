@@ -15,8 +15,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         #region Public Properties
 
         public string Pan { get; set; }
-        public int Count { get; set; }
-        public DateTime EditDate { get; set; }
+        public int? Count { get; set; }
+        public DateTime? EditDate { get; set; }
 
         #endregion Public Properties
     }
