@@ -75,10 +75,10 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
                    .HasForeignKey(jb => jb.OidJournal)
                    .HasPrincipalKey(jh => jh.Oid);
 
-            builder.HasOne(r => r.Receipt)
-                .WithOne()
-                .HasForeignKey<Receipts>(r => r.OidReceipt)
-                .HasPrincipalKey<JournalHeader>(h => h.Oid)
+            builder.HasOne(jh => jh.Receipt)
+                .WithOne(r => r.Header)
+                .HasForeignKey<Receipts>(r => r.OidReceipt) // FK в RECEIPTS
+                .HasPrincipalKey<JournalHeader>(jh => jh.Oid) // PK в JOURNALHEADER
                 .OnDelete(DeleteBehavior.Restrict);
         }
 

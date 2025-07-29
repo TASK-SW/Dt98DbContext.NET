@@ -31,9 +31,9 @@ public class ReceiptsConfiguration : IEntityTypeConfiguration<Receipts>
 
         // JournalHeader
         builder.HasOne(r => r.Header)
-            .WithOne()
-            .HasForeignKey<Receipts>(r => r.OidReceipt)
-            .HasPrincipalKey<JournalHeader>(h => h.Oid)
+            .WithOne(h => h.Receipt)
+            .HasForeignKey<Receipts>(r => r.OidReceipt) // FK в RECEIPTS
+            .HasPrincipalKey<JournalHeader>(h => h.Oid) // PK в JOURNALHEADER
             .OnDelete(DeleteBehavior.Restrict);
     }
 
