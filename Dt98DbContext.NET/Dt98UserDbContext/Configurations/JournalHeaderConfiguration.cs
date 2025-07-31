@@ -80,6 +80,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
                 .HasForeignKey<Receipts>(r => r.OidReceipt) // FK в RECEIPTS
                 .HasPrincipalKey<JournalHeader>(jh => jh.Oid) // PK в JOURNALHEADER
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(jh => jh.JournalKassenSich)
+                .WithOne(r => r.Header)
+                .HasForeignKey<JournalKassenSich>(r => r.OidJournal) // FK в JOURNALKASSENSICH
+                .HasPrincipalKey<JournalHeader>(jh => jh.Oid) // PK в JOURNALHEADER
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
         #endregion Public Methods

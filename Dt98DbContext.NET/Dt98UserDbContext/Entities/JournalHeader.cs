@@ -14,6 +14,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         private Receipts _receipt;
 
+        private JournalKassenSich _journalKassenSich;
+
         #endregion Private Fields
 
         #region Private Properties
@@ -54,6 +56,12 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         {
             get => LazyLoader.Load(this, ref _receipt);
             set => _receipt = value;
+        }
+
+        public JournalKassenSich JournalKassenSich
+        {
+            get => LazyLoader.Load(this, ref _journalKassenSich);
+            set => _journalKassenSich = value;
         }
 
         public int? RecType { get; set; }
