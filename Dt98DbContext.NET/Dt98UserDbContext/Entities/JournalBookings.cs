@@ -1,11 +1,28 @@
+﻿using Microsoft.EntityFrameworkCore.Infrastructure;
+using System;
+using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
+
 namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 {
     public class JournalBookings
     {
+        #region Private Fields
+
+        private readonly ILazyLoader _lazyLoader;
+
+        private Units _units;
+
+        #endregion Private Fields
+
         #region Public Constructors
 
         public JournalBookings()
         { }
+
+        public JournalBookings(ILazyLoader lazyLoader)
+        {
+            _lazyLoader = lazyLoader;
+        }
 
         #endregion Public Constructors
 
@@ -28,7 +45,16 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         public decimal? FpAmount { get; set; }
         public string ArtSubGrp { get; set; }
         public string ArtGrp { get; set; }
+
         public int? Unit { get; set; }
+
+        // 👇 Lazy-loaded navigation property using ILazyLoader
+        public Units Units
+        {
+            get => _lazyLoader?.Load(this, ref _units);
+            set => _units = value;
+        }
+
         public string OidStornoOrigin { get; set; }
         public int? DscType { get; set; }
         public decimal? DscRate { get; set; }

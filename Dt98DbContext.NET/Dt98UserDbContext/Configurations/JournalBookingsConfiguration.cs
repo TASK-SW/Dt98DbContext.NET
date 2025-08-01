@@ -44,6 +44,13 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(jb => jb.FpCrc).HasColumnName("FP_CRC");
             builder.Property(jb => jb.FrgnIdCny).HasColumnName("FRGN_ID_CNY");
             builder.Property(jb => jb.FrgnUnitPrc).HasColumnName("FRGN_UNIT_PRC");
+
+            // 👇 One-way lazy-loaded relation to Units
+            builder.HasOne(jb => jb.Units)
+                .WithMany() // no navigation back
+                .HasForeignKey(jb => jb.Unit)
+                .HasPrincipalKey(u => u.Id)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
         #endregion Public Methods
