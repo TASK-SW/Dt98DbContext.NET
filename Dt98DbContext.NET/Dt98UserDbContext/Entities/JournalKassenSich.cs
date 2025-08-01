@@ -12,13 +12,9 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         private JournalHeader _header;
 
+        private ILazyLoader LazyLoader;
+
         #endregion Private Fields
-
-        #region Private Properties
-
-        private ILazyLoader LazyLoader { get; set; }
-
-        #endregion Private Properties
 
         #region Public Constructors
 
@@ -30,16 +26,19 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         {
             LazyLoader = lazyLoader;
         }
+
         #endregion Public Constructors
 
         #region Public Properties
 
         public string OidJournal { get; set; }
+
         public JournalHeader Header
         {
             get => LazyLoader.Load(this, ref _header);
             set => _header = value;
         }
+
         public string ProcessType { get; set; }
         public string ProcessData { get; set; }
         public long? TransactionNumber { get; set; }
