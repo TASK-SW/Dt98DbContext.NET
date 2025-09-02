@@ -11,7 +11,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Tests
         public void GetDbContextTest()
         {
             Dt98UserContextFactory factory = new Dt98UserContextFactory(
-                @"Server=localhost\SQL2014;Database=DT98User;User Id=sa;Password=E77lingen;Encrypt=false;TrustServerCertificate=true;");
+                @"Server=localhost\SQLEXPRESS;Database=DT98User_CityBonCard;User Id=sa;Password=E77lingen;Encrypt=false;TrustServerCertificate=true;");
 
             var db = factory.GetDbContext();
 
