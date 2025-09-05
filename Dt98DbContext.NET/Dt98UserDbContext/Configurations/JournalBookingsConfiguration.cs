@@ -51,6 +51,13 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
                 .HasForeignKey(jb => jb.Unit)
                 .HasPrincipalKey(u => u.Id)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            // 👇 One-way lazy-loaded relation to EanCodes
+            builder.HasOne(jb => jb.EanCodes)
+                .WithMany() // no navigation back
+                .HasForeignKey(jb => jb.ArticleId)
+                .HasPrincipalKey(u => u.OidArticle)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
         #endregion Public Methods

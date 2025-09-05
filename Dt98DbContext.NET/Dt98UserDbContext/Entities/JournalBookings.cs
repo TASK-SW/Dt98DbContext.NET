@@ -12,6 +12,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
 
         private Units _units;
 
+        private EanCodes _eanCodes;
+
         #endregion Private Fields
 
         #region Public Constructors
@@ -53,6 +55,13 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         {
             get => _lazyLoader?.Load(this, ref _units);
             set => _units = value;
+        }
+
+        // 👇 Lazy-loaded navigation property using ILazyLoader
+        public EanCodes EanCodes
+        {
+            get => _lazyLoader?.Load(this, ref _eanCodes);
+            set => _eanCodes = value;
         }
 
         public string OidStornoOrigin { get; set; }
