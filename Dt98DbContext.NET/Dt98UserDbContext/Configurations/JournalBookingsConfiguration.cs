@@ -58,6 +58,10 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
                 .HasForeignKey(jb => jb.ArticleId)
                 .HasPrincipalKey(u => u.OidArticle)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(a => a.SubGroup)
+                .WithMany(sg => sg.JournalBookings)
+                .HasForeignKey(a => a.ArtSubGrp);
         }
 
         #endregion Public Methods
