@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class CardTypesConfiguration : IEntityTypeConfiguration<CardTypes>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<CardTypes> builder)
         {
             builder.ToTable("_sctCARDTYPES");
@@ -24,5 +25,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.IIdManualCardDlg).HasColumnName("IID_MANUALCARDDLG");
             builder.Property(e => e.ClsIdManualCardDlg).HasColumnName("CLSID_MANUALCARDDLG");
         }
+
+        #endregion Public Methods
     }
 }

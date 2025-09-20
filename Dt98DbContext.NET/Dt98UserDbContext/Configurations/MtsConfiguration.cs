@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class MtsConfiguration : IEntityTypeConfiguration<Mts>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<Mts> builder)
         {
             builder.ToTable("MTS");
@@ -22,5 +23,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.OrderNumber).HasColumnName("OrderNumber");
             builder.Property(e => e.HostDeliveryState).HasColumnName("HostDeliveryState");
         }
+
+        #endregion Public Methods
     }
 }

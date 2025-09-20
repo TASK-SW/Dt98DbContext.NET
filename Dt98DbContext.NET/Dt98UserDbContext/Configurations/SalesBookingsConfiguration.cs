@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class SalesBookingsConfiguration : IEntityTypeConfiguration<SalesBookings>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<SalesBookings> builder)
         {
             builder.ToTable("SALESBOOKINGS");
@@ -41,5 +42,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.FrgnIdCny).HasColumnName("FRGN_ID_CNY");
             builder.Property(e => e.FrgnUnitPrc).HasColumnName("FRGN_UNIT_PRC");
         }
+
+        #endregion Public Methods
     }
 }

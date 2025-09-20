@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class NozzlesConfiguration : IEntityTypeConfiguration<Nozzles>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<Nozzles> builder)
         {
             builder.ToTable("_sptNOZZLES");
@@ -18,5 +19,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.OidTank).HasColumnName("OID_TANK");
             builder.Property(e => e.Id).HasColumnName("ID");
         }
+
+        #endregion Public Methods
     }
 }

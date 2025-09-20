@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class ObjectTypesConfiguration : IEntityTypeConfiguration<ObjectTypes>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<ObjectTypes> builder)
         {
             builder.ToTable("_sctOBJECTTYPES");
@@ -15,5 +16,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.Objtype).HasColumnName("OBJTYPE");
             builder.Property(e => e.ObjtypeName).HasColumnName("OBJTYPENAME");
         }
+
+        #endregion Public Methods
     }
 }

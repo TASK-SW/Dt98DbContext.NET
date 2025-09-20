@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class persFuelIngPointsConfiguration : IEntityTypeConfiguration<persFuelIngPoints>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<persFuelIngPoints> builder)
         {
             builder.ToTable("_persFUELINGPOINTS");
@@ -30,5 +31,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.PsCountEr4).HasColumnName("PS_COUNTER4");
             builder.Property(e => e.PsNummeRateUr).HasColumnName("PS_NUMMERATEUR");
         }
+
+        #endregion Public Methods
     }
 }

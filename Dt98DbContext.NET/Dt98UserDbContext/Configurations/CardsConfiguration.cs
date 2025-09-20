@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class CardsConfiguration : IEntityTypeConfiguration<Cards>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<Cards> builder)
         {
             builder.ToTable("_sptCARDS");
@@ -21,5 +22,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.OidCardHandling).HasColumnName("OID_CARDHANDLING");
             builder.Property(e => e.OidPaymentType).HasColumnName("OID_PAYMENTTYPE");
         }
+
+        #endregion Public Methods
     }
 }

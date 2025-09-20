@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class OpTotalFilesConfiguration : IEntityTypeConfiguration<OpTotalFiles>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<OpTotalFiles> builder)
         {
             builder.ToTable("OPTOTALFILES");
@@ -18,5 +19,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.DelivGen).HasColumnName("DELIVGEN");
             builder.Property(e => e.DtVersion).HasColumnName("DT_VERSION");
         }
+
+        #endregion Public Methods
     }
 }

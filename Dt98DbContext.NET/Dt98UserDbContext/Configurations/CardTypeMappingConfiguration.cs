@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class CardTypeMappingConfiguration : IEntityTypeConfiguration<CardTypeMapping>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<CardTypeMapping> builder)
         {
             builder.ToTable("_sctCARDTYPEMAPPING");
@@ -17,5 +18,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.BofName).HasColumnName("BOF_NAME");
             builder.Property(e => e.BofId).HasColumnName("BOF_ID");
         }
+
+        #endregion Public Methods
     }
 }

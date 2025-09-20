@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class NormUnitsConfiguration : IEntityTypeConfiguration<NormUnits>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<NormUnits> builder)
         {
             builder.ToTable("_sctNORMUNITS");
@@ -16,5 +17,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.NormUnitName).HasColumnName("NORM_UNIT_NAME");
             builder.Property(e => e.NormBaseQuantity).HasColumnName("NORM_BASE_QUANTITY");
         }
+
+        #endregion Public Methods
     }
 }

@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class ScaledDiscountConfiguration : IEntityTypeConfiguration<ScaledDiscount>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<ScaledDiscount> builder)
         {
             builder.ToTable("ScaledDiscount");
@@ -17,5 +18,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.Type).HasColumnName("Type");
             builder.Property(e => e.Amount).HasColumnName("Amount");
         }
+
+        #endregion Public Methods
     }
 }
