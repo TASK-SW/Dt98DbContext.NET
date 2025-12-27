@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class CardDlyTotal001Configuration : IEntityTypeConfiguration<CardDlyTotal001>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<CardDlyTotal001> builder)
         {
             builder.ToTable("CARDDLYTOTAL001");
@@ -21,5 +22,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.DopOutdoorAmt).HasColumnName("DOP_OUTDOOR_AMT");
             builder.Property(e => e.DopOutdoorCnt).HasColumnName("DOP_OUTDOOR_CNT");
         }
+
+        #endregion Public Methods
     }
 }

@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class OpTotalPaymentMapConfiguration : IEntityTypeConfiguration<OpTotalPaymentMap>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<OpTotalPaymentMap> builder)
         {
             builder.ToTable("_sptOPTOTAL_PAYMENTMAP");
@@ -17,5 +18,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.OidTerminalType).HasColumnName("OID_TERMINALTYPE");
             builder.Property(e => e.TransactionId).HasColumnName("TRANSACTION_ID");
         }
+
+        #endregion Public Methods
     }
 }

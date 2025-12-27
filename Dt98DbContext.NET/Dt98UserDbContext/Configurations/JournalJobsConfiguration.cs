@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class JournalJobsConfiguration : IEntityTypeConfiguration<JournalJobs>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<JournalJobs> builder)
         {
             builder.ToTable("JOURNALJOBS");
@@ -19,5 +20,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.ResultCode).HasColumnName("ResultCode");
             builder.Property(e => e.JobStatus).HasColumnName("JobStatus");
         }
+
+        #endregion Public Methods
     }
 }

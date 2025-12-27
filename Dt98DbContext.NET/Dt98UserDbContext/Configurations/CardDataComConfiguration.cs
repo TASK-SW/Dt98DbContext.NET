@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class CardDataComConfiguration : IEntityTypeConfiguration<CardDataCom>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<CardDataCom> builder)
         {
             builder.ToTable("_sptCARDDATACOM");
@@ -28,5 +29,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.PanStripTransAct).HasColumnName("PAN_STRIP_TRANSACT");
             builder.Property(e => e.TrxDelivMask).HasColumnName("TRXDELIVMASK");
         }
+
+        #endregion Public Methods
     }
 }

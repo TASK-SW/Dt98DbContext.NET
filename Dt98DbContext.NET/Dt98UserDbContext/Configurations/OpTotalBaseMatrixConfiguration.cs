@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class OpTotalBaseMatrixConfiguration : IEntityTypeConfiguration<OpTotalBaseMatrix>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<OpTotalBaseMatrix> builder)
         {
             builder.ToTable("_sptOPTOTAL_BASEMATRIX");
@@ -17,5 +18,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.DtTransactionId).HasColumnName("DT_TRANSACTION_ID");
             builder.Property(e => e.DtType).HasColumnName("DT_TYPE");
         }
+
+        #endregion Public Methods
     }
 }

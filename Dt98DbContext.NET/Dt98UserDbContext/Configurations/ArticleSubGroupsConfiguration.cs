@@ -27,6 +27,10 @@ public class ArticleSubGroupsConfiguration : IEntityTypeConfiguration<ArticleSub
         builder.HasMany(sg => sg.Articles)
             .WithOne(a => a.SubGroup)
             .HasForeignKey(a => a.OidArtSubGrp);
+
+        builder.HasMany(sg => sg.JournalBookings)
+            .WithOne(a => a.SubGroup)
+            .HasForeignKey(a => a.ArtSubGrp);
     }
 
     #endregion Public Methods

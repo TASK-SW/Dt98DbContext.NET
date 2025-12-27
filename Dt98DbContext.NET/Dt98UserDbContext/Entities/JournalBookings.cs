@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
 using System;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
 
@@ -11,6 +12,10 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         private readonly ILazyLoader _lazyLoader;
 
         private Units _units;
+
+        private EanCodes _eanCodes;
+
+        private ArticleSubGroups _subGroup;
 
         #endregion Private Fields
 
@@ -53,6 +58,20 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities
         {
             get => _lazyLoader?.Load(this, ref _units);
             set => _units = value;
+        }
+
+        // 👇 Lazy-loaded navigation property using ILazyLoader
+        public EanCodes EanCodes
+        {
+            get => _lazyLoader?.Load(this, ref _eanCodes);
+            set => _eanCodes = value;
+        }
+
+        // 👇 Lazy-loaded navigation property using ILazyLoader
+        public ArticleSubGroups SubGroup
+        {
+            get => _lazyLoader?.Load(this, ref _subGroup);
+            set => _subGroup = value;
         }
 
         public string OidStornoOrigin { get; set; }

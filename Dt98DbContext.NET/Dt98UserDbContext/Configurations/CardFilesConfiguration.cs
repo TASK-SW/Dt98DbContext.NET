@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class CardFilesConfiguration : IEntityTypeConfiguration<CardFiles>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<CardFiles> builder)
         {
             builder.ToTable("_sptCARDFILES");
@@ -23,5 +24,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.OidCardDataCom).HasColumnName("OID_CARDDATACOM");
             builder.Property(e => e.OidForeignTrx).HasColumnName("OID_FOREIGNTRX");
         }
+
+        #endregion Public Methods
     }
 }

@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class FuelIngPointsConfiguration : IEntityTypeConfiguration<FuelIngPoints>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<FuelIngPoints> builder)
         {
             builder.ToTable("_sptFUELINGPOINTS");
@@ -18,5 +19,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.Id).HasColumnName("ID");
             builder.Property(e => e.ExternNumber).HasColumnName("EXTERNNUMBER");
         }
+
+        #endregion Public Methods
     }
 }

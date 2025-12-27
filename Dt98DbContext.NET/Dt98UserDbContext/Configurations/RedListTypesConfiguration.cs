@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class RedListTypesConfiguration : IEntityTypeConfiguration<RedListTypes>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<RedListTypes> builder)
         {
             builder.ToTable("_sctREDLISTTYPES");
@@ -18,5 +19,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.IId).HasColumnName("IID");
             builder.Property(e => e.ClsId).HasColumnName("CLSID");
         }
+
+        #endregion Public Methods
     }
 }

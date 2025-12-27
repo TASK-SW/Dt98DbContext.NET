@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class ProductCodeTaxMapConfiguration : IEntityTypeConfiguration<ProductCodeTaxMap>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<ProductCodeTaxMap> builder)
         {
             builder.ToTable("_sptPRODUCTCODETAXMAP");
@@ -17,5 +18,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.VatOid).HasColumnName("VAT_OID");
             builder.Property(e => e.ProductCodeName).HasColumnName("PRODUCTCODENAME");
         }
+
+        #endregion Public Methods
     }
 }

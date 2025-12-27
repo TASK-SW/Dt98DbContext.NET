@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class DatacomOnlineHostsConfiguration : IEntityTypeConfiguration<DatacomOnlineHosts>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<DatacomOnlineHosts> builder)
         {
             builder.ToTable("DatacomOnlineHosts");
@@ -26,5 +27,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.EncKey).HasColumnName("ENCKey");
             builder.Property(e => e.OlisVersion).HasColumnName("OlisVersion");
         }
+
+        #endregion Public Methods
     }
 }

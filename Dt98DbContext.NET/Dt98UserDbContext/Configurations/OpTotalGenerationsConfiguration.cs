@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class OpTotalGenerationsConfiguration : IEntityTypeConfiguration<OpTotalGenerations>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<OpTotalGenerations> builder)
         {
             builder.ToTable("OPTOTALGENERATIONS");
@@ -20,5 +21,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.CreationEnd).HasColumnName("CREATIONEND");
             builder.Property(e => e.DeliveryDate).HasColumnName("DELIVERYDATE");
         }
+
+        #endregion Public Methods
     }
 }

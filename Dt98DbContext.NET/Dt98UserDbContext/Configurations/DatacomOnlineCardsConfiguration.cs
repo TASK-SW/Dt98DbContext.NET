@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class DatacomOnlineCardsConfiguration : IEntityTypeConfiguration<DatacomOnlineCards>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<DatacomOnlineCards> builder)
         {
             builder.ToTable("DatacomOnlineCards");
@@ -39,5 +40,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.BlacklistId).HasColumnName("BlacklistId");
             builder.Property(e => e.DccQuery).HasColumnName("DCCQuery");
         }
+
+        #endregion Public Methods
     }
 }

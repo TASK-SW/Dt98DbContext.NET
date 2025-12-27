@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class ObjectStatesConfiguration : IEntityTypeConfiguration<ObjectStates>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<ObjectStates> builder)
         {
             builder.ToTable("OBJECTSTATES");
@@ -19,5 +20,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.State).HasColumnName("STATE");
             builder.Property(e => e.ObjStateIX).HasColumnName("Order = 4");
         }
+
+        #endregion Public Methods
     }
 }

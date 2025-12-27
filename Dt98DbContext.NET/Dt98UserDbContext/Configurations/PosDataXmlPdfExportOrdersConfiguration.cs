@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class PosDataXmlPdfExportOrdersConfiguration : IEntityTypeConfiguration<PosDataXmlPdfExportOrders>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<PosDataXmlPdfExportOrders> builder)
         {
             builder.ToTable("POSDataXmlPdfExportOrders");
@@ -36,5 +37,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.ErrorCode).HasColumnName("ErrorCode");
             builder.Property(e => e.Errormessage).HasColumnName("Errormessage");
         }
+
+        #endregion Public Methods
     }
 }

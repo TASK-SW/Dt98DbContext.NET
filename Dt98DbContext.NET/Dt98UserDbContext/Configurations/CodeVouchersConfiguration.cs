@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class CodeVouchersConfiguration : IEntityTypeConfiguration<CodeVouchers>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<CodeVouchers> builder)
         {
             builder.ToTable("CodeVouchers");
@@ -25,5 +26,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.IsScanned).HasColumnName("IsScanned");
             builder.Property(e => e.VoucherSeqNo).HasColumnName("VoucherSeqNo");
         }
+
+        #endregion Public Methods
     }
 }

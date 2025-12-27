@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class CardFieldsConfiguration : IEntityTypeConfiguration<CardFields>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<CardFields> builder)
         {
             builder.ToTable("_sptCARDFIELDS");
@@ -22,5 +23,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.MaxSize).HasColumnName("MAXSIZE");
             builder.Property(e => e.TextId).HasColumnName("TEXTID");
         }
+
+        #endregion Public Methods
     }
 }

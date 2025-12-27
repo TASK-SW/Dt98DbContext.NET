@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class CardTrxCountsConfiguration : IEntityTypeConfiguration<CardTrxCounts>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<CardTrxCounts> builder)
         {
             builder.ToTable("_sptCARDTRXCOUNTS");
@@ -17,5 +18,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.Id).HasColumnName("ID");
             builder.Property(e => e.ResetDate).HasColumnName("RESETDATE");
         }
+
+        #endregion Public Methods
     }
 }

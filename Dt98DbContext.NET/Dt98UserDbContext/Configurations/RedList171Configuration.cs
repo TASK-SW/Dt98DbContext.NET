@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Entities;
@@ -7,6 +6,8 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
 {
     public class RedList171Configuration : IEntityTypeConfiguration<RedList171>
     {
+        #region Public Methods
+
         public void Configure(EntityTypeBuilder<RedList171> builder)
         {
             builder.ToTable("REDLIST171");
@@ -16,5 +17,7 @@ namespace TaskStar.Dt98DbContext.NET.Dt98UserDbContext.Configurations
             builder.Property(e => e.Count).HasColumnName("COUNT");
             builder.Property(e => e.EditDate).HasColumnName("EDITDATE");
         }
+
+        #endregion Public Methods
     }
 }
